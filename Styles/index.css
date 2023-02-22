@@ -1,0 +1,511 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Top Section Css */
+/* Top most Div Css */
+#topmost_div {
+  box-sizing: border-box;
+  color: #000000;
+  background-color: #ffd166;
+  text-align: center;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10000;
+  line-height: 1.25;
+  padding: 0.1px 0;
+}
+
+#topmost_div p {
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  vertical-align: baseline;
+  color: #000;
+  background: #ffd166;
+  font-size: 13px;
+  line-height: 1.25;
+  font-weight: 500;
+  word-spacing: 0.6px;
+  letter-spacing: 0.1px;
+}
+
+#topmost_div a {
+  color: #e85348;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: "Mr Eaves XL Modern Bold", sans-serif;
+}
+/* Low Screen Top Most Div */
+#low_sc_top_most_div {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  background: #2f4858;
+  padding: 10px 20px;
+  min-height: 48px;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  font-size: 16px;
+  font-family: Mr Eaves XL Modern, sans-serif;
+  display: none;
+}
+#low_sc_top_most_div svg {
+  fill: rgb(255, 255, 255);
+  width: 130px;
+  height: 30%;
+}
+#low_sc_top_most_div h2 {
+  font-size: 1.6em;
+  font-family: Mr Eaves XL Modern, sans-serif;
+  margin: auto;
+  position: relative;
+  min-width: 400px;
+}
+#low_sc_top_most_div button {
+  border: none;
+  outline: none;
+  background: #ed7745;
+  font-size: 14px;
+  color: white;
+  border-radius: 2px;
+  padding: 7px 12px;
+  margin-right: 25px;
+}
+
+/* Help and Track Div */
+.top_divs_container {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  border-width: 1px 0;
+  padding: 7px 0;
+  color: #000000;
+  overflow: auto;
+}
+.top_most_parent_divs {
+  margin: auto;
+  max-width: 990px;
+  min-width: 768px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#help_track_left_div {
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  max-width: 400px;
+  min-width: 160px;
+  align-items: center;
+}
+#help_track_left_div a {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  border: 0;
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  font-size: 13px;
+}
+#help_track_left_div a:hover {
+  fill: #ed7745;
+  color: #ed7745;
+}
+.help_track_icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+#help_track_right_div {
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  max-width: 500px;
+  min-width: 300px;
+  align-items: center;
+}
+#help_track_right_div a {
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: inherit;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  border: 0;
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  font-size: 13px;
+}
+#help_track_right_div a:hover {
+  color: #ed7745;
+}
+
+/* Logo and Search Div Css */
+#logo_div_container {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  border-width: 1px 0;
+  padding: 7px 0;
+  color: #000000;
+  padding: 20px 0;
+  font-family: "Mr Eaves XL Modern", sans-serif;
+}
+#logo_div_parent_div {
+  margin: auto;
+  max-width: 990px;
+  min-width: 768px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Top Logo and Title */
+#main_logo_title_div {
+  max-width: 400px;
+  min-width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+#main_logo_title_div img {
+  width: 45%;
+  height: 100%;
+  border: 2px solid rgba(255, 128, 0, 0.947);
+  border-left: none;
+  border-right: none;
+  border-radius: 15%;
+}
+#title_text_div {
+  margin-top: -10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#title_text_div p {
+  margin: 0;
+  font-size: 120%;
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  color: #2f4858;
+}
+
+/* Search Bar Css */
+#search_label_tag {
+  position: relative;
+}
+#top_search_inp {
+  background-color: transparent;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  height: auto;
+  border-radius: 3px;
+  font-size: 15.7px;
+  max-width: 700px;
+  min-width: 630px;
+  outline: none;
+  padding: 10px 10px;
+}
+#top_search_inp::placeholder {
+  color: #9f9e9e;
+  font-size: 14px;
+}
+#top_search_btn {
+  position: absolute;
+  top: 25%;
+  font-size: 130%;
+  right: 3px;
+  color: #999999;
+  transform: translate(-50%);
+  background: white;
+  cursor: pointer;
+}
+#top_search_btn:hover {
+  color: #ed7745;
+}
+
+/* Login, Cart Icons Css */
+#logo_div_right_div {
+  max-width: 200px;
+  min-width: 150px;
+}
+.search_div_icon_cont {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+.search_div_icon_cont a:hover {
+  fill: #ed7745;
+}
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #999999;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 30%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search_box_icons {
+  font-size: 18px;
+  color: black;
+}
+.tooltip_rect {
+  opacity: 0;
+}
+.tooltip {
+  position: absolute;
+  background-color: #1c1b1b;
+  color: #fff;
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  padding: 5px 6px;
+  font-size: 13px;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+/* lOG IN AND SIGN UP CSS */
+#login_signup_icon_div {
+  position: relative;
+}
+.dropdown-menu {
+  width: 120px;
+  background: #ffffff;
+  cursor: pointer;
+  border: 1px solid #e1e1e1;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  text-align: start;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-top: -4px;
+  line-height: 1.2;
+}
+#login_btn {
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  font-size: 1rem;
+  border-bottom: 1px solid rgb(243, 240, 240);
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+#login_btn:hover {
+  background-color: #f8f6f6;
+  color: #ed7745;
+}
+#signup_btn {
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  font-size: 1rem;
+  border-bottom: 1px solid rgb(243, 240, 240);
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+#signup_btn:hover {
+  color: #ed7745;
+  background-color: #f8f6f6;
+}
+#login_signup_icon_div:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu p {
+  margin: 0;
+  padding: 5px 10px;
+}
+
+/*Products Drop Down Menu CSS */
+
+#Product_drop_down_cont {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  border-width: 1px 0;
+  color: #000000;
+  padding-top: 10px;
+}
+
+#Parent_product_drop_down {
+  margin: auto;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  max-width: 990px;
+  min-width: 768px;
+}
+
+.card_product {
+  position: relative;
+}
+
+.product_title {
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: inline-block;
+  color: #000000;
+  font-size: 15px;
+  font: 400;
+  padding-bottom: 12px;
+}
+
+.product_title:hover {
+  color: #ed7745;
+  border-bottom: 2px solid #ed7745;
+}
+
+.child_product_divs {
+  text-align: start;
+  display: block;
+  border-left: 1px solid rgb(232, 232, 232);
+  padding-left: 15px;
+}
+
+.child_product_divs a:nth-child(1) {
+  color: #2f4858;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+.child_product_divs a {
+  text-decoration: none;
+  color: #516571;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+  line-height: 1.5;
+  display: block;
+}
+.child_product_divs a:hover {
+  color: #ed7745;
+}
+.drop_down_products {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 15px 25px;
+  border: 1px solid #ebebeb;
+  display: flex;
+  justify-content: space-evenly;
+}
+.drop_down_products > div:nth-child(1) {
+  border: none;
+  padding-left: 0;
+}
+.card_product ul {
+  display: none;
+}
+.card_product:hover ul {
+  display: block;
+}
+.child_product_divs:hover .head_child_product {
+  border-bottom: 1px solid #ed7745;
+}
+#deal_zone {
+  min-width: 200px;
+}
+#Sofas_Recliners {
+  min-width: 700px;
+  left: -90%;
+}
+#Living {
+  min-width: 500px;
+  left: -550%;
+}
+#bedroom_mattress {
+  min-width: 700px;
+  left: -200%;
+}
+#dining {
+  min-width: 500px;
+  left: -550%;
+}
+#storage {
+  min-width: 750px;
+  left: -580%;
+}
+#study {
+  min-width: 650px;
+  left: -600%;
+}
+#light_decor {
+  min-width: 850px;
+  left: -480%;
+}
+#outdoor {
+  min-width: 200px;
+  right: -295%;
+}
+#urban_interior {
+  min-width: 200px;
+  left: -110%;
+}
+#trending {
+  min-width: 850px;
+  left: -1450%;
+}
+
+/*  Media Querry for Tablet  */
+@media screen and (max-width: 900px) and (min-width: 451px) {
+  #topmost_div {
+    display: none;
+  }
+
+  #low_sc_top_most_div {
+    display: flex;
+  }
+
+  #low_sc_top_most_div h2 {
+    min-width: 300px;
+  }
+
+  #help_track_container {
+    display: none;
+  }
+
+  #logo_div_container {
+    display: none;
+  }
+}
+
+/* Media Querry for Mobile */
+@media screen and (max-width: 450px) {
+  body {
+    background-color: blue;
+  }
+}
