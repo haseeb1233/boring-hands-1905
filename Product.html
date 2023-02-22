@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #products{
+            border: 2px solid red;
+        }
+        #filterSort{
+          display: flex;
+          margin-bottom: 40px;
+        }
+        #filterSort>div:nth-child(3){
+         margin-left: 50%;
+        }
+        #filterSort>div:nth-child(2){
+            margin-left: 5%;
+        }
+        /* #SubCategory>select{
+            height: 30px;
+        }
+        #filterPrice>select{
+            height: 30px;
+        } */
+        select{
+            height: 30px;
+            background-color:#F57F17 ;
+            border-radius: 3px;
+            color: antiquewhite;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="filterSort">
+    
+    <div id="SubCategory">
+        <select name="SCategory" id="SCategory">
+          <option value="">-- Category--</option>
+          <option value="Shirts">Study Chairs</option>
+          <option value="T-Shirt">Accent Chairs</option>
+          <option value="Coffee Tables">Coffee Tables</option>
+          <option value="Sofa">Sofa</option>
+          <option value="Bed">Bed</option>
+          <option value="Bookshelves">Bookshelves</option>
+          <option value="Study Table">Study Table</option>
+          <option value="Tv Units">Tv Units</option>
+          <option value="Cupboard">Cupboard</option>
+          <option value="Shoe Rack">Shoe Rack</option>
+      </select>
+      </div>
+      <div id="filterPrice">
+        <select name="SCategory" id="priceRange">
+          <option value="">--Price--</option>
+          <option value=""></option>
+          <option value="T-Shirt">T-Shirt</option>
+          <option value="Sweaters">Sweaters</option>
+          <option value="Hoodies">Hoodies</option>
+          <option value="Jackets">Jackets</option>
+          <option value="Jeans">Jeans</option>
+          <option value="Shorts">Shorts</option>
+          <option value="Wallets">Wallets</option>
+          <option value="Belts">Belts</option>
+          <option value="Hats">Hats</option>
+      </select>
+      </div>
+      <div id="sort">
+        <select name="sorting" id="sortCategory">
+            <option value="">Recommended </option>
+            <option value="H2L">Price:High To Low</option>
+            <option value="L2H">Price:Low To High</option>
+            <option value="New">New Arrivals</option>
+            <option value="Discount">Discount</option>
+        </select>
+    </div>
+      </div>
+      <div id="products">
+        
+       <!-- products card will be appended here -->
+      </div>
+</body>
+<script>
+    let filterCotegory = document.getElementById('SCategory');
+    console.log(filterCotegory);
+</script>
+</html>
