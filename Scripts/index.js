@@ -9,8 +9,8 @@ window.addEventListener("scroll", function () {
     box2.style.position = "fixed";
     box2.style.top = "42px";
   } else {
-    box1.style.position = "relative";
-    box2.style.position = "relative";
+    box1.style.position = "static";
+    box2.style.position = "static";
     box2.style.top = "auto";
   }
 });
@@ -111,14 +111,6 @@ cart_icon.addEventListener("mouseout", function () {
 // ***************
 
 // Animation Script
-
-// const images = [
-//   `Images\home_anim_imgs\Anim-2.jpg`,
-//   `Images\home_anim_imgs\Anim-2.jpg`,
-//   `Images\home_anim_imgs\Anim-2.jpg`,
-//   `Images\home_anim_imgs\Anim-2.jpg`,
-//   `Images\home_anim_imgs\Anim-2.jpg`,
-// ];
 
 const images = [
   `https://www.ulcdn.net/media/Slideshow/Dining-3.jpg?1676877042`,
