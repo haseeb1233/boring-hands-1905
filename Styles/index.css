@@ -353,6 +353,8 @@ body {
   border-width: 1px 0;
   color: #000000;
   padding-top: 10px;
+  background-color: white;
+  position: relative;
 }
 
 #Parent_product_drop_down {
@@ -363,6 +365,10 @@ body {
   justify-content: space-between;
   max-width: 990px;
   min-width: 768px;
+  position: relative;
+}
+.ul_drop_down {
+  position: relative;
 }
 
 .card_product {
@@ -377,11 +383,13 @@ body {
   font-size: 15px;
   font: 400;
   padding-bottom: 12px;
+  position: relative;
 }
 
 .product_title:hover {
   color: #ed7745;
   border-bottom: 2px solid #ed7745;
+  position: relative;
 }
 
 .child_product_divs {
@@ -389,6 +397,7 @@ body {
   display: block;
   border-left: 1px solid rgb(232, 232, 232);
   padding-left: 15px;
+  position: relative;
 }
 
 .child_product_divs a:nth-child(1) {
@@ -422,6 +431,7 @@ body {
   border: 1px solid #ebebeb;
   display: flex;
   justify-content: space-evenly;
+  background-color: white;
 }
 .drop_down_products > div:nth-child(1) {
   border: none;
@@ -432,6 +442,8 @@ body {
 }
 .card_product:hover ul {
   display: block;
+  background-color: rgb(255, 255, 255);
+  position: relative;
 }
 .child_product_divs:hover .head_child_product {
   border-bottom: 1px solid #ed7745;
@@ -479,6 +491,93 @@ body {
   min-width: 850px;
   left: -1450%;
 }
+
+/* Animation CSS */
+#animation_div_parent {
+  position: relative;
+  overflow: hidden;
+  width: 97%;
+  margin: auto;
+  cursor: pointer;
+}
+#anim_image_tag {
+  display: block;
+  width: 100%;
+  position: relative;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+#anim_btn_cont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.anim_btns {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.747);
+  padding: 8px 5px;
+  cursor: pointer;
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  font-size: 35px;
+  color: #000000;
+  line-height: 1;
+}
+.anim_icons {
+  font-size: 40px;
+  font-weight: 400;
+}
+#prev_anim_btn {
+  position: absolute;
+  left: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-left: 10px;
+}
+#next_anim_btn {
+  position: absolute;
+  right: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-right: 10px;
+}
+#anim_dots_div {
+  min-width: 90px;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.anim_dots_icons {
+  font-size: 0.6em;
+  color: #a6a4a4;
+}
+.anim_dots_icons.active {
+  color: #e85348;
+}
+
+.slide-right {
+  animation-name: slide-right;
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*  */
 
 /*  Media Querry for Tablet  */
 @media screen and (max-width: 900px) and (min-width: 451px) {

@@ -172,7 +172,9 @@
               </svg>
             </a>
             <div class="dropdown-menu">
-              <p id="login_btn">Login</p>
+              <p onclick="window.location.href=`login.html`" id="login_btn">
+                Login
+              </p>
               <p id="signup_btn">Sign Up</p>
             </div>
           </div>
@@ -680,6 +682,30 @@
       </ul>
     </div>
 
+    <!-- Animation Div -->
+    <div id="animation_div_parent">
+      <img
+        id="anim_image_tag"
+        src=""
+        alt="Slide Show Animation"
+        class="slide-right slide-left"
+      />
+      <div id="anim_btn_cont">
+        <button id="prev_anim_btn" class="anim_btns">
+          <i class="fa-regular fa-chevron-left anim_icons"></i>
+        </button>
+        <button id="next_anim_btn" class="anim_btns">
+          <i class="fa-regular fa-chevron-right anim_icons"></i>
+        </button>
+      </div>
+      <div id="anim_dots_div">
+        <i class="fa-sharp fa-solid fa-circle anim_dots_icons"></i>
+        <i class="fa-sharp fa-solid fa-circle anim_dots_icons"></i>
+        <i class="fa-sharp fa-solid fa-circle anim_dots_icons"></i>
+        <i class="fa-sharp fa-solid fa-circle anim_dots_icons"></i>
+        <i class="fa-sharp fa-solid fa-circle anim_dots_icons"></i>
+      </div>
+    </div>
     <!--  -->
   </body>
 </html>
