@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="adminmainpage.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+rel="stylesheet"
+href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+    <div id="logo_div_container">
+        <div id="logo_div_parent_div">
+          <div
+            onclick="window.location.href=`index.html`"
+            id="main_logo_title_div"
+          >
+            <img src="Images\1.png" alt="" />
+            <div id="title_text_div">
+              <p><b>Heaven</b></p>
+              <p><b>Gallery</b></p>
+            </div>
+          </div>
+  
+          <!-- Search Input -->
+          <label for="" id="search_label_tag"
+            ><input type="text" placeholder="Search" id="top_search_inp" />
+            <i id="top_search_btn" class="fa-regular fa-magnifying-glass"></i
+          ></label>
+          <button id="logoutbtn" style="font-size:15px" ><i style="font-size:15px;color: red;" class="fa">&#xf08b;</i> Log out</i></button>
+          </div> 
+    </div>  
+
+        <!-- container -->
+        <div id="container">
+            <!-- sidebar -->
+            <div id="sidebar">
+                <button id="sidebarprdtbtn">
+                 <div id="sidebarProducts">
+                     <span>  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M20.4843 14.1202L14.1264 20.4797C13.9617 20.6447 13.7661 20.7755 13.5509 20.8648C13.3356 20.9541
+                    13.1048 21 12.8717 21C12.6387 21 12.4079 20.9541 12.1926 20.8648C11.9773 20.7755 11.7817 20.6447 11.617 20.4797L4 12.8696V4H12.8673L20.4843 
+                       11.619C20.8146 11.9514 21 12.401 21 12.8696C21 13.3383 20.8146 13.7879 20.4843 14.1202V14.1202Z" 
+                       stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                       </path>
+                       <path d="M9 9H9.01006" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                   <span id="prdttitle">Products</span>
+                   </div>
+                </button>
+                <button id="Addprdocutsbtn">
+                 <div id="Addprdocuts">
+                     <i class="fa fa-plus" style="font-size:20px"></i>
+                     <span>Add Product</span>
+                     <form id="addprdtform" action="">
+                        <input type="text" placeholder="title">
+                        <input type="text" placeholder="categories">
+                     </form>
+                 </div>
+                </button>
+                <button id="editprdocutsbtn">
+                    <div id="editprdocuts">
+                        <i class="fa fa-edit" style="font-size:20px"></i>
+                        <span>Edit Price</span>
+                        <form id="editprdtform" action="">
+                           <input id="editpriceidinput" type="text" placeholder="id">
+                           <input id="editpriceinput" type="text" placeholder="price">
+                        </form>
+                    </div>
+                   </button>
+             </div>
+             <!-- mainSection -->
+             <div id="mainsection">
+              <div id="extra"> </div>
+              <div id="products">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>IMAGE</th>
+                            <th>TITLE</th>
+                            <th>PRICE</th>
+                            <th>CATEGORY</th>
+                            <th>BRAND</th>
+                            <th>SIZE</th>
+                            <th>MATERIAL</th>
+                            <th>COLOR</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabledata">
+        
+                    </tbody>
+                    
+                </table>
+              </div>
+
+             </div>
+
+        </div>
+          
+</body>
+<script src="adminmainpage.js"></script>
+</html>
