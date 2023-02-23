@@ -72,25 +72,59 @@ cart_icon.addEventListener("mouseout", function () {
 });
 // ***************
 
-// Product Category Drop Down Functionality
-// let product_drop_down_card = document.querySelectorAll(".child_product_divs");
-// product_drop_down_card.forEach((item, ind) => {
-//   item.addEventListener("mouseover", function (e) {
-//     e.target.style.display = "block";
-//   });
+// Animation Script
 
-//   item.addEventListener("mouseout", function (e) {
-//     this.style.display = "none";
-//   });
-// });
+// const images = [
+//   `Images\home_anim_imgs\Anim-2.jpg`,
+//   `Images\home_anim_imgs\Anim-2.jpg`,
+//   `Images\home_anim_imgs\Anim-2.jpg`,
+//   `Images\home_anim_imgs\Anim-2.jpg`,
+//   `Images\home_anim_imgs\Anim-2.jpg`,
+// ];
 
-// let product_title = document.querySelectorAll(".product_title");
-// product_title.forEach((item, ind) => {
-//   item.addEventListener("mouseover", function () {
-//     this.nextElementSibling.style.display = "block";
-//   });
+const images = [
+  `https://www.ulcdn.net/media/Slideshow/Dining-3.jpg?1676877042`,
+  `https://www.ulcdn.net/media/Slideshow/Shoeracks4.jpg?1676894369`,
+  `https://www.ulcdn.net/media/Slideshow/UI-Feb-slideshow.jpg?1676622712`,
+  `https://www.ulcdn.net/media/Slideshow/Spring-into-sale-Slideshow.jpg?1676664267`,
+  `https://www.ulcdn.net/media/Slideshow/Beds-2.jpg?1676877037`,
+];
 
-//   item.addEventListener("mouseout", function () {
-//     this.nextElementSibling.style.display = "none";
-//   });
-// });
+let currentImageIndex = 0;
+const animImageTag = document.getElementById("anim_image_tag");
+const animDotsIcons = document.querySelectorAll(".anim_dots_icons");
+
+function updateImageAndDots() {
+  animImageTag.src = images[currentImageIndex];
+  animDotsIcons.forEach((dot, index) => {
+    if (index === currentImageIndex) {
+      dot.classList.add("active");
+    } else {
+      dot.classList.remove("active");
+    }
+  });
+}
+
+function nextImage() {
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  animImageTag.classList.remove("slide-right");
+  void animImageTag.offsetWidth;
+  animImageTag.classList.add("slide-right");
+  updateImageAndDots();
+}
+
+function prevImage() {
+  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+  animImageTag.classList.remove("slide-right");
+  void animImageTag.offsetWidth;
+  animImageTag.classList.add("slide-right");
+  updateImageAndDots();
+}
+
+document.getElementById("next_anim_btn").addEventListener("click", nextImage);
+document.getElementById("prev_anim_btn").addEventListener("click", prevImage);
+
+updateImageAndDots();
+setInterval(nextImage, 5000);
+
+// *****************
