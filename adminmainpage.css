@@ -1,0 +1,223 @@
+#logo_div_container {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    border-width: 1px 0;
+    padding: 7px 0;
+    color: #000000;
+    padding: 20px 0;
+    font-family: "Mr Eaves XL Modern", sans-serif;
+  }
+  #logo_div_parent_div {
+    margin: auto;
+    max-width: 990px;
+    min-width: 768px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Top Logo and Title */
+  #main_logo_title_div {
+    max-width: 400px;
+    min-width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  #main_logo_title_div img {
+    width: 45%;
+    height: 100%;
+    border: 2px solid rgba(255, 128, 0, 0.947);
+    border-left: none;
+    border-right: none;
+    border-radius: 15%;
+  }
+  #title_text_div {
+    margin-top: -10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #title_text_div p {
+    margin: 0;
+    font-size: 120%;
+    font-family: "Mr Eaves XL Modern", sans-serif;
+    color: #2f4858;
+  }
+  
+  /* Search Bar Css */
+  #search_label_tag {
+    position: relative;
+  }
+  #top_search_inp {
+    background-color: transparent;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    height: auto;
+    border-radius: 3px;
+    font-size: 15.7px;
+    max-width: 700px;
+    min-width: 630px;
+    outline: none;
+    padding: 10px 10px;
+  }
+  #top_search_inp::placeholder {
+    color: #9f9e9e;
+    font-size: 14px;
+  }
+  #top_search_btn {
+    position: absolute;
+    top: 25%;
+    font-size: 130%;
+    right: 3px;
+    color: #999999;
+    transform: translate(-50%);
+    background: white;
+    cursor: pointer;
+  }
+  #top_search_btn:hover {
+    color: #ed7745;
+  }
+  #logoutbtn{
+    /* border: none; */
+    background-color: #ffffff;
+    color: red;
+  }
+  /* container */
+  #container{
+    display: flex;
+  
+  }
+  /* sidebar */
+  #sidebar button{
+    border: none;
+    background-color: #ffffff;
+    margin: 20px 0px 0px 10px;
+  }
+  #sidebar button:hover{
+    cursor: pointer;
+    background-color:#E0E0E0 ;
+  }
+  #prdttitle{
+    margin-left: 5px;
+  }
+  #sidebar{
+    background-color: #ffffff;
+    border-right: 1px solid #eee;
+    width: 15%;
+    height:700px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    position: sticky;
+    top: 0;
+    
+    
+  }
+  #sidebarProducts{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  #Addprdocuts{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  #addprdtform{
+    display: none;
+}
+#editprdocuts{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  #editprdtform{
+    display: none;
+}
+  /* mainsection */
+  #mainsection{
+    width: 80%;
+    border: 1px solid red;
+    margin:20px 10px 0px 40px;
+
+  }
+  #table{
+    margin-top: 20px;
+    width: 95%;
+    margin: auto;
+    border: 1px solid red;
+}
+th {
+   margin-left: 20px; 
+   border: solid 1px #eee;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#tabledata td{
+    height: 110px;
+    text-align: center;
+    background-color: rgb(234, 240, 245);
+}
+#td1{
+    width: 200px;
+}
+#td2{
+    width:200px;
+    
+}
+#td3{
+    width: 80px;
+    text-align: center;
+
+}
+#td4{
+    width:50px ;
+    text-align: center;
+    
+}
+#td5{
+    width:100px;
+    text-align: center;
+   
+}
+#td6{
+    width: 70px;
+   
+}
+#td7{
+    width: 70px;
+    
+}
+#td8{
+    width: 100px;
+   
+}
+
+#tabledata img{
+    width: 100%;
+    
+}
+#editprdt{
+    margin:50px 0px 0px 10px;
+}
+#edit{
+    border: none;
+    background-color: #ffffff;
+    color: green;
+    margin-right: 20px;
+}
+#edit:hover{
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 15px;
+}
+#delete{
+    border: none;
+    background-color: #ffffff;
+    color: red;
+}
+#delete:hover{
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 15px;
+}
