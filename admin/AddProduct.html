@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Add Product To Site...</title>
+    <!-- <link rel="stylesheet" href="./styles/scrolebar.css"> -->
+    <!-- <link rel="icon" type="image/x-icon" href="./images/logo.png"> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100%;
+      }
+      nav {
+        width: 100%;
+        height: 70px;
+        background: rgb(32, 7, 5);
+        background: #F57F17;
+        display: flex;
+        justify-content: space-between;
+      }
+      nav > div > a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: bolder;
+        height: 100%;
+        padding: 0px 30px 0px 30px;
+        display: flex;
+        align-items: center;
+      }
+      #adminbtn {
+        border: none;
+        border-radius: 0px 10px 10px 0px;
+        background-color: #F57F17
+      }
+      nav > img {
+        border-radius: 10px 0px 0px 10px;
+      }
+      h2 {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 20px;
+      }
+      form {
+        box-shadow: 10px 10px 132px -1px #F57F17;
+        width: 400px;
+        border: 2px solid teal;
+        text-align: left;
+        margin: auto;
+        background-color: rgb(215 173 173 / 43%);
+        padding: 20px;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+      #material,
+      #Category,
+      #price {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      #size,
+      #brand,
+      #color {
+        grid-column-start: 4;
+        grid-column-end: 6;
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      #img1,
+      #img2,
+      #img3,
+      #img4,
+      #name {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      button {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        padding: 10px;
+        color: white;
+        font-weight: bolder;
+        border-radius: 10px;
+        background: rgb(3, 3, 3);
+        background:#F57F17
+      }
+      .swal-text {
+        font-size: 20px;
+        font-weight: bolder;
+      }
+      .swal-button {
+        background-color: #0025ff;
+      }
+      @media screen and (min-width:0px) and (max-width:400px){
+        form{
+    width: 300px;
+  }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div id="adminbtn"><a href="./admin.html">Back to ADMIN Page</a></div>
+      <img
+        src=""
+        alt="logo"
+        onclick="locat()"
+      />
+    </nav>
+    <h2 id="msg">Please Fill Product Details ...</h2>
+    <form method="post" name="google-sheet" id="form">
+      <input
+        type="text"
+        name="Title"
+        placeholder="Title of Product..."
+        id="name"
+      />
+      <input
+        type="number"
+        name="Price"
+        placeholder="Price of a Product..."
+        id="price"
+      />
+      <select name="Color" id="color">
+        <option value="">Color</option>
+        <option value="Navy">Navy</option>
+        <option value="Multi-colored">Multi-colored</option>
+        <option value="Grey">Grey</option>
+        <option value="Beige">Beige</option>
+        <option value="Black">Black</option>
+        <option value="Blue">Blue</option>
+        <option value="Brown">Brown</option>
+        <option value="Burgundy">Burgundy</option>
+        <option value="Coral">Coral</option>
+        <option value="Cream">Cream</option>
+        <option value="Green">Green</option>
+        <option value="Khaki">Khaki</option>
+        <option value="Maroon">Maroon</option>
+        <option value="Olive">Olive</option>
+        <option value="Orange">Orange</option>
+        <option value="Peach">Peach</option>
+        <option value="Pink">Pink</option>
+        <option value="Purple">Purple</option>
+        <option value="Red">Red</option>
+        <option value="Tan">Tan</option>
+        <option value="White">White</option>
+        <option value="Yellow">Yellow</option>
+      </select>
+      <input
+        type="text"
+        name="Image1"
+        placeholder="Past 1st Image URL..."
+        id="img1"
+      />
+      <input
+        type="text"
+        name="Image2"
+        placeholder="Past 2st Image URL..."
+        id="img2"
+      />
+      <input
+        type="text"
+        name="Image3"
+        placeholder="Past 3st Image URL..."
+        id="img3"
+      />
+      <input
+        type="text"
+        name="Image4"
+        placeholder="Past 4st Image URL..."
+        id="img4"
+      />
+      <select name="Category" id="Category">
+        <option value="">Category</option>
+        <option value="Study Chairs">Study Chairs</option>
+        <option value="Accent Chairs">Accent Chairs</option>
+        <option value="coffee table">coffee table</option>
+        <option value="Sofa">Sofa</option>
+        <option value="Bed">Bed</option>
+        <option value="Bookshelves">Bookshelves</option>
+        <option value="study table">study table</option>
+        <option value="Tv units">Tv units</option>
+        <option value="Cupboard">Cupboard</option>
+        <option value="Shoe Rack">Shoe Rack</option>
+      </select>
+      <select name="brand" id="brand">
+        <option value="">Brand</option>
+        <option value="T-Shirt">Urban Ladder Create</option>
+        <option value="Tops">Home lifestyle</option>
+        <option value="Jeans">Adonica</option>
+        <option value="Belts">Arra</option>
+        <option value="Hats">Urban Ladder </option>
+        <option value="Hoodies">Febonic</option>
+        
+      </select>
+      <input
+        type="text"
+        name="material"
+        placeholder="Material of  Product..."
+        id="material"
+      />
+      <input
+        type="text"
+        name="size"
+        placeholder="size"
+        id="size"
+      />
+      <button type="submit" id="btn" name="submit">ADD to SITE</button>
+    </form>
+  </body>
+  <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+  <script src="/Admin.js"></script>
+  <script>
+    // const form = document.forms["google-sheet"];
+
+   let myForm=document.getElementById('form')
+
+   let msgAlert=document.getElementById("msg")
+
+    myForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+     // console.log(myForm.name.value,myForm.price.value,)
+      if (
+       myForm.name.value != "" &&
+       myForm.price.value != "" &&
+        myForm.color.value != "" &&
+        myForm.img1.value != "" &&
+        myForm.img2.value != "" &&
+        myForm.img3.value != "" &&
+        myForm.img4.value != "" &&
+        myForm.Category.value != "" &&
+        myForm.brand.value != "" &&
+        myForm.size.value != ""
+      ) {
+        msgAlert.innerText="Processing"
+        let product={};
+       product.name=myForm.name.value 
+       product.price=myForm.price.value 
+       product.color=myForm.color.value 
+       product.img1=myForm.img1.value 
+       product.img2=myForm.img2.value 
+       product.img3=myForm.img3.value 
+       product.img4=myForm.img4.value 
+       product.category=myForm.Category.value 
+       product.brand=myForm.brand.value 
+       product.size=myForm.size.value 
+      
+        fetch(scriptURL, { 
+            method: 'POST',
+            headers:{
+  'Content-Type': 'application/json',
+                    },
+            body: JSON.stringify(product)
+         })
+          .then((response) => {
+            msgAlert.innerText= "Product added to Site...";
+            setTimeout(() => {
+              myForm.name.value = "";
+              myForm.price.value = "";
+              myForm.color.value = "";
+              myForm.img1.value = "";
+              myForm.img2.value = "";
+              myForm.img3.value = "";
+              myForm.img4.value = "";
+            //   myForm.category.value = "";
+              myForm.brand.value = "";
+              myForm.size.value = "";
+            }, 3000);
+          })
+          .catch(() => {
+            msgAlert.innerText="Sorry Try Again...!";
+          });
+      } else {
+        msgAlert.innerText="Please Provide Complete Information....!";
+      }
+    });
+    function locat() {
+      location.href = "./index.html";
+    }
+  </script>
+</html>

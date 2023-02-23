@@ -82,7 +82,19 @@
        <!-- products card will be appended here -->
       </div>
 </body>
+
 <script>
+    const scriptURL = "https://himanshu-bamu.onrender.com/Products"
+
+let fetchdata = fetch(scriptURL);
+    fetchdata
+      .then((data) => {
+        return data.json();
+      })
+      .then((data) => {
+        console.log(data)
+      });
+    
     let filterCotegory = document.getElementById('SCategory');
     console.log(filterCotegory);
 </script>
