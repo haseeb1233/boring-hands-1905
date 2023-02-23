@@ -6,9 +6,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #f9fafa;
 }
 
 /* Top Section Css */
+
 /* Top most Div Css */
 #topmost_div {
   box-sizing: border-box;
@@ -93,6 +95,7 @@ body {
   padding: 7px 0;
   color: #000000;
   overflow: auto;
+  background-color: white;
 }
 .top_most_parent_divs {
   margin: auto;
@@ -167,6 +170,7 @@ body {
   color: #000000;
   padding: 20px 0;
   font-family: "Mr Eaves XL Modern", sans-serif;
+  background-color: white;
 }
 #logo_div_parent_div {
   margin: auto;
@@ -355,6 +359,7 @@ body {
   padding-top: 10px;
   background-color: white;
   position: relative;
+  z-index: 999;
 }
 
 #Parent_product_drop_down {
@@ -562,11 +567,9 @@ body {
 .anim_dots_icons.active {
   color: #e85348;
 }
-
 .slide-right {
   animation-name: slide-right;
 }
-
 @keyframes slide-right {
   from {
     opacity: 0;
@@ -577,7 +580,76 @@ body {
     transform: translateX(0);
   }
 }
-/*  */
+/* Explore Category Css */
+.mid_sec_heading {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px 0 10px 0;
+  font-family: "Mrs Eaves XL Serif", serif;
+  font-size: 28px;
+  line-height: 32px;
+  color: #2f4858;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 100;
+}
+.mid_sec_heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 1px;
+  background-color: #e85348;
+}
+/* Main Category Box Css */
+#furn_range_cont {
+  width: 100%;
+  margin-bottom: 120px;
+}
+#explore_range_parent {
+  margin: auto;
+  max-width: 990px;
+  min-width: 768px;
+}
+.icon_holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.icon_cont {
+  display: block;
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+}
+.icon_cont:hover {
+  fill: #ed7745;
+}
+.icon_cont a {
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+  text-rendering: optimizelegibility;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.icon_cont:hover a {
+  color: #ed7745;
+}
+.explore_icon_img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 7px;
+}
+.category-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 7px;
+}
 
 /*  Media Querry for Tablet  */
 @media screen and (max-width: 900px) and (min-width: 451px) {
@@ -607,4 +679,10 @@ body {
   body {
     background-color: blue;
   }
+}
+#test_div {
+  height: 1000px;
+  border: 3px solid red;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  fill: #ed7745;
 }

@@ -1,3 +1,41 @@
+// Top Divs Position Fix Script
+
+let box1 = document.querySelector("#topmost_div");
+let box2 = document.querySelector("#Product_drop_down_cont");
+
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > 150) {
+    box1.style.position = "fixed";
+    box2.style.position = "fixed";
+    box2.style.top = "42px";
+  } else {
+    box1.style.position = "relative";
+    box2.style.position = "relative";
+    box2.style.top = "auto";
+  }
+});
+
+// ********************************
+
+// Category Drop Down Fix
+
+let drop_down_title = document.querySelectorAll(".product_title");
+let drop_down_box = document.querySelectorAll(".drop_down_products");
+
+drop_down_box.forEach(function (item, ind) {
+  item.addEventListener("mouseover", function () {
+    drop_down_title[ind].style.color = "#ed7745";
+    drop_down_title[ind].borderBottom = "2px solid #ed7745";
+    drop_down_title[ind].position = "relative";
+  });
+
+  item.addEventListener("mouseout", function () {
+    drop_down_title[ind].style.color = "#000000";
+    drop_down_title[ind].position = "static";
+  });
+});
+// ***********************
+
 // Tooltip Script
 var tooltip_1 = document.createElement("div");
 tooltip_1.className = "tooltip";
