@@ -180,10 +180,8 @@
               </svg>
             </a>
             <div class="dropdown-menu">
-              <p onclick="window.location.href=`login.html`" id="login_btn">
-                Login
-              </p>
-              <p id="signup_btn">Sign Up</p>
+              <p id="login_btn" onclick="showPopup()">Login</p>
+              <p id="signup_btn" onclick="show_signup_Popup()">Sign Up</p>
             </div>
           </div>
 
@@ -252,6 +250,124 @@
 
         <!--  -->
       </div>
+    </div>
+
+    <!-- Actual LogIn Box PopUp -->
+    <div class="popups_login_signup" id="login_popup" onclick="hidePopup()">
+      <!--  -->
+      <div class="popup-content">
+        <img
+          src="Images\HomePage_Imgs\login_signup_popup_imgs\signup_login_popup_img.jpg"
+          alt=""
+        />
+        <form class="popup_forms" id="login_form">
+          <p onclick="disappear_clearforms()" class="login_form_close">Close</p>
+          <h2 class="form_head">SIGN UP FOR SALE UPDATES</h2>
+          <h3 class="form_next_head">Login to explore great designs</h3>
+          <h4 class="form_common_text log_ct1">LOGIN WITH YOUR EMAIL ID</h4>
+          <input
+            class="form_email"
+            type="email"
+            id="login_email"
+            name="login_email"
+            placeholder="Email Address"
+          />
+          <input
+            class="form_pass"
+            type="password"
+            id="login_password"
+            name="login_password"
+            placeholder="Password"
+          />
+          <button class="form_submit_btns" id="login_submit" type="submit">
+            Log In
+          </button>
+          <p class="form_hrefs">
+            Don't have an account?
+            <span
+              onclick="hidePopup(); show_signup_Popup() "
+              id="login_to_signup"
+              >Sign-up</span
+            >
+          </p>
+          <h4 class="form_common_text log_ct2">SOCIAL SIGN-IN</h4>
+          <div class="login_popup_social_div">
+            <div class="fb_div" id="facebook_div">
+              <i class="fa-brands fa-facebook-f fb_social"></i>
+              <p>Connect</p>
+              <i class="fa-solid fa-angle-right prev_social"></i>
+            </div>
+            <div class="google_div" id="google_div">
+              <i class="fa-brands fa-google google_social"></i>
+              <p>Connect</p>
+              <i class="fa-solid fa-angle-right prev_social"></i>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--  -->
+    </div>
+
+    <!-- Actual SignUp Box PopUp -->
+    <div
+      class="popups_login_signup"
+      id="signup_popup"
+      onclick="hide_signup_Popup()"
+    >
+      <!--  -->
+      <div class="popup-content">
+        <img
+          src="Images\HomePage_Imgs\login_signup_popup_imgs\signup_login_popup_img.jpg"
+          alt=""
+        />
+        <form class="popup_forms" id="signup_form">
+          <p onclick="disappear_clearforms()" class="login_form_close">Close</p>
+          <h2 class="form_head">SIGN UP FOR SALE UPDATES</h2>
+          <h3 class="form_next_head">
+            Get ideas, inspirations & offers in your inbox
+          </h3>
+          <h4 class="form_common_text log_ct1">BE THE FIRST TO KNOW.</h4>
+          <input
+            class="form_email"
+            type="email"
+            id="signup_email"
+            name="signup_email"
+            placeholder="Email Address"
+          />
+          <input
+            class="form_pass"
+            type="password"
+            id="signup_password"
+            name="signup_password"
+            placeholder="Password"
+          />
+          <button class="form_submit_btns" id="signup_submit" type="submit">
+            Sign Up
+          </button>
+          <p class="form_hrefs">
+            Have an account?
+            <span
+              onclick="hide_signup_Popup(); showPopup();"
+              id="signup_to_login"
+              >Log-in</span
+            >
+          </p>
+          <h4 class="form_common_text log_ct2">SOCIAL SIGN-IN</h4>
+          <div class="login_popup_social_div">
+            <div class="fb_div" id="facebook_div">
+              <i class="fa-brands fa-facebook-f fb_social"></i>
+              <p>Connect</p>
+              <i class="fa-solid fa-angle-right prev_social"></i>
+            </div>
+            <div class="google_div" id="google_div">
+              <i class="fa-brands fa-google google_social"></i>
+              <p>Connect</p>
+              <i class="fa-solid fa-angle-right prev_social"></i>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--  -->
     </div>
 
     <!-- Category Box with Drop Down Functionality -->
@@ -1481,6 +1597,14 @@
       </div>
       <h2>© 2012-2023 Heaven Gallery</h2>
       <!--  -->
+    </div>
+
+    <!-- Floating Icons -->
+    <div class="floating-icons">
+      <a href="#" class="icon1"><i class="fa-solid fa-video"></i></a>
+      <a href="#" class="icon2"
+        ><i class="fa-sharp fa-solid fa-comment-lines"></i
+      ></a>
     </div>
 
     <!--  -->
