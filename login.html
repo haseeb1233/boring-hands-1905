@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	
+    <title>Document</title> 
+
     <style>
           body
     {
 	    margin:0px;
-	    background-color:orange;
+    background-color: transparent; 
+	 /* background-color:orange; */
 
 	    background-image:url(image/background.jpg);
 	    color:#f9fcf5;
@@ -34,7 +37,7 @@
     /* css code for textbox */
     #main .tb{height:28px;
          width:230px;
-          border:1px solid #f26724; 
+          border:4px solid #f26724; 
           color:#fd7838; 
           font-weight:bold;
            border-left:5px solid #f7f7f7; 
@@ -68,19 +71,87 @@
           border:1px solid #f1f1f1;
     -webkit-transition: 1s; -moz-transition: 1s; transition: 1s; }
 
-    @media all and (min-width: 100px) and (max-width: 600px) {
-      .btn2{
-        position: relative;
-        top: 25px;
-        left: -114px;
-      }
+    @media all and (min-width: 100px) and (max-width: 999px) {
+     
       #res{
         position: relative;
         top: -17px;
         left: 40px;
       }
+	   #Table{
+		background-color: #ffd166;
+		border-radius: 10px;
+		padding: 20px;
+		width: 80%;
+		height: 300px;
+		margin: auto;
+        animation-name: sample;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        /* animation-delay: 0.5s; */
+        animation-direction: alternate;
+	  } 
+      @keyframes sample{
+
+from{background-color: lightpink;
+    border-radius: 0px;
+}
+to{background-color:lightblue;
+
+border-radius: 80px;}
+
+}
+
+
+	  .btn2{
+	position: relative;
+	top: -7px;;
+	left: 39px;
+	  }
+	  .aa{
+		
+		/* background-color: rosybrown; */
+		width: 40%;
+		margin: auto;
+		margin-bottom: 10px;
+		padding-bottom: 20px;
+	}
 
       }
+	  @media all and (min-width: 1000px) and (max-width: 3000px) {
+		#front{
+		background-color: #ffd166;
+		width: 50%;
+        /* height:600px; */
+		margin: auto;
+        filter: blur();
+        animation-name: sample;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        /* animation-delay: 0.5s; */
+        animation-direction: alternate;
+		
+
+	  }
+      @keyframes sample{
+
+        from{background-color: lightpink;
+            border-radius: 0px;
+        }
+        to{background-color:lightblue;
+        
+        border-radius: 80px;}
+        
+      }
+
+   
+	  }
+
+	  .a{
+	color: black;
+	  }
+
+
     </style>
 </head>
 <body>
@@ -91,34 +162,36 @@
   <head>
   <title>Welcome To Registration Form</title>
   </head>
-
+  <!-- #ffd166 -->
+  <button id="bt"> login</button>
 	<body>
+		<div id="front" style="display:none">
 	<!-- Main div code -->
 	<div id="main">
 	<div class="h-tag">
-	<h2>Create Your Account</h2>
+	<h2 class="a aa">Create Your Account</h2>
 	</div>
 	<!-- create account div -->
 	<div class="login">
-	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<table cellspacing="2" align="center" cellpadding="8" border="0" id="Table">
 	<tr>
-	<td align="right">Enter Name :</td>
+	<td align="right" class="a">Enter Name :</td>
 	<td><input type="text" placeholder="Enter user here" id="t1" class="tb" /></td>
 	</tr>
 	<tr>
-	<td align="right">Enter Email ID :</td>
+	<td align="right" class="a">Enter Email ID :</td>
 	<td><input type="text" placeholder="Enter Email ID here" id="t2" class="tb" /></td>
 	</tr>
 	<tr>
-	<td align="right">Enter Username :</td>
+	<td align="right" class="a">Enter Username :</td>
 	<td><input type="text" placeholder="Enter Username here" id="t3" class="tb" /></td>
 	</tr>
 	<tr>
-	<td align="right">Enter Password :</td>
+	<td align="right" class="a">Enter Password :</td>
 	<td><input type="password" placeholder="Enter Password here" id="t4" class="tb" /></td>
 	</tr>
 	<tr>
-	<td align="right">Enter Confirm Password :</td>
+	<td align="right" class="a">Enter Confirm Password :</td>
 	<td><input type="password" placeholder="Enter Password here" id="t5" class="tb" /></td>
 	</tr>
 	<tr>
@@ -132,6 +205,10 @@
 	<!-- create account box ending here.. -->
 	</div>
 	<!-- Main div ending here... -->
+</div>
+<div id="output">
+
+</div>
 	</body>
 	</html>
     <script>
@@ -202,10 +279,18 @@
 		{				                            
              
             console.log(t1)
+			
+    localStorage.setItem("name", name);
+    localStorage.setItem("email", email);
+    localStorage.setItem("username", uname);
+    localStorage.setItem("pass", pwd);
+    localStorage.setItem("currentpass", cpwd);
+
             
             alert('Thank You for Login & You are Redirecting to Website');
 			   // Redirecting to other page or webste code. 
-			   window.location = "https://www.urbanladder.com/"; 
+			 //  window.location = "https://www.urbanladder.com/"; 
+               displayLocalStorage();
 		}
 	}
 	function clearFunc()
@@ -216,6 +301,25 @@
 		document.getElementById("t4").value="";
 		document.getElementById("t5").value="";
 	}
+
+
+    
+function displayLocalStorage() {
+  var outputDiv = document.getElementById("output");
+  var name = localStorage.getItem("name");
+  var email = localStorage.getItem("email");
+  var password = localStorage.getItem("pass");
+  var  currentpassword = localStorage.getItem("currentpass");
+  let 
+
+//   outputDiv.innerHTML = "<p>Name: " + name + "</p><p>Email: " + email + "</p><p>Password: " + password + "</p>";
+}
+
+bt.addEventListener("click",()=>{
+    let front=document.getElementById("front")
+    front.style.display="block"
+    
+})
 
     </script>
 
