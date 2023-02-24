@@ -1167,6 +1167,134 @@ body {
   margin-right: 5px;
 }
 
+/* FAQ's Section CSS */
+#faq_cont {
+  width: 100%;
+  color: white;
+  background: #2f4858;
+  padding: 40px 0;
+}
+#faq_parent {
+  margin: auto;
+  max-width: 990px;
+  min-width: 768px;
+  display: flex;
+  justify-content: space-between;
+}
+#left_cont {
+  margin-top: -10px;
+  width: 28%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#left_cont p {
+  color: white;
+  font-size: 18px;
+}
+#left_cont p:nth-child(1) {
+  margin-bottom: 89px;
+}
+#left_cont p:nth-child(2) {
+  margin-bottom: 38px;
+}
+#left_cont p:nth-child(3) {
+  margin-bottom: 88px;
+}
+#left_cont p:nth-child(4) {
+  margin-bottom: 38px;
+}
+#left_cont p:nth-child(5) {
+  margin-bottom: 88px;
+}
+#left_cont p:nth-child(6) {
+  margin-bottom: 42px;
+}
+#left_cont p:nth-child(7) {
+}
+#right_cont {
+  margin-top: -10px;
+  width: 72%;
+  font-size: 13px;
+  font-weight: 100;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.para_cont span {
+  margin-left: 5px;
+  margin-right: 2px;
+}
+.para_cont span:hover {
+  cursor: pointer;
+  color: #ed7745;
+}
+.para_cont p {
+  margin-top: -7px;
+}
+#para1_div {
+  margin-top: 28px;
+}
+#para2_div {
+  margin-top: 30px;
+}
+#para3_div {
+  margin-top: 30px;
+}
+#para4_div {
+  margin-top: 30px;
+}
+#para5_div {
+  margin-top: 30px;
+}
+#para6_div {
+  margin-top: 30px;
+}
+#More_faq {
+  margin-left: 0px;
+  color: #ed7745;
+}
+#More_faq:hover {
+  color: #ff5c16;
+}
+#faq_icons {
+  width: 350px;
+  display: flex;
+  margin-top: 25px;
+  align-items: center;
+  margin-left: 5px;
+  justify-content: space-between;
+}
+#faq_icons img:nth-child(1) {
+  width: 50px;
+  height: 20px;
+}
+#faq_icons img:nth-child(2) {
+  width: 25px;
+  height: 20px;
+}
+#faq_icons img:nth-child(3) {
+  width: 25px;
+  height: 20px;
+}
+#faq_icons img:nth-child(4) {
+  width: 50px;
+  height: 20px;
+}
+#faq_icons img:nth-child(5) {
+  width: 50px;
+  height: 20px;
+}
+#faq_icons img:nth-child(6) {
+  width: 50px;
+  height: 10px;
+}
+#faq_cont h2 {
+  width: 210px;
+  font-size: 16px;
+  margin: auto;
+  font-weight: lighter;
+  margin-top: 10px;
+  color: whitesmoke;
+  font-family: "Mr Eaves XL Modern", sans-serif;
+}
+
 /*  Media Querry for Tablet  */
 @media screen and (max-width: 900px) and (min-width: 451px) {
   #topmost_div {
@@ -1196,7 +1324,7 @@ body {
     background-color: blue;
   }
 }
-#test_div {
+/* #test_div {
   height: 1000px;
   border: 3px solid red;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -1204,4 +1332,4 @@ body {
   max-width: 990px;
   min-width: 768px;
   font-family: "Mr Eaves XL Modern", sans-serif;
-}
+} */
