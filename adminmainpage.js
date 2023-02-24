@@ -1,19 +1,18 @@
 
-let url="https://63f5f6d5ab76703b15b55021.mockapi.io/products"
+let url="https://himanshu-bamu.onrender.com/Products"
 let sidebarprdtbtn=document.getElementById("sidebarprdtbtn")
 let addprdtform=document.getElementById("addprdtform")
 let Addprdocutsbtn=document.getElementById("Addprdocutsbtn")
 let editprdocutsbtn=document.getElementById("editprdocutsbtn")
 let editprdtform=document.getElementById("editprdtform")
-
+let productpage =document.getElementById("products")
+// addproductbtn
 Addprdocutsbtn.addEventListener("click",() =>{
-    if(addprdtform.style.display=="block"){
-        addprdtform.style.display="none"
-    }else{
-        addprdtform.style.display="block"
-    }
-    console.log(addprdtform.style.display)
+   
+    window.open("admin/AddProduct.html")
 })
+
+// editproductbtn
 editprdocutsbtn.addEventListener("click",() =>{
     if(editprdtform.style.display=="block"){
         editprdtform.style.display="none"
@@ -76,14 +75,25 @@ function renderCard(data){
         fetch(`${url}/${e.target.dataset.id}`)
         .then(res => res.json())
         .then((data) => {
-            document.getElementById("editpriceidinput").value=data.id
-            document.getElementById("editpriceinput").value=data.price
+            editprdtform.setAttribute("data-id",data.id)
+            document.getElementById("inptimg1").value=data.image[0]
+            document.getElementById("inptimg2").value=data.image[1]
+            document.getElementById("inptimg3").value=data.image[2]
+            document.getElementById("inptimg4").value=data.image[3]
+            document.getElementById("inpttitle").value=data.title
+            document.getElementById("inptprice").value=data.price
+            document.getElementById("inptcategory").value=data.category
+            document.getElementById("inptbrand").value=data.brand
+            document.getElementById("inptsize").value=data.size
+            document.getElementById("inptmaterial").value=data.material
+            document.getElementById("inptcolor").value=data.color
+            
         })
         
        })
 
        deletebtn.setAttribute("id","delete")
-
+       deletebtn.setAttribute("data-id",`${element.id}`)
        td2.innerText=element.title
        td3.innerText=element.price
        td4.innerText=element.category
@@ -94,6 +104,18 @@ function renderCard(data){
        editbtn.innerText="EDIT"
        deletebtn.innerText="DELETE"
 
+       deletebtn.addEventListener("click",(e)=>{
+        console.log(e.target.dataset)
+          fetch(`${url}/${e.target.dataset.id}`,{
+            method:"DELETE",
+           
+          })
+          .then(res => res.json())
+          .then((data) =>{
+            console.log(data)
+          })
+
+       })
      
        
 
@@ -122,3 +144,44 @@ document.getElementById("top_search_inp").addEventListener("input", (e) => {
     })
    
   });
+
+
+//   editproductform
+
+editprdtform.addEventListener("submit",(e)=>{
+   e.preventDefault()
+    let img1=document.getElementById("inptimg1").value
+    let img2=document.getElementById("inptimg2").value
+    let img3=document.getElementById("inptimg3").value
+    let img4=document.getElementById("inptimg4").value
+    let title=document.getElementById("inpttitle").value
+    let price=document.getElementById("inptprice").value
+    let category=document.getElementById("inptcategory").value
+     let brand=document.getElementById("inptbrand").value
+    let size=document.getElementById("inptsize").value
+    let material=document.getElementById("inptmaterial").value
+    let color =document.getElementById("inptcolor").value
+    let obj={}
+    obj.image=[img1,img2,img3,img4]
+    obj.title=title
+    obj.price=price
+    obj.category=category
+    obj.brand=brand
+    obj.size=size
+    obj.material=material
+    obj.color=color
+    console.log(obj)
+    fetch(`${url}/${e.target.dataset.id}`,{
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(obj),
+      })
+      .then(res => res.json())
+      .then((data) =>{
+        alert(`Data of ${data.id} updated.`);
+        fetchCard(url)
+      })
+    })
+    
