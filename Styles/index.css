@@ -1,16 +1,13 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Top Section Css */
-
-/* Top most Div Css */
+/* Top Most Yellow Box Css */
 #topmost_div {
   box-sizing: border-box;
   color: #000000;
@@ -24,7 +21,6 @@ body {
   line-height: 1.25;
   padding: 0.1px 0;
 }
-
 #topmost_div p {
   font-family: "Mr Eaves XL Modern", sans-serif;
   vertical-align: baseline;
@@ -36,14 +32,14 @@ body {
   word-spacing: 0.6px;
   letter-spacing: 0.1px;
 }
-
 #topmost_div a {
   color: #e85348;
   text-decoration: none;
   font-weight: 700;
   font-family: "Mr Eaves XL Modern Bold", sans-serif;
 }
-/* Low Screen Top Most Div */
+
+/* Top Most Box for Low Screen Device Css */
 #low_sc_top_most_div {
   width: 100%;
   align-items: center;
@@ -85,7 +81,7 @@ body {
   margin-right: 25px;
 }
 
-/* Help and Track Div */
+/* Help & Track Order Icons Box Css */
 .top_divs_container {
   width: 100%;
   text-align: center;
@@ -159,7 +155,7 @@ body {
   color: #ed7745;
 }
 
-/* Logo and Search Div Css */
+/* Box Containing WebPage Logo, Search Bar, LogIN SignUp, Cart Icon Css */
 #logo_div_container {
   width: 100%;
   text-align: center;
@@ -179,8 +175,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
-/* Top Logo and Title */
+/* Logo and Title Css */
 #main_logo_title_div {
   max-width: 400px;
   min-width: 140px;
@@ -211,7 +206,6 @@ body {
   font-family: "Mr Eaves XL Modern", sans-serif;
   color: #2f4858;
 }
-
 /* Search Bar Css */
 #search_label_tag {
   position: relative;
@@ -246,8 +240,7 @@ body {
 #top_search_btn:hover {
   color: #ed7745;
 }
-
-/* Login, Cart Icons Css */
+/* Right Side Icons Css */
 #logo_div_right_div {
   max-width: 200px;
   min-width: 150px;
@@ -293,8 +286,7 @@ body {
   opacity: 0;
   transition: visibility 0s, opacity 0.3s ease-in-out;
 }
-
-/* lOG IN AND SIGN UP CSS */
+/* LogIn $ SignUp Pop-Up CSS */
 #login_signup_icon_div {
   position: relative;
 }
@@ -347,8 +339,7 @@ body {
   padding: 5px 10px;
 }
 
-/*Products Drop Down Menu CSS */
-
+/* Category Box with Drop Down Functionality CSS */
 #Product_drop_down_cont {
   width: 100%;
   text-align: center;
@@ -360,7 +351,6 @@ body {
   position: relative;
   z-index: 999;
 }
-
 #Parent_product_drop_down {
   margin: auto;
   list-style: none;
@@ -374,11 +364,9 @@ body {
 .ul_drop_down {
   position: relative;
 }
-
 .card_product {
   position: relative;
 }
-
 .product_title {
   text-decoration: none;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -389,13 +377,11 @@ body {
   padding-bottom: 12px;
   position: relative;
 }
-
 .product_title:hover {
   color: #ed7745;
   border-bottom: 2px solid #ed7745;
   position: relative;
 }
-
 .child_product_divs {
   text-align: start;
   display: block;
@@ -403,7 +389,6 @@ body {
   padding-left: 15px;
   position: relative;
 }
-
 .child_product_divs a:nth-child(1) {
   color: #2f4858;
   font-size: 15px;
@@ -579,7 +564,8 @@ body {
     transform: translateX(0);
   }
 }
-/* Explore Category Css */
+
+/* Explore Our Furniture Range Css */
 .mid_sec_heading {
   position: relative;
   margin-top: 40px;
@@ -603,7 +589,6 @@ body {
   height: 1px;
   background-color: #e85348;
 }
-/* Main Category Box Css */
 #furn_range_cont {
   width: 100%;
   margin-bottom: 120px;
@@ -651,7 +636,7 @@ body {
   margin-bottom: 7px;
 }
 
-/* Value Buys In Furniture */
+/* Value Buys In Furniture & Value Buys In Decor Css*/
 .mid_sec_card_cont_parent {
   width: 1050px;
   margin: auto;
@@ -696,7 +681,8 @@ body {
   border-bottom: 1px solid #eee;
   border-width: 1px 0;
 }
-/* Across Site Css */
+
+/* Popular Across Site Css */
 #across_site_head {
   margin-top: -1px;
   margin-bottom: 30px;
@@ -746,7 +732,7 @@ body {
   left: 13.3%;
 }
 
-/* Customer Stories */
+/* Customer Stories Css*/
 #customer_stories_head {
   margin-top: 80px;
   margin-bottom: 30px;
@@ -888,7 +874,7 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-/* Subscribe Box CSS */
+/* Subscribe Box Css */
 #subs_cont {
   text-align: center;
   width: 100%;
@@ -959,6 +945,226 @@ body {
 }
 #subs_btn:hover {
   background-color: #ff6827;
+}
+
+/* Lower Section Css*/
+#lower_cont {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: #fff;
+  padding-top: 30px;
+}
+#lower_parent {
+  max-width: 990px;
+  min-width: 768px;
+  margin: auto;
+}
+#upper_child_cont {
+  display: flex;
+  justify-content: space-between;
+}
+#upper_left {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.upper_right_card {
+  width: 50%;
+}
+.text_cont {
+  display: flex;
+  justify-content: space-between;
+}
+.text_card p {
+  cursor: pointer;
+  line-height: 25px;
+  color: #2f4858;
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  margin-bottom: -12px;
+  font-size: 13px;
+}
+.text_card p:nth-child(1) {
+  margin-top: 5px;
+}
+.text_card p:hover {
+  color: #ed7745;
+}
+#compt_text_cont {
+  width: 185px;
+}
+#upper_right {
+  display: flex;
+  justify-content: space-between;
+}
+#upper_right_card {
+  width: 50%;
+}
+#lower_parent h2 {
+  font-size: 17px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 500;
+  position: relative;
+}
+#the_comp_head::after {
+  left: 13.5%;
+  transform: translateX(-80%);
+  content: "";
+  position: absolute;
+  top: 32px;
+  bottom: 0;
+  width: 40px;
+  height: 1px;
+  background-color: #ed7745;
+}
+#more_imp_head::after {
+  left: 13.5%;
+  transform: translateX(-80%);
+  content: "";
+  position: absolute;
+  top: 32px;
+  bottom: 0;
+  width: 40px;
+  height: 1px;
+  background-color: #ed7745;
+}
+#more_imp_text_cont_1 {
+  width: 300px;
+}
+#more_imp_text_cont_2 {
+  width: 200px;
+}
+#upper_right {
+  width: 420px;
+}
+#upper_right p {
+  line-height: 25px;
+  color: #2f4858;
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  margin-bottom: -12px;
+  font-size: 13px;
+}
+#explore_more_head::after {
+  left: 20.5%;
+  transform: translateX(-80%);
+  content: "";
+  position: absolute;
+  top: 32px;
+  bottom: 0;
+  width: 40px;
+  height: 1px;
+  background-color: #ed7745;
+}
+#upper_right p:hover {
+  cursor: pointer;
+  color: #ed7745;
+}
+#address_cont {
+  width: 340px;
+}
+#address_cont p {
+  font-size: 11px;
+  margin-bottom: -18px;
+}
+#address_cont p:hover {
+  cursor: auto;
+  color: #2f4858;
+}
+#CIN {
+  margin-top: 20px;
+}
+#CIN span {
+  font-weight: 600;
+}
+#address_head::after {
+  left: 12.4%;
+  transform: translateX(-80%);
+  content: "";
+  position: absolute;
+  top: 32px;
+  bottom: 0;
+  width: 40px;
+  height: 1px;
+  background-color: #ed7745;
+}
+#lower_child_cont {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.lower_icons_cont {
+  margin-top: 18px;
+}
+#connect_with_head {
+  font-size: 17px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 500;
+  position: relative;
+}
+#connect_with_head::after {
+  left: 10%;
+  transform: translateX(-80%);
+  content: "";
+  position: absolute;
+  top: 32px;
+  bottom: 0;
+  width: 40px;
+  height: 1px;
+  background-color: #ed7745;
+}
+#download_app_head {
+  font-size: 17px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 500;
+  position: relative;
+}
+#download_app_head::after {
+  left: 8%;
+  transform: translateX(-80%);
+  content: "";
+  position: absolute;
+  top: 32px;
+  bottom: 0;
+  width: 40px;
+  height: 1px;
+  background-color: #ed7745;
+}
+.lower_icons_cont {
+  display: flex;
+  justify-content: space-between;
+}
+#connect_icons_div {
+  width: 330px;
+}
+#connect_icons_div i {
+  font-size: 21px;
+  cursor: pointer;
+  color: rgb(80, 79, 79);
+}
+#connect_icons_div i:hover {
+  color: #ed7745;
+}
+#lower_left p {
+  color: #ed7745;
+  cursor: pointer;
+  margin-top: 0;
+  font-size: 13px;
+}
+#download_div {
+  width: 420px;
+}
+#download_img_cont {
+  display: inline;
+}
+#download_img_cont img {
+  width: 130px;
+  cursor: pointer;
+  margin-top: 1px;
+}
+#app_store {
+  margin-right: 5px;
 }
 
 /*  Media Querry for Tablet  */
