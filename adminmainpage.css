@@ -141,6 +141,10 @@
 #editprdtform input{
   width: 200px;
 }
+#editorderssbtn{
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 #titlelabel{
   margin-left: 16px;
 }
