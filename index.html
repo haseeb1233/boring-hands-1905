@@ -114,10 +114,15 @@
     <!-- Low Screen device Nav Bar -->
     <div id="nav_bar_cont">
       <div class="nav_bar_left_div">
-        <button class="hamburger_menu">
-          <i class="fa-duotone fa-bars"></i>
+        <button onclick="show_category_toggle()" class="hamburger_menu">
+          <i class="fa-light fa-bars"></i>
         </button>
-        <img class="nav_bar_logo" src="Images\Logo.png" alt="" />
+        <img
+          onclick="window.location.href=`index.html`"
+          class="nav_bar_logo"
+          src="Images\Logo.png"
+          alt=""
+        />
       </div>
 
       <div class="nav_bar_right_div">
@@ -167,6 +172,61 @@
             d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
           ></path>
         </svg>
+      </div>
+    </div>
+
+    <!-- Low Device Category Toggle -->
+    <div onclick="hide_toggle_cont()" id="cate_toggle_cont">
+      <div class="cate_toggle_parent">
+        <p>Home</p>
+
+        <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+          <option value="">DEAL ZONE</option>
+        </select>
+
+        <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+          <option value="">SOFAS & RECLINERS</option>
+        </select>
+
+        <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+          <option value="">LIVING</option>
+        </select>
+
+        <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+          <option value="">BEDROOM & MATTRESSES</option>
+        </select>
+
+        <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+          <option value="">DINING</option>
+        </select>
+
+        <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+          <option value="">STORAGE</option>
+        </select>
+
+        <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+          <option value="">STUDY</option>
+        </select>
+
+        <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+          <option value="">LIGHTING & DECOR</option>
+        </select>
+
+        <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+          <option value="">OUTDOOR</option>
+        </select>
+
+        <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+          <option value="">INTERIORS</option>
+        </select>
+
+        <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+          <option value="">TRENDING</option>
+        </select>
+
+        <p>STORES</p>
+
+        <p>HELP</p>
       </div>
     </div>
 
@@ -868,6 +928,18 @@
         </li>
         <!--  -->
       </ul>
+    </div>
+
+    <!-- Low Device Search Div -->
+    <div id="low_search_bar_cont">
+      <!-- Search Container -->
+      <label for="" id="low_search_label_tag"
+        ><input
+          type="text"
+          placeholder="Search Heaven Gallery "
+          id="top_search_inp"
+        />
+      </label>
     </div>
 
     <!-- Animation Box -->
