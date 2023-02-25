@@ -20,6 +20,8 @@ body {
   z-index: 10000;
   line-height: 1.25;
   padding: 0.1px 0;
+  max-width: 100%;
+  min-width: 0;
 }
 #topmost_div p {
   font-family: "Mr Eaves XL Modern", sans-serif;
@@ -37,48 +39,6 @@ body {
   text-decoration: none;
   font-weight: 700;
   font-family: "Mr Eaves XL Modern Bold", sans-serif;
-}
-
-/* Top Most Box for Low Screen Device Css */
-#low_sc_top_most_div {
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  color: #fff;
-  background: #2f4858;
-  padding: 10px 20px;
-  min-height: 48px;
-  z-index: 5;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  overflow: auto;
-  font-size: 16px;
-  font-family: Mr Eaves XL Modern, sans-serif;
-  display: none;
-}
-#low_sc_top_most_div svg {
-  fill: rgb(255, 255, 255);
-  width: 130px;
-  height: 30%;
-}
-#low_sc_top_most_div h2 {
-  font-size: 1.6em;
-  font-family: Mr Eaves XL Modern, sans-serif;
-  margin: auto;
-  position: relative;
-  min-width: 400px;
-}
-#low_sc_top_most_div button {
-  border: none;
-  outline: none;
-  background: #ed7745;
-  font-size: 14px;
-  color: white;
-  border-radius: 2px;
-  padding: 7px 12px;
-  margin-right: 25px;
 }
 
 /* Help & Track Order Icons Box Css */
@@ -1568,12 +1528,78 @@ body {
   }
 }
 
-/*  Media Querry for Tablet  */
-@media screen and (max-width: 900px) and (min-width: 451px) {
+#logo_div_container,
+#popups_login_signup,
+#help_track_container,
+#Product_drop_down_cont,
+#animation_div_parent,
+.mid_sec_heading,
+#furn_range_cont,
+#value_buys_parent,
+#across_site_head,
+#customer_stories_head,
+#view_cust_stories_div #lower_cont,
+#faq_cont .floating-icons {
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* ***************** */
+/* Here Starts Css for Low Screen */
+/* Top Most Box for Low Screen Device Css */
+#low_sc_top_most_div {
+  max-width: 100%;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  background: #2f4858;
+  padding: 10px 20px;
+  height: 48px;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  font-size: 16px;
+  font-family: Mr Eaves XL Modern, sans-serif;
+  display: none;
+}
+#low_sc_top_most_div svg {
+  fill: rgb(255, 255, 255);
+  width: 120px;
+
+  height: 50%;
+}
+#low_sc_top_most_div h2 {
+  font-size: 100%;
+  font-family: Mr Eaves XL Modern, sans-serif;
+  margin: auto;
+}
+#low_sc_top_most_div button {
+  border: none;
+  outline: none;
+  background: #ed7745;
+  font-size: 14px;
+  color: white;
+  border-radius: 2px;
+  padding: 7px 12px;
+  margin-right: 25px;
+}
+
+/* Nav Bar */
+#nav_bar_cont {
+  display: none;
+}
+
+/* ********************* */
+/* Media Querry Starts from here */
+@media screen and (max-width: 768px) {
   #topmost_div {
     display: none;
   }
-
+  /* Top Most Div */
   #low_sc_top_most_div {
     display: flex;
   }
@@ -1581,28 +1607,21 @@ body {
   #low_sc_top_most_div h2 {
     min-width: 300px;
   }
-
+  /* Help and Track */
   #help_track_container {
     display: none;
   }
-
   #logo_div_container {
     display: none;
   }
-}
-
-/* Media Querry for Mobile */
-@media screen and (max-width: 450px) {
-  body {
-    background-color: blue;
+  #Product_drop_down_cont {
+    display: none;
+  }
+  /* Nav Bar Css */
+  #nav_bar_cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
   }
 }
-/* #test_div {
-  height: 1000px;
-  border: 3px solid red;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  fill: #ed7745;
-  max-width: 990px;
-  min-width: 768px;
-  font-family: "Mr Eaves XL Modern", sans-serif;
-} */

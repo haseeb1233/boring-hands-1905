@@ -194,6 +194,7 @@ cart_icon.addEventListener("mouseout", function () {
 // Script For Animation
 
 const images = [
+  `https://www.ulcdn.net/media/Slideshow/CCS-Slideshow.jpg?1677261646`,
   `https://www.ulcdn.net/media/Slideshow/Dining-3.jpg?1676877042`,
   `https://www.ulcdn.net/media/Slideshow/Shoeracks4.jpg?1676894369`,
   `https://www.ulcdn.net/media/Slideshow/UI-Feb-slideshow.jpg?1676622712`,
@@ -235,3 +236,27 @@ document.getElementById("prev_anim_btn").addEventListener("click", prevImage);
 updateImageAndDots();
 setInterval(nextImage, 5000);
 // *****************
+
+// Drop Down Category Item Script
+let selected_category = document.querySelectorAll(".head_child_product");
+
+let clicked_category =
+  JSON.parse(localStorage.getItem("selected_category")) || [];
+
+selected_category.forEach(function (item, index) {
+  item.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    let obj = {
+      category: event.target.innerText,
+      Id: index,
+    };
+
+    clicked_category.push(obj);
+
+    localStorage.setItem("selected_category", JSON.stringify(clicked_category));
+
+    // Here we can paste the link of the page we want to go
+    // window.location.href = "";
+  });
+});
