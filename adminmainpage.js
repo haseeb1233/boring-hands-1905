@@ -73,6 +73,7 @@ function renderCard(data) {
       fetch(`${url}/${e.target.dataset.id}`)
         .then((res) => res.json())
         .then((data) => {
+
           editprdtform.setAttribute("data-id", data.id);
           document.getElementById("inptimg1").value = data.image[0];
           document.getElementById("inptimg2").value = data.image[1];
@@ -110,6 +111,52 @@ function renderCard(data) {
           console.log(data);
         });
     });
+
+            editprdtform.setAttribute("data-id",data.id)
+            document.getElementById("inptimg1").value=data.image[0]
+            document.getElementById("inptimg2").value=data.image[1]
+            document.getElementById("inptimg3").value=data.image[2]
+            document.getElementById("inptimg4").value=data.image[3]
+            document.getElementById("inpttitle").value=data.title
+            document.getElementById("inptprice").value=data.price
+            document.getElementById("inptcategory").value=data.category
+            document.getElementById("inptbrand").value=data.brand
+            document.getElementById("inptsize").value=data.size
+            document.getElementById("inptmaterial").value=data.material
+            document.getElementById("inptcolor").value=data.color
+            
+        })
+        
+       })
+
+       deletebtn.setAttribute("id","delete")
+       deletebtn.setAttribute("data-id",`${element.id}`)
+       td2.innerText=element.title
+       td3.innerText=element.price
+       td4.innerText=element.category
+       td5.innerText=element.brand
+       td6.innerText=element.size
+       td7.innerText=element.material
+       td8.innerText=element.color
+       editbtn.innerText="EDIT"
+       deletebtn.innerText="DELETE"
+
+       deletebtn.addEventListener("click",(e)=>{
+        console.log(e.target.dataset)
+          fetch(`${url}/${e.target.dataset.id}`,{
+            method:"DELETE",
+           
+          })
+          .then(res => res.json())
+          .then((data) =>{
+            renderCard(data)
+          })
+
+       })
+     
+       
+
+
 
     tr.append(td1, td2, td3, td4, td5, td6, td7, td8, editprdt);
     tabledata.append(tr);

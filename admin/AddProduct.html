@@ -249,17 +249,14 @@
       ) {
         msgAlert.innerText="Processing"
         let product={};
-       product.name=myForm.name.value 
+       product.title=myForm.name.value 
        product.price=myForm.price.value 
        product.color=myForm.color.value 
-       product.img1=myForm.img1.value 
-       product.img2=myForm.img2.value 
-       product.img3=myForm.img3.value 
-       product.img4=myForm.img4.value 
+       product.image=[myForm.img1.value,myForm.img2.value,myForm.img3.value,myForm.img4.value]  
        product.category=myForm.Category.value 
        product.brand=myForm.brand.value 
        product.size=myForm.size.value 
-      
+       product.material=myForm.material.value
         fetch(scriptURL, { 
             method: 'POST',
             headers:{
