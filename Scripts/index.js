@@ -17,6 +17,8 @@ window.addEventListener("scroll", function () {
 
 // Actual LogIn Box PopUp
 function showPopup() {
+  var signup_popup = document.getElementById("signup_popup");
+  signup_popup.style.display = "none";
   var popup = document.getElementById("login_popup");
   var category_drop_down = document.getElementById("Product_drop_down_cont");
   var top_yellow_box = document.getElementById("topmost_div");
@@ -37,6 +39,8 @@ function hidePopup() {
 
 // Actual SignUp Box PopUp
 function show_signup_Popup() {
+  var popup = document.getElementById("login_popup");
+  popup.style.display = "none";
   var signup_popup = document.getElementById("signup_popup");
   var category_drop_down = document.getElementById("Product_drop_down_cont");
   var top_yellow_box = document.getElementById("topmost_div");
