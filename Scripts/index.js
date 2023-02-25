@@ -260,3 +260,18 @@ selected_category.forEach(function (item, index) {
     // window.location.href = "";
   });
 });
+
+// Script for Category Toggle Clicked on Hamburger Menu
+function show_category_toggle() {
+  var toggle_cate = document.getElementById("cate_toggle_cont");
+  toggle_cate.style.display = "block";
+}
+
+// // Script for Hiding Category Toggle
+function hide_toggle_cont() {
+  var toggle_cont = document.getElementById("cate_toggle_cont");
+
+  if (event.target == toggle_cont) {
+    toggle_cont.style.display = "none";
+  }
+}
