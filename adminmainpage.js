@@ -112,7 +112,7 @@ function renderCard(data){
           })
           .then(res => res.json())
           .then((data) =>{
-            console.log(data)
+            renderCard(data)
           })
 
        })
