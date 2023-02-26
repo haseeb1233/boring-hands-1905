@@ -1,81 +1,1055 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - Urban Ladder</title>
-    <style>
-       body{
-        width: 80%;
-        margin: auto;
-       }
-       .nav-bar{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        text-align: center;
-       
-       }
-   
-       
-      .help-track-order{
-        display: flex;
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Urban Ladder</title>
+  <!-- Title Icon -->
+  <link rel="icon" id="logo" href="../Images/Logo.png" type="image/x-icon" />
+  <style>
+    body {
+      width: 80%;
+      margin: auto;
+    }
+
+    .nav-bar {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      text-align: center;
+
+    }
+
+
+
+    .help-track-order>a {
+      text-decoration: none;
+      margin-top: 0;
+      font-size: 15px;
+    }
+
+    .help-track-order>a:hover {
+      color: rgb(255, 217, 1);
+    }
+
+    .help-track-order>a>span>svg {
+      margin-top: 5px;
+    }
+
+    .logo-and-heading {
+      width: 33%;
+      text-align: center;
+    }
+
+    .logo-and-heading>p:nth-child(2) {
+      margin-top: -7px;
+      font-size: 32px;
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+
+    .logo-and-heading>p:nth-child(3) {
+      margin-top: -12px;
+      font-size: 17px;
+      color: gray;
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+
+    .logo-and-heading>img {
+      border-radius: 50%;
+      width: 40%;
+    }
+
+
+    .secure-payment-div>div>img {
+      width: 8%;
+    }
+
+    .secure-payment-div {
+      margin-top: 5px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+
+    .secure-payment-div>div:nth-child(2) {
+      display: flex;
+      gap: 5px;
+      margin: 20px 50px 0px 0px;
+    }
+
+    .secure-payment-div>div>hr {
+      height: 15px;
+      margin-top: 15px;
+    }
+
+    .cart-address-payment {
+      margin: auto;
+      width: 60%;
+      display: flex;
+      justify-content: space-around;
+      font-size: 30px;
+    }
+
+    .cart-address-payment>p:nth-child(1) {
+      color: goldenrod;
+    }
+
+    .cart-address-payment>p:nth-child(2) {
+      color: goldenrod;
+    }
+
+    .pin-checkout-button {
+      width: 100%;
+      display: flex;
+      margin: auto;
+      justify-content: space-around;
+    }
+
+    .pincode-input {
+      display: flex;
+      border: 1px solid black;
+      background-color: rgb(242, 222, 171);
+      height: 35px;
+
+    }
+
+    .pincode-input>img {
+      width: 20%;
+      padding: 2px;
+    }
+
+    .pincode-input>input {
+      border: none;
+      padding: 5px;
+      font-size: 15px;
+      background-color: rgb(242, 222, 171);
+      /* text-align: center; */
+    }
+
+    .pincode-input>button {
+      border: none;
+      color: white;
+      background-color: rgb(198, 131, 6);
+      /* padding: 4px; */
+      font-size: 15px;
+      margin-left: -10px;
+      border: 1px solid black;
+      cursor: pointer;
+      padding: 5px 20px;
+    }
+
+    .shoping-checkout {
+      display: flex;
+      gap: 15px;
+      font-family: sans-serif;
+      cursor: pointer;
+    }
+
+    .shoping-checkout>p {
+      color: red;
+      font-size: 15px;
+      margin-top: 20px;
+
+    }
+
+    .shoping-checkout>button {
+      padding: 0px 30px;
+      height: 30px;
+      margin-top: 10px;
+      background-color: rgb(218, 82, 32);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      height: 35px;
+    }
+
+    .shoping-checkout>button:hover {
+      padding: 0px 30px;
+      height: 30px;
+      margin-top: 10px;
+      background-color: white;
+      color: rgb(218, 82, 32);
+      border: 2px solid red;
+      cursor: pointer;
+      border-radius: 5px;
+      height: 35px;
+      font-weight: bold;
+    }
+
+    .shoping-checkout1>button:hover {
+      padding: 0px 30px;
+      height: 30px;
+      margin-top: 10px;
+      background-color: white;
+      color: rgb(218, 82, 32);
+      border: 2px solid red;
+      cursor: pointer;
+      border-radius: 5px;
+      height: 35px;
+      font-weight: bold;
+    }
+
+    .shoping-checkout1 {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+      gap: 15px;
+      font-family: sans-serif;
+      cursor: pointer;
+    }
+
+    .shoping-checkout1>p {
+      color: red;
+      font-size: 15px;
+      margin-top: 20px;
+
+    }
+
+    .shoping-checkout1>button {
+      padding: 0px 30px;
+      height: 30px;
+      margin-top: 10px;
+      background-color: rgb(218, 82, 32);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      height: 35px;
+    }
+
+    .discount {
+      text-align: center;
+      background-color: rgb(213, 247, 236);
+      line-height: 10px;
+      width: 98%;
+      margin: auto;
+      padding: 10px;
+      margin-top: 20px;
+      font-family: sans-serif;
+    }
+
+    .p-d-q-t {
+      display: flex;
+      justify-content: space-between;
+
+      margin: -15px 20px;
+    }
+
+    .p-d-q-t>div:nth-child(2) {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    .cart-product-detail {
+      display: flex;
+      font-family: sans-serif;
+    }
+
+
+    .product-image {
+      width: 100%;
+      height: 70%;
+      margin-top: 10%;
+
+    }
+
+    .product-desc {
+      /* margin-left: -0px; */
+      width: 40%;
+
+
+
+    }
+
+    .product-desc>p {
+      color: gray;
+      line-height: 5px;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+
+    .product-desc>div {
+      display: flex;
+      font-size: 12px;
+      margin-top: 40px;
+    }
+
+    .product-desc>div>img {
+      width: 10%;
+      height: 10%;
+    }
+
+    .cart-product-detail {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cart-product-detail>div:nth-child(1) {
+      width: 50%;
+      display: flex;
+      gap: 10px;
+
+    }
+
+    #append-data>button {
+      margin-left: 65%;
+      margin-bottom: 40px;
+      color: white;
+      padding: 5px 10px;
+      font-size: 16px;
+      border: none;
+      font-weight: 400;
+      background-color: #ed7745;
+    }
+
+    #append-data>button:hover {
+      border: 2px solid #ed7745;
+      background-color: white;
+      color: #ff5c16;
+    }
+
+    .cart-product-detail>div:nth-child(1)>div:nth-child(1) {
+      width: 40%;
+
+
+    }
+
+    .cart-product-detail>div:nth-child(2) {
+
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      margin: 2% 40px;
+    }
+
+    .card-image-div {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: auto;
+    }
+
+    .card-image-div>div:nth-child(1) {
+      width: 50%;
+      display: flex;
+      gap: 1rem;
+
+
+    }
+
+    .card-image-div>div>img {
+      width: 10%;
+      height: 30px;
+
+    }
+
+    .right-side-total>div:nth-child(1) {
+      display: block;
+    }
+
+    .right-side-total>div:nth-child(2)>div {
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    .right-side-total>div:nth-child(2) {
+      margin-top: 20px;
+      font-family: sans-serif;
+      font-size: 16px;
+      padding: 10px;
+      line-height: -0;
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+    }
+
+    .right-side-total {
+      width: 30%;
+      justify-content: right;
+      text-align: center;
+    }
+
+    .voucher-apply {
+      display: flex;
+    }
+
+    .voucher-apply>button {
+      padding: 5px 15px;
+      font-size: 15px;
+      background-color: orangered;
+      color: white;
+      border: none;
+      margin-left: -5px;
+
+
+
+    }
+
+    .voucher-apply>input {
+      text-align: center;
+      font-size: 15px;
+      padding: 4px 15px;
+      background-color: rgb(253, 215, 166);
+      border: 1px solid rgb(116, 115, 115);
+
+
+    }
+
+
+    /* FAQ's Section CSS */
+    #faq_cont {
+      width: 130%;
+      margin: auto;
+      color: white;
+      background: #2f4858;
+      margin-left: -12.5%;
+      margin-top: 20px;
+      padding: 40px 0;
+    }
+
+    #faq_parent {
+      margin: auto;
+      max-width: 990px;
+      min-width: 768px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #left_cont {
+      margin-top: -10px;
+      width: 28%;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+
+    #left_cont p {
+      color: white;
+      font-size: 18px;
+    }
+
+    #left_cont p:nth-child(1) {
+      margin-bottom: 89px;
+    }
+
+    #left_cont p:nth-child(2) {
+      margin-bottom: 38px;
+    }
+
+    #left_cont p:nth-child(3) {
+      margin-bottom: 88px;
+    }
+
+    #left_cont p:nth-child(4) {
+      margin-bottom: 38px;
+    }
+
+    #left_cont p:nth-child(5) {
+      margin-bottom: 88px;
+    }
+
+    #left_cont p:nth-child(6) {
+      margin-bottom: 42px;
+    }
+
+    #right_cont {
+      margin-top: -10px;
+      width: 72%;
+      font-size: 13px;
+      font-weight: 100;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+
+    .para_cont span {
+      margin-left: 5px;
+      margin-right: 2px;
+    }
+
+    .para_cont span:hover {
+      cursor: pointer;
+      color: #ed7745;
+    }
+
+    .para_cont p {
+      margin-top: -7px;
+    }
+
+    #para1_div {
+      margin-top: 28px;
+    }
+
+    #para2_div {
+      margin-top: 30px;
+    }
+
+    #para3_div {
+      margin-top: 30px;
+    }
+
+    #para4_div {
+      margin-top: 30px;
+    }
+
+    #para5_div {
+      margin-top: 30px;
+    }
+
+    #para6_div {
+      margin-top: 30px;
+    }
+
+    #More_faq {
+      margin-left: 0px;
+      color: #ed7745;
+    }
+
+    #More_faq:hover {
+      color: #ff5c16;
+    }
+
+    #faq_icons {
+      width: 350px;
+      display: flex;
+      margin-top: 25px;
+      align-items: center;
+      margin-left: 5px;
+      justify-content: space-between;
+    }
+
+    #faq_icons img:nth-child(1) {
+      width: 50px;
+      height: 20px;
+    }
+
+    #faq_icons img:nth-child(2) {
+      width: 25px;
+      height: 20px;
+    }
+
+    #faq_icons img:nth-child(3) {
+      width: 25px;
+      height: 20px;
+    }
+
+    #faq_icons img:nth-child(4) {
+      width: 50px;
+      height: 20px;
+    }
+
+    #faq_icons img:nth-child(5) {
+      width: 50px;
+      height: 20px;
+    }
+
+    #faq_icons img:nth-child(6) {
+      width: 50px;
+      height: 10px;
+    }
+
+    #faq_cont h2 {
+      width: 210px;
+      font-size: 16px;
+      margin: auto;
+      font-weight: lighter;
+      margin-top: 10px;
+      color: whitesmoke;
+      font-family: "Mr Eaves XL Modern", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-checkout-div-container">
+    <div class="nav-bar">
+      <div class="help-track-order">
+        <a href=""><span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              class="call-us-icon help_track_icon">
+              <path fill-rule="evenodd"
+                d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z">
+              </path>
+            </svg> </span>Help</a>
+
+        <a href="">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              class="email-icon help_track_icon">
+              <path fill-rule="evenodd"
+                d="M6.54 6.8C5.7 6.8 5.02 6.15 5 5.32c-.02-.83.63-1.5 1.46-1.54.83-.03 1.52.62 1.54 1.45v.04c0 .8-.65 1.47-1.46 1.5zm0-4C5.16 2.76 4.02 3.86 4 5.24c-.02 1.4 1.08 2.53 2.46 2.56C7.84 7.8 8.98 6.7 9 5.32V5.3c0-1.37-1.1-2.5-2.46-2.5zM23 21h-1.4c-.3-1.35-1.6-2.22-2.96-1.95-.98.2-1.75.97-1.95 1.95h-1.43v-8.55h2.3c3.07.1 5.5 2.66 5.42 5.74V21zm-2.42.68c-.02.1-.04.22-.08.32-.2.6-.77 1-1.4 1-.64 0-1.2-.4-1.42-1-.04-.1-.07-.2-.08-.3v-.2c0-.17.03-.34.1-.5.26-.78 1.1-1.2 1.88-.93.44.15.78.5.93.93.08.16.1.33.1.5.05.07.04.13.04.18h-.05zM14.24 21H7c-.26-1.35-1.57-2.23-2.92-1.97-1 .2-1.78.97-1.97 1.97H1v-9.88h2.8l.13.18.23.3c.62.78 1.3 1.53 2 2.23.04.05.1.08.16.1.1.05.25.05.36 0 .06-.02.12-.05.17-.1.72-.7 1.4-1.44 2-2.23.1-.1.18-.2.26-.33l.14-.15h5V21zM6 21.5c.03.17.03.34 0 .5-.22.6-.78 1-1.4 1-.64 0-1.2-.4-1.4-1-.1-.17-.17-.35-.2-.55.02-.16.06-.3.14-.45.2-.6.77-1 1.4-1 .66-.02 1.25.4 1.46 1 .05.15.08.3.1.45l-.1.05zM2.2 6.13c-.32-1.2-.06-2.46.7-3.43C3.77 1.6 5.12.95 6.53 1c1.43-.04 2.8.6 3.66 1.74.73.96 1 2.22.7 3.4-.54 1.52-1.3 2.94-2.3 4.2l-.14.16-.13.17-.23.33c-.48.63-1 1.23-1.57 1.8-.35-.37-1-1-1.6-1.8l-.2-.28c-.07-.07-.13-.14-.18-.22l-.1-.16c-1-1.25-1.77-2.68-2.25-4.2zm15.37 5.32H15.3v-.83c0-.27-.23-.5-.5-.5H10c.8-1.13 1.44-2.38 1.87-3.7.4-1.5.07-3.07-.87-4.28C9.94.76 8.28-.04 6.53 0 4.8-.05 3.16.73 2.1 2.1 1.16 3.33.84 4.92 1.23 6.4c.42 1.34 1.04 2.6 1.84 3.72H.5c-.28 0-.5.23-.5.5V21.5c0 .28.22.5.5.5h1.6c.27 1.36 1.6 2.23 2.95 1.96C6.03 23.76 6.8 23 7 22h9.7c.27 1.36 1.58 2.23 2.94 1.96.98-.2 1.75-.97 1.95-1.96h1.9c.27 0 .5-.22.5-.5v-3.3c.07-3.64-2.8-6.65-6.44-6.75zm-2.3 1V21v-8.55z">
+              </path>
+            </svg> </span>Track Order</a>
+      </div>
+      <div class="logo-and-heading">
+        <img src="../Images/Logo.png" alt="">
+        <p>Heavens Gallery</p>
+        <p>L e t ' s &nbsp &nbsp C r e a t e</p>
+      </div>
+      <div class="secure-payment-div">
+        <div>
+          <img src="https://img.icons8.com/ios/1x/region-code.png" alt="">
+          <a>Secure Payment</a>
+        </div>
+        <div>
+          <p>Wishlist</p>
+          <hr>
+          <p>Track Order</p>
+          <hr>
+          <p>My Account</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-address-payment">
+      <p>1.Cart </p>
+      <p>&#8594</p>
+      <p>2. Address</p>
+      <p>&#8594</p>
+      <p>3.Payment </p>
+    </div>
+    <div class="pin-checkout-button">
+
+      <div class="pincode-input">
+        <img src="https://img.icons8.com/ios/1x/region-code.png" alt="">
+        <input type="number" placeholder="Enter Pincode" value="" id="pincode-input">
+        <button id="pincode-check">Check</button>
+      </div>
+      <div class="shoping-checkout">
+        <p onclick="window.location.href='../index.html'">CONTINUE SHOPPING</p>
+        <button class="checkout-btn">CHECKOUT</button>
+      </div>
+    </div>
+
+    <div class="discount">
+      <p>We have some exiting surprise for you use our cupon code and get Extra 5% off apply code :
+        <strong>MasaiSchool</strong></p>
+      <p>No Cost EMIs on Credit Cards ! <a href="">Know More</a></p>
+    </div>
+
+    <hr>
+    <div class="p-d-q-t">
+      <p>PRODUCTS</p>
+      <div>
+        <p>DELIVERY DATE</p>
+        <p>QUANTITY</p>
+        <p>TOTAL</p>
+      </div>
+    </div>
+    <hr>
+    <div id="append-data">
+      <div class="cart-product-detail">
+        <div>
+          <div>
+            <img class="product-image"
+              src="https://www.ulcdn.net/images/products/173720/original/FNSF54TRBK3_-_main_1.jpg?1521367891" alt="">
+          </div>
+          <div class="product-desc">
+            <h3 id="product-name">Parymel queen size bed with walnut finish</h3>
+            <p id="color">Color : black</p>
+            <p id="size">size : 3 seater</p>
+            <p id="material">material : Leather</p>
+            <div>
+              <img src="https://cdn-icons-png.flaticon.com/128/9725/9725185.png" alt="">
+              <p>You can cancel your order before shipped, and a full refund will be initiated</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div id="">
+            delivery date
+          </div>
+          <div> quantity</div>
+          <div>price</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-image-div">
+      <div>
+        <img
+          src="https://www.ulcdn.net/assets/spree/frontend/paymentMode/VISA-verified-gray-071bc1fbd8561b3bf044e3ac3037eca5.png"
+          alt=""><img
+          src="https://www.ulcdn.net/assets/spree/frontend/paymentMode/mastercard-gray-ada104aa6eb18055113b049ae1994f11.png"
+          alt=""><img
+          src="https://www.ulcdn.net/assets/spree/frontend/paymentMode/norton-secured-gray-9525120b9e171ac18de6eb9dd6143106.png"
+          alt=""><img
+          src="https://www.ulcdn.net/assets/spree/frontend/paymentMode/amex-safekey-gray-66917d54dd2e4f3ce9ac62fd8f6a9e6e.png"
+          alt=""><img
+          src="https://www.ulcdn.net/assets/spree/frontend/paymentMode/rupay-gray-d3669859faa810034818f90a821ccbf2.png"
+          alt=""><img
+          src="https://www.ulcdn.net/assets/spree/frontend/paymentMode/Bhim-upi-gray-52fb6904f152e87013c3da2352997f90.png"
+          alt="">
+      </div>
+      <div class="right-side-total">
+        <div class="voucher-apply">
+          <input id="dis-input" placeholder="Enter Cupon/Voucher" type="text">
+          <button id="dis-button">Apply</button>
+        </div>
+        <div>
+          <div>
+            <p>Cart Total</p>
+            <p id="cart-total"></p>
+          </div>
+          <hr>
+          <div>
+            <p>Discount</p>
+            <p id="discount">0</p>
+          </div>
+          <hr>
+          <div>
+            <p>Delivery Charges</p>
+            <p style="color: green;"><strong>Free</strong></p>
+          </div>
+          <hr>
+          <div>
+            <p>Total Payable Ammount</p>
+            <p id="pay-ammount"></p>
+          </div>
+          <hr>
+          <div>
+            <p><strong>Booking Ammount (Pay Now)</strong></p>
+            <p><strong id="final-price"></strong></p>
+          </div>
+        </div>
+        <div class="shoping-checkout1">
+          <p onclick="window.location.href='../index.html'">CONTINUE SHOPPING</p>
+          <button class="checkout-btn">CHECKOUT</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div id="faq_cont">
+    <!--  -->
+    <div id="faq_parent">
+      <div id="left_cont">
+        <p>Polpular Furniture Categories:</p>
+        <p>Shop Furniture By Room:</p>
+        <p>Popular Decor Categories:</p>
+        <p>Popular Mattress Categories:</p>
+        <p>Popular Tableware Categories:</p>
+        <p>Delivering in:</p>
+        <p>We Accept:</p>
+      </div>
+      <!--  -->
+      <div id="right_cont">
+        <!--  -->
+        <div id="para1_div" class="para_cont">
+          <p>
+            <span>Bed</span>, <span>Beds By Design</span>,
+            <span>Sofa Set</span>, <span>Wooden Sofa</span>,
+            <span>Sofas By Design</span>, <span>Sofa Cum Bed</span>,
+            <span>Double Bed</span>, <span>Single Bed</span>,
+            <span>Queen Size</span>
+          </p>
+
+          <p>
+            <span>Bed</span>, <span>King Size Bed</span>, <span>Chair</span>,
+            <span>Wooden Table</span>, <span>Study Table</span>,
+            <span>Study Chair</span>, <span>Wardrobe </span>,
+            <span>Chest of Drawers</span>, <span>Futon</span>,
+            <span>Loveseat</span>,
+          </p>
+
+          <p>
+            <span>Dining Table Set</span>, <span>Dining Chair </span>,
+            <span>Bookshelves</span>, <span>Shoe Racks</span>,
+            <span>TV Units</span>, <span>Recliners</span>,
+            <span>Furniture</span>, <span>Office Furniture</span>,
+            <span>Office Table</span>,
+          </p>
+
+          <p>
+            <span>Office Chair</span>, <span>2 Seater Sofa</span>,
+            <span>TV Cupboard</span>, <span>TV Showcase</span>,
+            <span>TV Stand</span>, <span>Center Table</span>
+          </p>
+        </div>
+
+        <div id="para2_div" class="para_cont">
+          <p>
+            <span>Living Room</span>, <span>Furniture</span>,
+            <span>Bedroom Furniture</span>,
+            <span>Dining Room Furniture</span>,
+            <span>Study Room Furniture</span>, <span>Bar Furniture </span>,
+            <span>Balcony </span>
+          </p>
+          <p><span>Furniture</span></p>
+        </div>
+
+        <div id="para3_div" class="para_cont">
+          <p>
+            <span>Home Decor</span>, <span>Carpets</span>,
+            <span>Mirrors</span>, <span>Study Lamps</span>,
+            <span>Table Lamps</span>, <span>Bed Sheets</span>,
+            <span>Floor Lamps</span>, <span>Wall Lights</span>,
+            <span>Lighting </span>, <span>Ceiling</span>
+          </p>
+
+          <p>
+            <span> Lights</span>, <span>Quilt </span>,
+            <span>Wall Decor </span>, <span>Wall Mirror</span>,
+            <span>Table Decor</span>, <span>Table Cover</span>,
+            <span>Table Napkin</span>, <span>Table Mat</span>,
+            <span>Cushion Cover</span>,
+            <span>Table </span>
+          </p>
+
+          <p>
+            <span>Runners</span>, <span>Home Furnishing</span>,
+            <span>Wall Art</span>,<span>Showpiece</span>,
+            <span>Artificial Plants</span>,<span>Photo Frame</span>,
+            <span>Candle Stand</span>,<span>Clocks </span>,
+            <span>Wall Clocks</span>,
+          </p>
+
+          <p>
+            <span>Festive Lights</span>, <span>Candles</span>,<span>Bath Mat</span>,
+            <span>Vases</span>,<span>Flower</span>, <span>Vase</span>,<span>Bathroom Accessories</span>, <span>Bathroom
+              Mirrors</span>,
+          </p>
+        </div>
+
+        <div id="para4_div" class="para_cont">
+          <p>
+            <span>Mattresses</span>, <span>Single Bed Mattresses</span>,
+            <span>Double Bed Mattresses</span>,
+            <span>King Size Mattresses</span>,
+            <span>Queen Size Mattresses</span>, <span>Foam Mattress</span>,
+          </p>
+
+          <p>
+            <span>Coir Mattress</span>, <span>Latex Mattress </span>,<span>Spring Mattress</span>, <span>Orthopaedic
+              Mattress</span>
+          </p>
+        </div>
+
+        <div id="para5_div" class="para_cont">
+          <p>
+            <span>Shot Glass </span>, <span>Dinner Plates </span>,<span>Baking Tray</span>, <span>Forks
+            </span>,<span>Dinner Set</span>,
+            <span>Tumbler</span>,<span>Drinking Glass</span>,
+            <span>Cutlery Holder </span>, <span>Tissue Holder</span>,
+          </p>
+
+          <p>
+            <span>Bottle Opener</span>,<span>Spoons</span>,
+            <span>Whiskey Glass</span>,<span>Kitchen Organizers</span>,<span>Hot Pot</span>, <span>Chef's
+              Cap</span>,<span>Glass Jars</span>,<span>Kitchen Gloves </span>, <span>Kitchen </span>
+          </p>
+
+          <p>
+            <span>Storage Containers</span>,<span>Bar Tools</span>,
+            <span>Masala Box</span>,
+            <span>Glass Bottles</span>,<span>Coasters</span>,
+            <span>Cutlery Set</span>,<span>Knives Set</span>,<span>Oven Gloves</span>, <span>Aprons</span>,
+          </p>
+
+          <p>
+            <span>Cake Stand</span>,<span>Fruit Basket</span>,
+            <span>Spice Box</span>, <span>Beer Glass</span>,<span>Bowls </span>, <span>Oil Dispenser</span>,
+            <span>Housewarming Gifts</span>
+          </p>
+        </div>
+
+        <div id="para6_div" class="para_cont">
+          <p>
+            <span>Aanamalai</span>,
+            <span>Ahmedabad</span>,<span>Alappuzha</span>,
+            <span>Aler</span>,<span>Alibaug</span>, <span>Alleppey</span>,
+            <span>Ambala</span>, <span>Ambarnath</span>,<span>Amdapur</span>,
+            <span>Amtala</span>,<span>Anand</span>,
+          </p>
+
+          <p>
+            <span>Anikorai</span>, <span>Arakkonam</span>,
+            <span>Arimpur</span>,<span>Arutla</span>,
+            <span>Asansol </span>,<span>Athikunna</span>,
+            <span>Athipalli</span>, <span>Aurangabad</span>,
+            <span>Avanshi</span><span id="More_faq">... More</span>
+          </p>
+        </div>
+
+        <div id="faq_icons">
+          <img src="https://www.ulcdn.net/assets/spree/frontend/weAccept/visa-color-5f4f48813f58a82a66072e04c747c44b.png" alt="" />
+          <img src="https://www.ulcdn.net/assets/spree/frontend/weAccept/mastercard-color-56ec2a5b27b9711c0181ee0d6fc92e1a.png" alt="" />
+          <img src="https://www.ulcdn.net/assets/spree/frontend/weAccept/maestro-color-aa7cd4624473b4ec8a4c383b5ba664b2.png" alt="" />
+          <img src="https://www.ulcdn.net/assets/spree/frontend/weAccept/amex-color-dc865c5f0bb4a5996a075b5ffb2dd90c.png" alt="" />
+          <img src="https://www.ulcdn.net/assets/spree/frontend/weAccept/rupay-color-cdb33c865776f5c161fddb1790f1c61e.png" alt="" />
+          <img src="https://www.ulcdn.net/assets/spree/frontend/weAccept/bhim-upi-color-91b36440594effe77b31512bc758f779.png" alt="" />
+        </div>
+        <!--  -->
+      </div>
+    </div>
+    <h2>© 2012-2023 Heaven Gallery</h2>
+    <!--  -->
+  </div>
+</body>
+
+</html>
+<script src="checkout.js"></script>
+<script>
+
+  let arr1 = JSON.parse(localStorage.getItem("cart")) || [];
+
+  displayData(arr1)
+
+  function displayData(arr1) {
+    let sum = 0;
+    let data1 = JSON.parse(localStorage.getItem("checkout-data")) || [];
+    document.getElementById("append-data").innerHTML = ""
+    arr1.forEach((element, index) => {
+
+
+      let mainDiv = document.createElement("div");
+      mainDiv.setAttribute("class", "cart-product-detail")
+
+      let fristDiv = document.createElement("div");
+
+      let imgDiv = document.createElement("div")
+      let image = document.createElement("img");
+      image.setAttribute("src", element.image[0])
+      image.setAttribute("class", "product-image")
+      imgDiv.append(image)
+
+
+      let prodDescDiv = document.createElement("div");
+      prodDescDiv.setAttribute("class", "product-desc")
+      let h3 = document.createElement("h3");
+      h3.innerText = `${element.title} `;
+
+      let p2 = document.createElement("p");
+      p2.innerText = `Color : ${element.color}`;
+
+      let p3 = document.createElement("p");
+      p3.innerText = `Size : ${element.size}`;
+      // console.log(element.size)
+
+      let p4 = document.createElement("p");
+      p4.innerText = `Material : ${element.material}`;
+
+      let div2 = document.createElement("div");
+      let image2 = document.createElement("img");
+      image2.setAttribute("src", "https://cdn-icons-png.flaticon.com/128/9725/9725185.png");
+      let p1 = document.createElement("p");
+      p1.innerText = "You can cancel your order before shipped, and a full refund will be initiated";
+      div2.append(image2, p1)
+
+
+      prodDescDiv.append(h3, p2, p3, p4, div2);
+
+
+      fristDiv.append(imgDiv, prodDescDiv)
+
+      let secondDiv = document.createElement("div");
+      let date = document.createElement("div");
+      date.innerText = "By ${date}"
+
+      let qty = document.createElement("div");
+      qty.innerHTML = `
+         <select id="quantity">
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6</option>
+               <option value="7">7</option>
+               <option value="8">8</option>
+               <option value="9">9</option>
+               <option value="10">10</option>
+         </select>
+      `
+      let obj = {
+        id: element.id,
+        title: element.title,
+        quantity: 1,
+        imag: element.image[0],
+        price:element.price,
+        color:element.color,
+        material:element.material,
+        size:element.size,
+      }
+      qty.addEventListener("change", (e) => {
+        let x = Number(e.target.value)
+        obj.quantity=Number(e.target.value);
        
         
-      }
-      .help-track-order>div{
-        display: flex;
-        gap: 7px;
+        price.innerText = `₹  ${element.price * x}`;
+        sum += element.price * (x - 1)
+        document.getElementById("cart-total").innerText = `₹  ${sum}`;
+        document.getElementById("final-price").innerText = `₹ ${sum-discounted(sum)}`;
+        document.getElementById("pay-ammount").innerText = `₹ ${sum-discounted(sum)}`;
+        console.log(obj)
+        obj.price=element.price*x;
 
-      }
-      .help-track-order>div>img{
-        width: 25%;
-        height: 20%;
-        margin-top: 10px;
-      }
-  
-      .main-logo-div>img{
-        width: 20%;
-        border-radius: 50%;
-      }
-      .secure-payment{
-        display: flex;
-      }
-      .secure-payment>img{
-        width: 20%;
-        height: 20%;
-        margin-top: 10px;
-      }
-    </style>
-</head>
-<body>
-    <div class="nav-bar">
-       <div class="help-track-order">
-         <div>
-            <img  src="https://cdn-icons-png.flaticon.com/128/471/471664.png" alt="">
-            <p>Help</p>
-         </div>
-         <div>
-            <img src="https://img.icons8.com/pastel-glyph/1x/track-order.png" alt="">
-            <p>Track Order</p>
-         </div>
-       </div>
+      })
 
-       <div class="main-logo-div">
-          <img src="IMG-20230221-WA0007.jpg" alt="">
-          <h1>Heavens Gellary</h1>
-       </div>
+      let price = document.createElement("div");
+      price.innerText = `₹  ${element.price}`;
+      sum += element.price;
+      secondDiv.append(date, qty, price)
+      let remove = document.createElement("button");
+      remove.innerText = "Remove Product"
+      remove.addEventListener("click", () => {
+        let data = arr1.filter((el, i) => {
+          if (index == i) {
+            return false;
+          } else {
+            return true;
+          }
+        })
+        localStorage.setItem("cart", JSON.stringify(data))
+        displayData(data)
+     
+      })
+      // let thirdDiv = document.createElement("div");
+      // thirdDiv.append(secondDiv,remove)
+      mainDiv.append(fristDiv, secondDiv)
+      let line = document.createElement("hr")
+      document.getElementById("append-data").append(mainDiv, remove, line)
 
-       <div>
-        <div class="secure-payment">
-            <img src="https://cdn-icons-png.flaticon.com/128/2889/2889676.png" alt="">
-            <p>Secure Payment</p>
-          </div>
-       </div>
-    </div>
-</body>
-</html>
-<script>
-   
+
+      data1.push(obj)
+    })
+    
+ document.querySelectorAll(".checkout-btn").forEach((elem)=>{
+       elem.addEventListener("click",()=>{
+        localStorage.setItem("checkout-data",JSON.stringify(data1));
+        window.location.href="address.html"
+       })
+ })
+   function discounted(sum){
+    return Math.floor(sum * 0.05);
+   }
+
+    document.getElementById("cart-total").innerText = `₹ ${sum}`;
+    document.getElementById("final-price").innerText = `₹ ${sum}`;
+    document.getElementById("pay-ammount").innerText = `₹ ${sum}`;
+
+    document.getElementById("dis-button").addEventListener("click", () => {
+      let discount = document.getElementById("dis-input");
+      if (discount.value == "MasaiSchool1000" && document.getElementById("discount").innerText == "0") {
+        alert(`Congratulation You Got A Discount Of ${Math.floor(sum*0.05)}`)
+        document.getElementById("discount").innerText = `- ₹ ${discounted(sum)}`;
+        document.getElementById("final-price").innerText = `₹ ${sum-discounted(sum)}`;
+        document.getElementById("pay-ammount").innerText = `₹ ${sum-discounted(sum)}`;
+      } else if (document.getElementById("discount").innerText != "0") {
+        alert("Voucher/Cupon Already Applied")
+      } else {
+        alert("Invalid Voucher/Cupon")
+      }
+    })
+
+  }
 </script>
