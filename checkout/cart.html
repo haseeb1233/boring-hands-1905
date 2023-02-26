@@ -905,8 +905,8 @@
   displayData(arr1)
 
   function displayData(arr1) {
+    let data1=[];
     let sum = 0;
-    let data1 = JSON.parse(localStorage.getItem("checkout-data")) || [];
     document.getElementById("append-data").innerHTML = ""
     arr1.forEach((element, index) => {
 
@@ -1027,6 +1027,7 @@
        elem.addEventListener("click",()=>{
         localStorage.setItem("checkout-data",JSON.stringify(data1));
         window.location.href="address.html"
+        window.localStorage.removeItem('cart');
        })
  })
    function discounted(sum){
@@ -1039,7 +1040,7 @@
 
     document.getElementById("dis-button").addEventListener("click", () => {
       let discount = document.getElementById("dis-input");
-      if (discount.value == "MasaiSchool1000" && document.getElementById("discount").innerText == "0") {
+      if (discount.value == "MasaiSchool" && document.getElementById("discount").innerText == "0") {
         alert(`Congratulation You Got A Discount Of ${Math.floor(sum*0.05)}`)
         document.getElementById("discount").innerText = `- ₹ ${discounted(sum)}`;
         document.getElementById("final-price").innerText = `₹ ${sum-discounted(sum)}`;

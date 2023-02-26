@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Checkout - Urban Ladder</title>
+  <!-- Title Icon -->
+  <link rel="icon" id="logo" href="../Images/Logo.png" type="image/x-icon" />
   <style>
     body {
       width: 80%;
@@ -688,8 +690,9 @@
     let sum = 0;
     mainDiv.innerHTML = "";
     localData.forEach((element, index) => {
+
       sum += element.price;
-      console.log(element)
+  
       let div1 = document.createElement("div")
       let div2 = document.createElement("div")
 
@@ -722,6 +725,7 @@
    let [extra, realP] = price1.trim().split(" ").map(Number);
    localStorage.setItem("purchace",realP)
     window.location.href = "credit-card.html"
+    window.localStorage.removeItem('checkout-data');
 
   })
 
