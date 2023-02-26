@@ -4,237 +4,989 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="titled"></title>
-    <link rel="stylesheet" href="./styles/nav.css">
-    <link rel="stylesheet" href="./styles/landing.css">
-    <!-- <link rel="stylesheet" href="./styles/scrolebar.css"> -->
-    <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+    <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            font-family: 'Avenir Next Regular','Helvetica Neue',Helvetica,Arial,sans-serif;
-            letter-spacing: .5px;
-        }
-        #body{
-            margin-top: 90px;
-        }
-        #bodycate{
-            display: flex;
-            justify-content: center;
-            padding: 10px 0px;
-            font-size: 12px;
-        }
-        #bodycate>span{
-            padding: 0px 20px;
-            color: gray;
-            font-size: 12px;
-        }
-        #upperTitle{
-            color: gray;
-            font-size: 12px;
-        }
-        #bodypagemain{
-            display: flex;
-        }
-        #bodypagemain>div:nth-child(1){
-            width: 20%;
-        }
-        #bodypagemain>div:nth-child(1)>div{
-         width: 60px;
-         height: 100px;
-         margin-left: auto;
-         padding-right: 10px;
-        }
-        #bodypagemain>div:nth-child(1)>div>img{
-            border-radius: 10px;
-        }
-        #bodypagemain>div:nth-child(2){
-            width: 498px;
-            overflow: hidden;
-
-        }
-        #bodypagemain>div:nth-child(3){
-            width: 375px;
-            padding: 50px;
-        }
-        #curimageimg{
-            height: 627px;
-            overflow: hidden;
-        }
-        #currimage{
-            border: 0.5px solid rgb(203, 203, 203);
-            border-radius: 10px;
-            transition: all .5s;
-        }
-        #currimage:hover{
-            transform: scale(1.2);
-        }
-        #shareIcon{
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            background-color: rgb(224, 224, 224);
-            padding: 10px;
-            border-radius: 50%;
-            margin-left: 31%;
-            margin-top: 7px;
-        }
-        #title{
-            text-align: center;
-            font-size: 20px;
-            font-family: inherit;
-        }
-        #priceprice{
-        margin-top: 30px;
-        text-align: center;
-        }
-        #priceprice>p:nth-child(1){
-            color: red;
-        }
-        #colorincircle{
-            width: 40px;
-            height: 40px;
-            background-color: rgb(255, 255, 255);
-            border-radius: 50%;
-            margin: auto;
-            margin-top: 20px;
-        }
-        #circleColor{
-            text-align: center;
-            margin-top: 8px;
-        }
-        #sizescale{
-            display: flex;
-            justify-content: space-around;
-            font-size: 15px;
-        }
-        #sizescale>img{
-            width: 30px;
-            margin-top: -5px;
-        }
-        #sizeValue,#AddtoBag{
-            width: 60%;
-            margin-left: 50px;
-            height: 50px;
-            font-size: 20px;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        #AddtoBag{
-            background-color: rgba(128, 128, 128, 0.444);
-            margin-top: 10px;
-            font-size: 15px;
-        }
-        #div3bootom{
-            margin-top: 100px;
-        }
-        #div3bootom>div,#div3bootom>h3,#div3bootom>p{
-            margin-bottom: 15px;
-        }
-        #div3bootom>h3{
-            font-size: 15px;
-        }
-        #div3bootom>div{
-            display: flex;
-        }
-        #div3bootom>div>img{
-            width: 30px;
-            height: 30px;
-        }
-        #imgs>img{
-            width: 30px;
-            margin-right: 30px;
-        }
-        #main2data{
-            margin-top: 50px;
-        }
-        #main2data>h3,#main2data>p,#main2data>div{
-            margin-bottom: 20px;
-        }
-        #recentsliders{
-            overflow: hidden;
-            height: 370px;
-
-        }
-        #recentdata{
-            border: 1px solid grey;
-            /* width: 100%; */
-            display: flex;
-            height: 345px;
-            overflow: scroll;
-        }
-        #recentsliders>h3{
-            margin-left: 20px;
-        }
-        #recentdata>div>h3{
-         font-size: 10px;
-        }
-        #recentdata>div>img{
-            width: 180px;
-            height: 250px;
-            padding: 10px;
-        }
-        #recentdata>div>p{
-            text-align: center;
-            margin-top: 20px;
-            font-weight: bolder;
-            color: red;
-       }
-
-
-
-
-
-
-
-
-
-
-* {
-    scrollbar-width: thin;
-    scrollbar-color: #3BD787 #E4EBE6;
+  #bodycate{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 50%;
+    height: 70px;
+    align-items: center;
   }
-  *::-webkit-scrollbar {
-    width: 5px;
-    width: 5px;
-  }
-  *::-webkit-scrollbar-track {
-    border-radius: 20px;
-    background-color: #E4EBE6;
-  }
-  
-  *::-webkit-scrollbar-track:hover {
-    background-color: #c21e1e00;
-  }
-  
-  *::-webkit-scrollbar-track:active {
-    background-color: #958b8b;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background-color: #958b8b;
-  }
-  
-  *::-webkit-scrollbar-thumb:hover {
-    background-color: #a30000;
-  }
-  
-  *::-webkit-scrollbar-thumb:active {
-    background-color: #9f0038;
-  }
-  
     </style>
+    <link rel="stylesheet" href="/Styles/index.css">
 </head>
 <body>
-   
+    <div id="topmost_div">
+        <p>
+          Spring into Sale | Up to 60% off | Now Live |
+          <span><a href="">Click to Shop!</a></span>
+        </p>
+      </div>
+  
+      <!-- Top Most Box for Low Screen Device  -->
+      <div id="low_sc_top_most_div">
+        <svg
+          id="star_ratings"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 161.16 26.06"
+        >
+          <path
+            d="M94 11.78l-5.23 5L90 23.72a1.93 1.93 0 0 1-.77 1.93 2 2 0 0 1-2.1.16l-6.5-3.3-6.5 3.3a2 2 0 0 1-2.13-.1 2 2 0 0 1-.8-2l1.22-7-5.22-4.82a1.94 1.94 0 0 1-.5-2 2 2 0 0 1 1.58-1.32l7.27-1 3.23-6.34a2 2 0 0 1 1.8-1 2 2 0 0 1 1.8 1l3.22 6.3 7.3 1a2 2 0 0 1 1.6 1.24 2 2 0 0 1-.5 2.06zM27.9 9.72a2 2 0 0 0-1.6-1.35l-7.27-1L15.78 1A2 2 0 0 0 14 0a2 2 0 0 0-1.8 1L9 7.4l-7.27 1A2 2 0 0 0 .1 9.7a2 2 0 0 0 .52 2l5.23 5-1.23 7a1.94 1.94 0 0 0 .8 2 2 2 0 0 0 1.16.36 2 2 0 0 0 .92-.22l6.5-3.3 6.5 3.3a2 2 0 0 0 2.1-.16 2 2 0 0 0 .78-1.98l-1.22-7 5.23-5a2 2 0 0 0 .5-2zm33.3 0a2 2 0 0 0-1.62-1.35l-7.26-1-3.25-6.34a2 2 0 0 0-1.78-1 2 2 0 0 0-1.8 1l-3.3 6.35-7.3 1a2 2 0 0 0-1.6 1.34 2 2 0 0 0 .5 2l5.24 5-1.23 7a1.94 1.94 0 0 0 .8 2 2 2 0 0 0 1.17.36 2 2 0 0 0 .9-.22l6.5-3.3 6.5 3.3a2 2 0 0 0 2.1-.24 2 2 0 0 0 .78-1.9l-1.23-7 5.25-5a2 2 0 0 0 .5-2zm66.57 0a2 2 0 0 0-1.6-1.35l-7.27-1L115.66 1a2 2 0 0 0-1.8-1 2 2 0 0 0-1.78 1l-3.24 6.36-7.26 1A2 2 0 0 0 100 9.72a2 2 0 0 0 .52 2l5.2 5-1.24 7a2 2 0 0 0 .82 1.94 2 2 0 0 0 1.15.36 2 2 0 0 0 .92-.22l6.5-3.3 6.5 3.3a2.06 2.06 0 0 0 2.1-.16 2 2 0 0 0 .78-1.92l-1.25-7 5.23-5a2 2 0 0 0 .54-2zm32.78 2.08l-5.24 5 1.3 7a1.94 1.94 0 0 1-.8 1.93 2.1 2.1 0 0 1-1.2.38 2.2 2.2 0 0 1-.9-.2l-6.5-3.3-6.5 3.3a2 2 0 0 1-2.05-.1 2 2 0 0 1-.8-2l1.23-7-5.2-4.94a2 2 0 0 1-.5-2 2 2 0 0 1 1.6-1.32l7.25-1 3.25-6.34a1.24 1.24 0 0 1 .2-.26 1.9 1.9 0 0 1 1.6-.77 2 2 0 0 1 1.78 1l3.23 6.34 7.26 1a2 2 0 0 1 1.6 1.37 1.94 1.94 0 0 1-.5 2.04zm-1.42-1.4l-8.26-1.15-3.6-7.1.1 18.2 7.17 3.65-1.4-8z"
+          ></path>
+        </svg>
+  
+        <h2>India's highest rated furniture app.</h2>
+  
+        <button>INSTALL</button>
+      </div>
+
+      <div class="top_divs_container" id="help_track_container">
+        <!-- Parent Container -->
+        <div class="top_most_parent_divs" id="help_track_parent">
+          <!-- Left Icons -->
+          <div id="help_track_left_div">
+            <a href=""
+              ><span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="call-us-icon help_track_icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+                  ></path>
+                </svg> </span
+              >Help</a
+            >
+  
+            <a href="">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="email-icon help_track_icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.54 6.8C5.7 6.8 5.02 6.15 5 5.32c-.02-.83.63-1.5 1.46-1.54.83-.03 1.52.62 1.54 1.45v.04c0 .8-.65 1.47-1.46 1.5zm0-4C5.16 2.76 4.02 3.86 4 5.24c-.02 1.4 1.08 2.53 2.46 2.56C7.84 7.8 8.98 6.7 9 5.32V5.3c0-1.37-1.1-2.5-2.46-2.5zM23 21h-1.4c-.3-1.35-1.6-2.22-2.96-1.95-.98.2-1.75.97-1.95 1.95h-1.43v-8.55h2.3c3.07.1 5.5 2.66 5.42 5.74V21zm-2.42.68c-.02.1-.04.22-.08.32-.2.6-.77 1-1.4 1-.64 0-1.2-.4-1.42-1-.04-.1-.07-.2-.08-.3v-.2c0-.17.03-.34.1-.5.26-.78 1.1-1.2 1.88-.93.44.15.78.5.93.93.08.16.1.33.1.5.05.07.04.13.04.18h-.05zM14.24 21H7c-.26-1.35-1.57-2.23-2.92-1.97-1 .2-1.78.97-1.97 1.97H1v-9.88h2.8l.13.18.23.3c.62.78 1.3 1.53 2 2.23.04.05.1.08.16.1.1.05.25.05.36 0 .06-.02.12-.05.17-.1.72-.7 1.4-1.44 2-2.23.1-.1.18-.2.26-.33l.14-.15h5V21zM6 21.5c.03.17.03.34 0 .5-.22.6-.78 1-1.4 1-.64 0-1.2-.4-1.4-1-.1-.17-.17-.35-.2-.55.02-.16.06-.3.14-.45.2-.6.77-1 1.4-1 .66-.02 1.25.4 1.46 1 .05.15.08.3.1.45l-.1.05zM2.2 6.13c-.32-1.2-.06-2.46.7-3.43C3.77 1.6 5.12.95 6.53 1c1.43-.04 2.8.6 3.66 1.74.73.96 1 2.22.7 3.4-.54 1.52-1.3 2.94-2.3 4.2l-.14.16-.13.17-.23.33c-.48.63-1 1.23-1.57 1.8-.35-.37-1-1-1.6-1.8l-.2-.28c-.07-.07-.13-.14-.18-.22l-.1-.16c-1-1.25-1.77-2.68-2.25-4.2zm15.37 5.32H15.3v-.83c0-.27-.23-.5-.5-.5H10c.8-1.13 1.44-2.38 1.87-3.7.4-1.5.07-3.07-.87-4.28C9.94.76 8.28-.04 6.53 0 4.8-.05 3.16.73 2.1 2.1 1.16 3.33.84 4.92 1.23 6.4c.42 1.34 1.04 2.6 1.84 3.72H.5c-.28 0-.5.23-.5.5V21.5c0 .28.22.5.5.5h1.6c.27 1.36 1.6 2.23 2.95 1.96C6.03 23.76 6.8 23 7 22h9.7c.27 1.36 1.58 2.23 2.94 1.96.98-.2 1.75-.97 1.95-1.96h1.9c.27 0 .5-.22.5-.5v-3.3c.07-3.64-2.8-6.65-6.44-6.75zm-2.3 1V21v-8.55z"
+                  ></path>
+                </svg> </span
+              >Track Order</a
+            >
+          </div>
+  
+          <!-- Right Icons -->
+          <div id="help_track_right_div">
+            <a href="">Stores</a>
+            <a href="">Bulk Orders</a>
+            <a href="">Gift Cards</a>
+            <a href="">HG Services</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Low Screen device Nav Bar -->
+      <div id="nav_bar_cont">
+        <div class="nav_bar_left_div">
+          <button onclick="show_category_toggle()" class="hamburger_menu">
+            <i class="fa-light fa-bars"></i>
+          </button>
+          <img
+            onclick="window.location.href=`index.html`"
+            class="nav_bar_logo"
+            src="Images\Logo.png"
+            alt=""
+          />
+        </div>
+  
+        <div class="nav_bar_right_div">
+          <svg
+            class="nav_bar_icons"
+            id="question_mark_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+            ></path>
+          </svg>
+  
+          <svg
+            class="nav_bar_icons"
+            id="nav_bar_heart_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z"
+            ></path>
+          </svg>
+  
+          <svg
+            class="nav_bar_icons"
+            id="nav_girl_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z"
+            ></path>
+          </svg>
+  
+          <svg
+            class="nav_bar_icons"
+            id="nav_bar_cart_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <div id="nav_bar_cont">
+        <div class="nav_bar_left_div">
+          <button onclick="show_category_toggle()" class="hamburger_menu">
+            <i class="fa-light fa-bars"></i>
+          </button>
+          <img
+            onclick="window.location.href=`index.html`"
+            class="nav_bar_logo"
+            src="Images\Logo.png"
+            alt=""
+          />
+        </div>
+  
+        <div class="nav_bar_right_div">
+          <svg
+            class="nav_bar_icons"
+            id="question_mark_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+            ></path>
+          </svg>
+  
+          <svg
+            class="nav_bar_icons"
+            id="nav_bar_heart_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z"
+            ></path>
+          </svg>
+  
+          <svg
+            class="nav_bar_icons"
+            id="nav_girl_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z"
+            ></path>
+          </svg>
+  
+          <svg
+            class="nav_bar_icons"
+            id="nav_bar_cart_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <div onclick="hide_toggle_cont()" id="cate_toggle_cont">
+        <div class="cate_toggle_parent">
+          <p>Home</p>
+  
+          <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+            <option value="">DEAL ZONE</option>
+          </select>
+  
+          <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+            <option value="">SOFAS & RECLINERS</option>
+          </select>
+  
+          <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+            <option value="">LIVING</option>
+          </select>
+  
+          <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+            <option value="">BEDROOM & MATTRESSES</option>
+          </select>
+  
+          <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+            <option value="">DINING</option>
+          </select>
+  
+          <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+            <option value="">STORAGE</option>
+          </select>
+  
+          <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+            <option value="">STUDY</option>
+          </select>
+  
+          <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+            <option value="">LIGHTING & DECOR</option>
+          </select>
+  
+          <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+            <option value="">OUTDOOR</option>
+          </select>
+  
+          <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+            <option value="">INTERIORS</option>
+          </select>
+  
+          <select name="deal_zone" class="cate_select_tag" id="deal_zone">
+            <option value="">TRENDING</option>
+          </select>
+  
+          <p>STORES</p>
+  
+          <p>HELP</p>
+        </div>
+      </div>
+
+      <div id="logo_div_container">
+        <!-- Parent Container -->
+  
+        <div id="logo_div_parent_div">
+          <!-- Logo & Name Container -->
+          <div
+            onclick="window.location.href=`index.html`"
+            id="main_logo_title_div"
+          >
+            <img src="Images\Logo.png" alt="" />
+            <div id="title_text_div">
+              <p><b>Heaven</b></p>
+              <p><b>Gallery</b></p>
+            </div>
+          </div>
+  
+          <!-- Search Container -->
+          <label for="" id="search_label_tag"
+            ><input type="text" placeholder="Search" id="top_search_inp" />
+            <i id="top_search_btn" class="fa-regular fa-magnifying-glass"></i
+          ></label>
+  
+          <!-- Right Icons Box -->
+          <div id="logo_div_right_div">
+            <!-- Truck Icon Container -->
+            <div class="search_div_icon_cont">
+              <a href="">
+                <svg
+                  id="truck_icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="search_box_icons"
+                >
+                  <rect
+                    class="tooltip_rect"
+                    id="rect_1"
+                    x="10"
+                    y="10"
+                    width="80"
+                    height="80"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.54 6.8C5.7 6.8 5.02 6.15 5 5.32c-.02-.83.63-1.5 1.46-1.54.83-.03 1.52.62 1.54 1.45v.04c0 .8-.65 1.47-1.46 1.5zm0-4C5.16 2.76 4.02 3.86 4 5.24c-.02 1.4 1.08 2.53 2.46 2.56C7.84 7.8 8.98 6.7 9 5.32V5.3c0-1.37-1.1-2.5-2.46-2.5zM23 21h-1.4c-.3-1.35-1.6-2.22-2.96-1.95-.98.2-1.75.97-1.95 1.95h-1.43v-8.55h2.3c3.07.1 5.5 2.66 5.42 5.74V21zm-2.42.68c-.02.1-.04.22-.08.32-.2.6-.77 1-1.4 1-.64 0-1.2-.4-1.42-1-.04-.1-.07-.2-.08-.3v-.2c0-.17.03-.34.1-.5.26-.78 1.1-1.2 1.88-.93.44.15.78.5.93.93.08.16.1.33.1.5.05.07.04.13.04.18h-.05zM14.24 21H7c-.26-1.35-1.57-2.23-2.92-1.97-1 .2-1.78.97-1.97 1.97H1v-9.88h2.8l.13.18.23.3c.62.78 1.3 1.53 2 2.23.04.05.1.08.16.1.1.05.25.05.36 0 .06-.02.12-.05.17-.1.72-.7 1.4-1.44 2-2.23.1-.1.18-.2.26-.33l.14-.15h5V21zM6 21.5c.03.17.03.34 0 .5-.22.6-.78 1-1.4 1-.64 0-1.2-.4-1.4-1-.1-.17-.17-.35-.2-.55.02-.16.06-.3.14-.45.2-.6.77-1 1.4-1 .66-.02 1.25.4 1.46 1 .05.15.08.3.1.45l-.1.05zM2.2 6.13c-.32-1.2-.06-2.46.7-3.43C3.77 1.6 5.12.95 6.53 1c1.43-.04 2.8.6 3.66 1.74.73.96 1 2.22.7 3.4-.54 1.52-1.3 2.94-2.3 4.2l-.14.16-.13.17-.23.33c-.48.63-1 1.23-1.57 1.8-.35-.37-1-1-1.6-1.8l-.2-.28c-.07-.07-.13-.14-.18-.22l-.1-.16c-1-1.25-1.77-2.68-2.25-4.2zm15.37 5.32H15.3v-.83c0-.27-.23-.5-.5-.5H10c.8-1.13 1.44-2.38 1.87-3.7.4-1.5.07-3.07-.87-4.28C9.94.76 8.28-.04 6.53 0 4.8-.05 3.16.73 2.1 2.1 1.16 3.33.84 4.92 1.23 6.4c.42 1.34 1.04 2.6 1.84 3.72H.5c-.28 0-.5.23-.5.5V21.5c0 .28.22.5.5.5h1.6c.27 1.36 1.6 2.23 2.95 1.96C6.03 23.76 6.8 23 7 22h9.7c.27 1.36 1.58 2.23 2.94 1.96.98-.2 1.75-.97 1.95-1.96h1.9c.27 0 .5-.22.5-.5v-3.3c.07-3.64-2.8-6.65-6.44-6.75zm-2.3 1V21v-8.55z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+  
+            <!-- LogIn SignUp Icon Container -->
+            <div id="login_signup_icon_div" class="search_div_icon_cont">
+              <a href="">
+                <svg
+                  id="login_signup_icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.07 21c.17-1.35.958-4.98 4.325-6.41.07.06.14.11.22.16.03.03.06.06.1.08.11.09.23.17.35.24.1.06.21.13.32.18.238.15.498.27.758.38.12.05.25.1.38.15.79.28 1.628.43 2.487.43.63 0 1.26-.08 1.858-.24.11-.02.23-.06.34-.1.13-.03.26-.08.39-.13.18-.06.36-.14.53-.22.17-.08.33-.16.488-.26.13-.06.25-.14.37-.22.07-.04.13-.08.19-.12.12-.08.24-.17.35-.26.03-.02.05-.04.08-.06 3.566 1.5 4.235 5.07 4.365 6.4H3.07zM5.735 9.11C5.735 5.74 8.553 3 12.01 3s6.274 2.74 6.274 6.11c0 1.18-.35 2.33-1.02 3.32-.25.38-.53.72-.858 1.03l-.22.19c-1.15 1-2.628 1.56-4.176 1.56-1.558 0-3.047-.56-4.196-1.57-.41-.35-.77-.76-1.07-1.21-.658-.99-1.008-2.14-1.008-3.32zm11.66 4.76c.258-.27.488-.57.698-.88.78-1.16 1.19-2.5 1.19-3.88 0-3.92-3.268-7.11-7.274-7.11-4.017 0-7.274 3.19-7.274 7.11 0 1.38.41 2.72 1.18 3.88.21.31.44.6.688.87-4.365 2.13-4.575 7.39-4.585 7.62L2 22h20v-.5c0-.06-.05-5.42-4.605-7.63z"
+                  ></path>
+                </svg>
+              </a>
+              <div class="dropdown-menu">
+                <p id="login_btn" onclick="showPopup()">Login</p>
+                <p id="signup_btn" onclick="show_signup_Popup()">Sign Up</p>
+              </div>
+            </div>
+  
+            <!-- Wishlist Icon Container -->
+            <div class="search_div_icon_cont">
+              <a href="">
+                <svg
+                  id="wishlist_icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="search_box_icons"
+                >
+                  <rect
+                    class="tooltip_rect"
+                    id="rect_2"
+                    x="10"
+                    y="10"
+                    width="80"
+                    height="80"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.93 8.55c0-1.4 1.1-2.53 2.44-2.53.27 0 .5-.22.5-.5 0-.27-.23-.5-.5-.5-1.9 0-3.42 1.6-3.42 3.53 0 .28.22.5.5.5.26 0 .48-.22.48-.5zm8.25-3.57zM7.38 4c-1.18 0-2.28.47-3.1 1.33-1.72 1.78-1.72 4.67 0 6.45l7.72 8 7.73-8c1.7-1.78 1.7-4.67 0-6.45C18.9 4.47 17.8 4 16.63 4c-1.17 0-2.26.47-3.1 1.33-.5.5-.84 1.1-1.06 1.8-.07.2-.25.34-.47.34-.2 0-.4-.14-.47-.34-.22-.7-.58-1.3-1.07-1.8C9.64 4.47 8.54 4 7.36 4zM12 21c-.13 0-.26-.05-.35-.15l-8.08-8.37c-2.1-2.17-2.1-5.7 0-7.85C4.57 3.58 5.93 3 7.37 3c1.43 0 2.78.58 3.8 1.63.32.34.6.7.83 1.1.23-.4.5-.76.83-1.1C13.85 3.58 15.2 3 16.63 3c1.44 0 2.8.58 3.8 1.63 2.1 2.16 2.1 5.68 0 7.85l-8.08 8.37c-.1.1-.22.15-.35.15z"
+                  ></path>
+                </svg>
+                <span class="cart-count">0</span>
+              </a>
+            </div>
+  
+            <!-- Cart Icon Container -->
+            <div class="search_div_icon_cont">
+              <a href="">
+                <svg
+                  id="cart_icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="search_box_icons"
+                >
+                  <rect
+                    class="tooltip_rect"
+                    id="rect_3"
+                    x="10"
+                    y="10"
+                    width="80"
+                    height="80"
+                  />
+                  <g fill-rule="evenodd">
+                    <path
+                      d="M19.45 13.77H7.18l-.83-7.99H20.9l-1.45 7.99zM9.58 18.8c.57 0 1.04.49 1.04 1.1 0 .61-.47 1.1-1.04 1.1-.57 0-1.03-.49-1.03-1.1 0-.61.46-1.1 1.03-1.1zm8.21 2.2c-.57 0-1.03-.49-1.03-1.1 0-.61.46-1.1 1.03-1.1.57 0 1.04.49 1.04 1.1 0 .61-.47 1.1-1.04 1.1zm4.09-16.04c-.09-.11-.23-.18-.38-.18H6.25l-.24-2.33c-.03-.26-.24-.45-.5-.45H2.5c-.28 0-.5.22-.5.5s.22.5.5.5h2.56l.24 2.28v.06l.93 8.99.39 3.78c.03.26.24.45.5.45h.9c-.29.36-.47.83-.47 1.34 0 1.16.91 2.1 2.03 2.1 1.12 0 2.04-.94 2.04-2.1 0-.52-.19-1-.5-1.36l5.15-.02c-.32.37-.51.85-.51 1.38 0 1.16.91 2.1 2.03 2.1 1.12 0 2.04-.94 2.04-2.1 0-.54-.2-1.03-.53-1.4h.05c.27 0 .5-.23.49-.5 0-.28-.22-.5-.5-.5l-11.77.06-.29-2.79h12.59c.25 0 .45-.17.49-.41l1.63-8.99c.03-.14-.01-.29-.11-.41z"
+                    ></path>
+                    <path
+                      d="M8.317 11.78c-.25 0-.468-.19-.496-.445l-.462-4.24c-.03-.274.168-.52.442-.55.264-.03.52.166.55.44l.466 4.24c.03.275-.168.522-.442.552-.02.002-.037.003-.056.003"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="cart-count">0</span>
+              </a>
+            </div>
+  
+            <!--  -->
+          </div>
+  
+          <!--  -->
+        </div>
+      </div>
+      <div class="popups_login_signup" id="login_popup" onclick="hidePopup()">
+        <!--  -->
+        <div class="popup-content">
+          <img
+            src="Images\HomePage_Imgs\login_signup_popup_imgs\signup_login_popup_img.jpg"
+            alt=""
+          />
+          <form class="popup_forms" id="login_form">
+            <p onclick="disappear_clearforms()" class="login_form_close">Close</p>
+            <h2 class="form_head">SIGN UP FOR SALE UPDATES</h2>
+            <h3 class="form_next_head">Login to explore great designs</h3>
+            <h4 class="form_common_text log_ct1">LOGIN WITH YOUR EMAIL ID</h4>
+            <input
+              class="form_email"
+              type="email"
+              id="login_email"
+              name="login_email"
+              placeholder="Email Address"
+            />
+            <input
+              class="form_pass"
+              type="password"
+              id="login_password"
+              name="login_password"
+              placeholder="Password"
+            />
+            <button class="form_submit_btns" id="login_submit" type="submit">
+              Log In
+            </button>
+            <p class="form_hrefs">
+              Don't have an account?
+              <span
+                onclick="hidePopup(); show_signup_Popup() "
+                id="login_to_signup"
+                >Sign-up</span
+              >
+            </p>
+            <h4 class="form_common_text log_ct2">SOCIAL SIGN-IN</h4>
+            <div class="login_popup_social_div">
+              <div class="fb_div" id="facebook_div">
+                <i class="fa-brands fa-facebook-f fb_social"></i>
+                <p>Connect</p>
+                <i class="fa-solid fa-angle-right prev_social"></i>
+              </div>
+              <div class="google_div" id="google_div">
+                <i class="fa-brands fa-google google_social"></i>
+                <p>Connect</p>
+                <i class="fa-solid fa-angle-right prev_social"></i>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--  -->
+      </div>
+  
+      <!-- Actual SignUp Box PopUp -->
+      <div
+        class="popups_login_signup"
+        id="signup_popup"
+        onclick="hide_signup_Popup()"
+      >
+        <!--  -->
+        <div class="popup-content">
+          <img
+            src="Images\HomePage_Imgs\login_signup_popup_imgs\signup_login_popup_img.jpg"
+            alt=""
+          />
+          <form class="popup_forms" id="signup_form">
+            <p onclick="disappear_clearforms()" class="login_form_close">Close</p>
+            <h2 class="form_head">SIGN UP FOR SALE UPDATES</h2>
+            <h3 class="form_next_head">
+              Get ideas, inspirations & offers in your inbox
+            </h3>
+            <h4 class="form_common_text log_ct1">BE THE FIRST TO KNOW.</h4>
+            <input
+              class="form_email"
+              type="email"
+              id="signup_email"
+              name="signup_email"
+              placeholder="Email Address"
+            />
+            <input
+              class="form_pass"
+              type="password"
+              id="signup_password"
+              name="signup_password"
+              placeholder="Password"
+            />
+            <button class="form_submit_btns" id="signup_submit" type="submit">
+              Sign Up
+            </button>
+            <p class="form_hrefs">
+              Have an account?
+              <span
+                onclick="hide_signup_Popup(); showPopup();"
+                id="signup_to_login"
+                >Log-in</span
+              >
+            </p>
+            <h4 class="form_common_text log_ct2">SOCIAL SIGN-IN</h4>
+            <div class="login_popup_social_div">
+              <div class="fb_div" id="facebook_div">
+                <i class="fa-brands fa-facebook-f fb_social"></i>
+                <p>Connect</p>
+                <i class="fa-solid fa-angle-right prev_social"></i>
+              </div>
+              <div class="google_div" id="google_div">
+                <i class="fa-brands fa-google google_social"></i>
+                <p>Connect</p>
+                <i class="fa-solid fa-angle-right prev_social"></i>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--  -->
+      </div>
+  
+      <!-- Category Box with Drop Down Functionality -->
+      <div id="Product_drop_down_cont">
+        <ul id="Parent_product_drop_down">
+          <!--  -->
+          <li class="card_product">
+            <a class="product_title" href="">Deal Zone</a>
+            <ul class="ul_drop_down">
+              <div id="deal_zone" class="drop_down_products">
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Top Deals</a>
+                  <a href="">Daily Deals</a>
+                  <a href="">Weekday Special Deals</a>
+                  <a href="">Stunning Deals</a>
+                  <a href="">Clearance Sale</a>
+                  <a href="">All Products on Sale</a>
+                  <a href="">All Decor on Sale</a>
+                </div>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="card_product">
+            <a class="product_title" href="">Sofas & Recliners</a>
+            <ul class="ul_drop_down">
+              <div id="Sofas_Recliners" class="drop_down_products">
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Sofas</a>
+                  <a href="">All Sofas</a>
+                  <a href="">Fabric Sofa Sets</a>
+                  <a href="">Wooden Sofa Sets</a>
+                  <a href="">Leather Sofa Sets</a>
+                  <a href="">Leatherrette Sofa Sets</a>
+                  <a href="">L Shaped Sofa Sets</a>
+                  <a href="">Diwans</a>
+                  <a href="">Loveseats</a>
+                </div>
+  
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Recliners</a>
+                  <a href="">All Recliners</a>
+                  <a href="">1 Seater Recliners</a>
+                  <a href="">2 Seater Recliners</a>
+                  <a href="">3 Seater Recliners</a>
+                  <a href="">Fabric Recliners</a>
+                  <a href="">Leatherrette Recliners</a>
+                  <a href="">Motorized Recliners</a>
+                  <a href="">Manual Recliners</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Sofa Bed</a>
+                  <a href="">All Sofa Beds</a>
+                  <a href="">Fabric Sofa Beds</a>
+                  <a href="">Wooden Sofa Beds</a>
+                  <a href="">Futons</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Seating & Chairs</a>
+                  <a href="">Lounge Chairs</a>
+                  <a href="">Accent Chairs</a>
+                  <a href="">Ottomans & Stools</a>
+                  <a href="">Bean Bags</a>
+                  <a href="">Benches</a>
+                  <a href="">Bar Stools</a>
+                  <a href="">Rocking Chairs</a>
+                  <a href="">Gaming Chairs</a>
+                </div>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="card_product">
+            <a class="product_title" href="">Living</a>
+            <ul class="ul_drop_down">
+              <div id="Living" class="drop_down_products">
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Seating & Chairs</a>
+                  <a href="">Lounge Chairs</a>
+                  <a href="">Accent Chairs</a>
+                  <a href="">Recliners</a>
+                  <a href="">Sofa Cum Bed</a>
+                  <a href="">Gaming Chairs</a>
+                  <a href="">Ottomans & Stools</a>
+                  <a href="">Bean Bags</a>
+                  <a href="">Benches</a>
+                  <a href="">Bar Stools</a>
+                  <a href="">Rocking Chairs</a>
+                  <a href="">Gaming Chairs</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Tables</a>
+                  <a href="">Coffee Tables</a>
+                  <a href="">Side & End Tables</a>
+                  <a href="">Console Tables</a>
+                  <a href="">Nested Tables</a>
+                  <a href="">Coffee Table Sets</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Living Storage</a>
+                  <a href="">TV Units</a>
+                  <a href="">Book Shelves</a>
+                  <a href="">Shoe Racks</a>
+                  <a href="">Prayer Units</a>
+                  <a href="">Showcases</a>
+                  <a href="">Wall Shelves</a>
+                  <a href="">Entryway & Frayer</a>
+                  <a href="">Corner Storage</a>
+                  <a href="">Room Divider</a>
+                  <a href="">Living Room Sets</a>
+                </div>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="card_product">
+            <a class="product_title" href="">Bedroom & Mattresses</a>
+            <ul class="ul_drop_down">
+              <div id="bedroom_mattress" class="drop_down_products">
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Beds</a>
+                  <a href="">All Beds</a>
+                  <a href="">Beds with Storage</a>
+                  <a href="">Beds without Storage</a>
+                  <a href="">King Size Beds</a>
+                  <a href="">Queens Size Beds</a>
+                  <a href="">Single Beds</a>
+                  <a href="">Double Beds</a>
+                  <a href="">Bed-Mattress Sets</a>
+                  <a href="">Uphoistered Beds</a>
+                  <a href="">Trundle Beds</a>
+                  <a href="">Sofa cum Beds</a>
+                  <a href="">Bedroom Sets</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Mattresses</a>
+                  <a href="">All Mattresses</a>
+                  <a href="">King Size Mattress</a>
+                  <a href="">Queen Size Mattress</a>
+                  <a href="">Single Size Mattress</a>
+                  <a href="">Double Bed Mattress</a>
+                  <a href="">Mattress By Material</a>
+                  <a href="">Mattress By Brand</a>
+                  <a href="">Mattress By Range</a>
+                  <a href="">Mattress By Firmness</a>
+                  <a href="">Mattress Protectors</a>
+                  <a href="">Pillows</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Storage & Accessories</a>
+                  <a href="">Wardrobes</a>
+                  <a href="">Bedside Tables</a>
+                  <a href="">Chest of Drawers</a>
+                  <a href="">Dressers & Mirrors</a>
+                  <a href="">Modular Wardrobes</a>
+                  <a href="">Bedrooom Benches</a>
+                  <a href="">Storage Chests</a>
+                  <a href="">Bedroom Chairs</a>
+                  <a href="">Plastic Storage</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Kid's Room</a>
+                  <a href="">Kids Beds</a>
+                  <a href="">Kids Tables</a>
+                  <a href="">Kids Beds</a>
+                  <a href="">Kids Seating</a>
+                  <a href="">Kids Decor</a>
+                </div>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="card_product">
+            <a class="product_title" href="">Dining</a>
+            <ul class="ul_drop_down">
+              <div id="dining" class="drop_down_products">
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Dining Tables & Chairs</a>
+                  <a href="">6 Seater Dining Table Set</a>
+                  <a href="">4 Seater Dining Table Set</a>
+                  <a href="">All 2 & 3 Seater Dining Table Set</a>
+                  <a href="">All 8 Seater Dining Table Set</a>
+                  <a href="">All Dining Table Set</a>
+                  <a href="">Dining Tables</a>
+                  <a href="">Dining Chairs</a>
+                  <a href="">Dining Benches</a>
+                  <a href="">Folding Dining Table Sets</a>
+                  <a href="">Chair Pads</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href=""
+                    >Storage & Bar Furniture</a
+                  >
+                  <a href="">Crockery Units</a>
+                  <a href="">Kitchen Cabinets 7 Racks</a>
+                  <a href="">Bars Stools</a>
+                  <a href="">Bar Cabinets</a>
+                  <a href="">Modular Kitchen</a>
+                </div>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="card_product">
+            <a class="product_title" href="">Storage</a>
+            <ul class="ul_drop_down">
+              <div id="storage" class="drop_down_products">
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Living Storage</a>
+                  <a href="">Shoe Racks</a>
+                  <a href="">Book Shelves</a>
+                  <a href="">Showcases</a>
+                  <a href="">Prayer Units</a>
+                  <a href="">TV Units</a>
+                  <a href="">Wall Shelves</a>
+                  <a href="">Entryway & Frayer</a>
+                  <a href="">Living Room Sets</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Bedroom Storage</a>
+                  <a href="">Cupboards</a>
+                  <a href="">Chest of Drawers</a>
+                  <a href="">Bedside Tables</a>
+                  <a href="">Dressers & Mirrors</a>
+                  <a href="">Storage Chests</a>
+                  <a href="">Modular Wardrobes</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Dining Storage</a>
+                  <a href="">Crockery Units</a>
+                  <a href="">Kitchen Cabinets & Racks</a>
+                  <a href="">Bar Cabinets</a>
+                  <a href="">Modular-Kitchen</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Kids Storage</a>
+                  <a href="">Kids Bookshelves</a>
+                  <a href="">Kids Bedside Tables</a>
+                  <a href="">Kids Stoarage Cabinets</a>
+                  <a href="">Kids Chest Drawers</a>
+                  <a href="">Kids Wardrobes</a>
+                </div>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="card_product">
+            <a class="product_title" href="">Study</a>
+            <ul class="ul_drop_down">
+              <div id="study" class="drop_down_products">
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Study Tables</a>
+                  <a href="">Study Tables</a>
+                  <a href="">Computer Tables</a>
+                  <a href="">Office Tables</a>
+                  <a href="">Solid Wood Study Tables</a>
+                  <a href="">Laptop Tables</a>
+                  <a href="">Study Tables</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Study Chairs</a>
+                  <a href="">Study Chairs</a>
+                  <a href="">Office Chairs</a>
+                  <a href="">Ergonomic Study Chairs</a>
+                  <a href="">Accent Study Chairs</a>
+                  <a href="">Gaming Chairs</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Storage</a>
+                  <a href="">Boookshelves</a>
+                  <a href="">Wall Shelves</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Decor</a>
+                  <a href="">Study Lamps</a>
+                </div>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="card_product">
+            <a class="product_title" href="">Lighting & Decor</a>
+            <ul class="ul_drop_down">
+              <div id="light_decor" class="drop_down_products">
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Lighting</a>
+                  <a href="">Floor Lamps</a>
+                  <a href="">Tables Lamps</a>
+                  <a href="">Study Lamps</a>
+                  <a href="">Wall Lights</a>
+                  <a href="">Cieling Lights</a>
+                  <a href="">Outdoor Lights</a>
+                  <a href="">Chandeliers</a>
+                  <a href="">Festive Lights</a>
+                  <a href="">Lamp Shades</a>
+                </div>
+  
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Carpets & Rugs</a>
+                  <a href="">Crapets</a>
+                  <a href="">Dhurries</a>
+                  <a href="">Doormats</a>
+                  <a href="">Runners</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Home Linen</a>
+                  <a href="">Bedsheets</a>
+                  <a href="">Quits</a>
+                  <a href="">Bedroom Linen</a>
+                  <a href="">Cushions & Throws</a>
+                  <a href="">Curtains</a>
+                  <a href="">Table Furnishing</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Wall Decor</a>
+                  <a href="">Mirrors</a>
+                  <a href="">Wall Art</a>
+                  <a href="">Wall Accent</a>
+                  <a href="">Wall Plates</a>
+                  <a href="">Clocks </a>
+                  <a href="">Photo Frames</a>
+                  <a href="">Decals & Wall Stickers</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Home Decor</a>
+                  <a href="">Showpieces</a>
+                  <a href="">Vases</a>
+                  <a href="">Artificial Plants</a>
+                  <a href="">Artificial Flowers</a>
+                  <a href="">Planters</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Tableware</a>
+                  <a href="">Cups & Mugs</a>
+                  <a href="">Trays & Platters</a>
+                  <a href="">Kitchen Organisers</a>
+                  <a href="">Dinnerware</a>
+                  <a href="">Bakeware</a>
+                  <a href="">Cutlery</a>
+                  <a href="">Barware</a>
+                  <a href="">Glassware</a>
+                  <a href="">Serveware</a>
+                  <a href="">Bottles & Flasks</a>
+                </div>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="card_product">
+            <a class="product_title" href="">Outdoor</a>
+            <ul class="ul_drop_down">
+              <div id="outdoor" class="drop_down_products">
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Balcony & Outdoor</a>
+                  <a href="">Balcony Chairs</a>
+                  <a href="">Balcony Sets</a>
+                  <a href="">Swing Chairs</a>
+                  <a href="">Outdoor Tables</a>
+                  <a href="">Hammocks</a>
+                  <a href="">Plastic Chairs</a>
+                </div>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="card_product">
+            <a class="product_title" href="">Interiors</a>
+            <ul class="ul_drop_down">
+              <div id="urban_interior" class="drop_down_products">
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Urban Interiors</a>
+                  <a href="">Full Home Interiors</a>
+                  <a href="">Modular Kitchen</a>
+                  <a href="">Modular Wardrobes</a>
+                </div>
+              </div>
+            </ul>
+          </li>
+  
+          <li class="card_product">
+            <a class="product_title" href="">Trending</a>
+            <ul class="ul_drop_down">
+              <div id="trending" class="drop_down_products">
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">House of Urban Ladder</a>
+                  <a href="">Simplywud - Affordable Furniture</a>
+                  <a href="">LazeON</a>
+                  <a href="">UL Create</a>
+                  <a href="">Aara Craft</a>
+                  <a href="">Gypsy Trunk</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">New Arrivals</a>
+                  <a href="">UL Picks</a>
+                  <a href="">Living Room</a>
+                  <a href="">Bedroom</a>
+                  <a href="">Dining Room</a>
+                  <a href="">Storage</a>
+                  <a href="">Home Decor</a>
+                  <a href="">All New Arivals</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">Best Sellers</a>
+                  <a href="">Living Room</a>
+                  <a href="">Bedroom</a>
+                  <a href="">Dining Room</a>
+                  <a href="">Study</a>
+                  <a href="">Decor</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">All Furniture</a>
+                  <a href="">Living Room Furniture</a>
+                  <a href="">Bedroom Furniture</a>
+                  <a href="">Dining Room Furniture</a>
+                  <a href="">Study Room Furniture</a>
+                  <a href="">Outdoor Furniture</a>
+                  <a href="">Home Decor</a>
+                </div>
+                <div class="child_product_divs">
+                  <a class="head_child_product" href="">HG Exclusive</a>
+                  <a href="">Keoni Range</a>
+                  <a href="">Bennis Range</a>
+                  <a href="">Satori Range</a>
+                  <a href="">Gaku Range</a>
+                  <a href="">Tuskany Range</a>
+                  <a href="">Malabar Range</a>
+                  <a href="">Helena Range</a>
+                  <a href="">Fidora Range</a>
+                  <a href="">Casella Range</a>
+                  <a href="">Oslo Range</a>
+                  <a href="">Vector Range</a>
+                  <a href="">Baltora Range</a>
+                  <a href="">Fujiwara Range</a>
+                  <a href="">Malabar Range</a>
+                  <a href="">Taarkashi Range</a>
+                </div>
+              </div>
+            </ul>
+          </li>
+          <!--  -->
+        </ul>
+      </div>
+  
+      <!-- Low Device Search Div -->
+      <div id="low_search_bar_cont">
+        <!-- Search Container -->
+        <label for="" id="low_search_label_tag"
+          ><input
+            type="text"
+            placeholder="Search Heaven Gallery "
+            id="top_search_inp"
+          />
+        </label>
+      </div>
+
+
     <div id="body">
         <div id="bodycate">
             <div>Home</div><span>/</span>
             <div id="upperMainC"></div><span>/</span>
-            <div id="upperSubC"></div><span>/</span>
             <div id="upperTitle"></div>
         </div>
         <div id="bodypagemain">
@@ -265,16 +1017,20 @@
                 <div id="colorincircle"></div>
                 <div id="circleColor"></div>
                 <div id="sizescale">
-                    <img src="./images/scale.png" alt="error">
+                    <img src="http://127.0.0.1:5502/images/scale.png" alt="error">
                     <p>Size Chart</p>
                     <p>Find the perfect size now !!</p>
                 </div>
                 <div>
                     <select name="sizes" id="sizeValue">
                         <option value="">Size</option>
-                        <option value="3">3-Seater</option>
-                        <option value="2">2-Seater</option>
-                        <option value="king">king</option>
+                        <option value="XXS"></option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
                     </select>
                 </div>
                 <div>
@@ -288,133 +1044,259 @@
                     <p>Classic fit</p>
                     <h3>Need Help Finding Your Size?</h3>
                     <div>
-                        <img src="./images/scale.png" alt="error">
+                        <img src="http://127.0.0.1:5502/images/scale.png" alt="error">
                         <p>Size Chart</p>
                     </div>
                     <div>
                         Product Disclosure <span>+</span>
                     </div>
                     <div id="imgs">
-                        <img src="./images/bluefacebook.png" alt="error">
-                        <img src="./images/twiter.png" alt="error">
+                        <img src="http://127.0.0.1:5502/images/bluefacebook.png" alt="error">
+                        <img src="http://127.0.0.1:5502/images/twiter.png" alt="error">
                     </div>
                 </div>
             </div>
         </div>
-        <div id="recentsliders">
-            <h3>RECENTLY VIEWED</h3>
-            <div id="recentdata">
+        <!-- FAQ's Section -->
+    <div id="faq_cont">
+        <!--  -->
+        <div id="faq_parent">
+          <div id="left_cont">
+            <p>Polpular Furniture Categories:</p>
+            <p>Shop Furniture By Room:</p>
+            <p>Popular Decor Categories:</p>
+            <p>Popular Mattress Categories:</p>
+            <p>Popular Tableware Categories:</p>
+            <p>Delivering in:</p>
+            <p>We Accept:</p>
+          </div>
+          <!--  -->
+          <div id="right_cont">
+            <!--  -->
+            <div id="para1_div" class="para_cont">
+              <p>
+                <span>Bed</span>, <span>Beds By Design</span>,
+                <span>Sofa Set</span>, <span>Wooden Sofa</span>,
+                <span>Sofas By Design</span>, <span>Sofa Cum Bed</span>,
+                <span>Double Bed</span>, <span>Single Bed</span>,
+                <span>Queen Size</span>
+              </p>
+  
+              <p>
+                <span>Bed</span>, <span>King Size Bed</span>, <span>Chair</span>,
+                <span>Wooden Table</span>, <span>Study Table</span>,
+                <span>Study Chair</span>, <span>Wardrobe </span>,
+                <span>Chest of Drawers</span>, <span>Futon</span>,
+                <span>Loveseat</span>,
+              </p>
+  
+              <p>
+                <span>Dining Table Set</span>, <span>Dining Chair </span>,
+                <span>Bookshelves</span>, <span>Shoe Racks</span>,
+                <span>TV Units</span>, <span>Recliners</span>,
+                <span>Furniture</span>, <span>Office Furniture</span>,
+                <span>Office Table</span>,
+              </p>
+  
+              <p>
+                <span>Office Chair</span>, <span>2 Seater Sofa</span>,
+                <span>TV Cupboard</span>, <span>TV Showcase</span>,
+                <span>TV Stand</span>, <span>Center Table</span>
+              </p>
             </div>
-        </div>
-    </div>
-    <!-- <footer id="footer">
-        <div id="footerone">
-            <div>Want 25% off your purchase? <span> Refer A friend!</span></div>
-            <div>A gift that always fits. <span> Shop E-Gift Card</span></div>
-        </div>
-        <div id="footermaindiv">
-            <div>
-                <div class="footerimg">
-                    <img src="./images/payment.png" alt="">
-                    <p>PAYMENT OPTIONS Credit,Debit,Paytm Wallet & more.</p>
-                </div>
-                <div class="footerimg">
-                    <img src="./images/location.png" alt="">
-                    <p>STORE LOCATOR</p>
-                </div>
-                <div class="footerimg">
-                    <img src="./images/email.jpg" alt="">
-                    <p>EMAIL SIGN UP</p>
-                </div>
-                <div class="footerimg">
-                    <img src="./images/BLOGS.png" alt="">
-                    <p>AEO BLOGS</p>
-                </div>
+  
+            <div id="para2_div" class="para_cont">
+              <p>
+                <span>Living Room</span>, <span>Furniture</span>,
+                <span>Bedroom Furniture</span>,
+                <span>Dining Room Furniture</span>,
+                <span>Study Room Furniture</span>, <span>Bar Furniture </span>,
+                <span>Balcony </span>
+              </p>
+              <p><span>Furniture</span></p>
             </div>
-            <div id="footerseconddiv">
-                <div class="footerimg">
-                    <img src="./images/track.png" alt="">
-                    <p>TRACK ORDER</p>
-                </div>
-                <div>ABOUT AEO</div>
-                <div>FREQUENTLY ASKED QUESTIONS</div>
-                <div>RETURNS POLICY</div>
-                <div>CANCELLATION POLICY</div>
-                <div>SHIPPING POLICY</div>
-                <div>TERMS AND CONDITIONS OF USE</div>
-                <div>OFFER T&C</div>
-                <div>PRIVACY POLICY</div>
-                <div>SITE MAP</div>
+  
+            <div id="para3_div" class="para_cont">
+              <p>
+                <span>Home Decor</span>, <span>Carpets</span>,
+                <span>Mirrors</span>, <span>Study Lamps</span>,
+                <span>Table Lamps</span>, <span>Bed Sheets</span>,
+                <span>Floor Lamps</span>, <span>Wall Lights</span>,
+                <span>Lighting </span>, <span>Ceiling</span>
+              </p>
+  
+              <p>
+                <span> Lights</span>, <span>Quilt </span>,
+                <span>Wall Decor </span>, <span>Wall Mirror</span>,
+                <span>Table Decor</span>, <span>Table Cover</span>,
+                <span>Table Napkin</span>, <span>Table Mat</span>,
+                <span>Cushion Cover</span>,
+                <span>Table </span>
+              </p>
+  
+              <p>
+                <span>Runners</span>, <span>Home Furnishing</span>,
+                <span>Wall Art</span>,<span>Showpiece</span>,
+                <span>Artificial Plants</span>,<span>Photo Frame</span>,
+                <span>Candle Stand</span>,<span>Clocks </span>,
+                <span>Wall Clocks</span>,
+              </p>
+  
+              <p>
+                <span>Festive Lights</span>, <span>Candles</span>,<span
+                  >Bath Mat</span
+                >, <span>Vases</span>,<span>Flower</span>, <span>Vase</span>,<span
+                  >Bathroom Accessories</span
+                >, <span>Bathroom Mirrors</span>,
+              </p>
             </div>
-            <div class="footermain3">
-                <div><img src="./images/question.png" alt=""><span> HAVE A QUESTION ?</span></div>
-                <div><img src="./images/suport.png" alt=""><span>CUSTOMER SUPPORT</span> </div>
-                <div><img src="./images/facebook.png" alt=""><span>FOLLOW US</span> </div>
-            </div> -->
+  
+            <div id="para4_div" class="para_cont">
+              <p>
+                <span>Mattresses</span>, <span>Single Bed Mattresses</span>,
+                <span>Double Bed Mattresses</span>,
+                <span>King Size Mattresses</span>,
+                <span>Queen Size Mattresses</span>, <span>Foam Mattress</span>,
+              </p>
+  
+              <p>
+                <span>Coir Mattress</span>, <span>Latex Mattress </span>,<span
+                  >Spring Mattress</span
+                >, <span>Orthopaedic Mattress</span>
+              </p>
+            </div>
+  
+            <div id="para5_div" class="para_cont">
+              <p>
+                <span>Shot Glass </span>, <span>Dinner Plates </span>,<span
+                  >Baking Tray</span
+                >, <span>Forks </span>,<span>Dinner Set</span>,
+                <span>Tumbler</span>,<span>Drinking Glass</span>,
+                <span>Cutlery Holder </span>, <span>Tissue Holder</span>,
+              </p>
+  
+              <p>
+                <span>Bottle Opener</span>,<span>Spoons</span>,
+                <span>Whiskey Glass</span>,<span>Kitchen Organizers</span>,<span
+                  >Hot Pot</span
+                >, <span>Chef's Cap</span>,<span>Glass Jars</span>,<span
+                  >Kitchen Gloves </span
+                >, <span>Kitchen </span>
+              </p>
+  
+              <p>
+                <span>Storage Containers</span>,<span>Bar Tools</span>,
+                <span>Masala Box</span>,
+                <span>Glass Bottles</span>,<span>Coasters</span>,
+                <span>Cutlery Set</span>,<span>Knives Set</span>,<span
+                  >Oven Gloves</span
+                >, <span>Aprons</span>,
+              </p>
+  
+              <p>
+                <span>Cake Stand</span>,<span>Fruit Basket</span>,
+                <span>Spice Box</span>, <span>Beer Glass</span>,<span>Bowls </span
+                >, <span>Oil Dispenser</span>,
+                <span>Housewarming Gifts</span>
+              </p>
+            </div>
+  
+            <div id="para6_div" class="para_cont">
+              <p>
+                <span>Aanamalai</span>,
+                <span>Ahmedabad</span>,<span>Alappuzha</span>,
+                <span>Aler</span>,<span>Alibaug</span>, <span>Alleppey</span>,
+                <span>Ambala</span>, <span>Ambarnath</span>,<span>Amdapur</span>,
+                <span>Amtala</span>,<span>Anand</span>,
+              </p>
+  
+              <p>
+                <span>Anikorai</span>, <span>Arakkonam</span>,
+                <span>Arimpur</span>,<span>Arutla</span>,
+                <span>Asansol </span>,<span>Athikunna</span>,
+                <span>Athipalli</span>, <span>Aurangabad</span>,
+                <span>Avanshi</span><span id="More_faq">... More</span>
+              </p>
+            </div>
+  
+            <div id="faq_icons">
+              <img src="Images\HomePage_Imgs\faq's img\visa.png" alt="" />
+              <img src="Images\HomePage_Imgs\faq's img\mastercard.png" alt="" />
+              <img src="Images\HomePage_Imgs\faq's img\maestro.png" alt="" />
+              <img src="Images\HomePage_Imgs\faq's img\amex.png" alt="" />
+              <img src="Images\HomePage_Imgs\faq's img\rupay.png" alt="" />
+              <img src="Images\HomePage_Imgs\faq's img\bhim-upi.png" alt="" />
+            </div>
+            <!--  -->
+          </div>
         </div>
-
-    </footer>
-    <!-- cpyorightsection -->
-    <div id="copyright">
-        © 2023 All Rights Reserved.
-    </div>
-    
+        <h2>© 2012-2023 Heaven Gallery</h2>
+        <!--  -->
+      </div>
+  
+      <!-- Floating Icons -->
+      <div class="floating-icons">
+        <a href="#" class="icon1"><i class="fa-solid fa-video"></i></a>
+        <a href="#" class="icon2"
+          ><i class="fa-sharp fa-solid fa-comment-lines"></i
+        ></a>
+      </div>
+  
+        
 </body>
-<!-- <script src="./scripts/singleProduct.js"></script> -->
-<!-- <script src="./scripts\index.js"></script> -->
-<!-- <script src="./scripts\signin.js"></script> -->
+<script src="/Scripts/index.js"></script>
 <script>
- 
-   // let body = document.getElementById("shareIcon");
-    let bodyy = document.getElementById("body");
-  // let recentdata = document.getElementById("recentdata");
-   //let localstoredata = JSON.parse(localStorage.getItem("recentStack"))||[];
-//let stack = [];
-let count = 1;
-for(let a = localstoredata.length-1;a>=0;a--){
-    count++;
-    stack.unshift(localstoredata[a]);
-    console.log(localstoredata[a]);
-    if(count == 15){
-    localStorage.setItem("recentStack",JSON.stringify(stack));
-        break;
-    }
-   let div  = document.createElement("div");
-   let img = document.createElement("img");
-   let h3  =document.createElement("h3");
-//    let title = (localstoredata[a].Title);
-   h3.innerText = localstoredata[a].Title.slice(0,30)+"...";
-   let p = document.createElement("p");
-   p.innerText = "Rs - "+localstoredata[a].Price;
-   img.setAttribute("src",localstoredata[a].Image1);
-   div.append(img,h3,p);
-   recentdata.append(div);
-   stack.unshift();
-   div.addEventListener("click",()=>{
-    resenttomainpro(localstoredata[a]);
-   })
-}
 
-function resenttomainpro(arr){
-    localStorage.setItem("singleProduct",JSON.stringify(arr));
-    window.location.href = "/singleProductPage.html"
-}
-window.addEventListener('scroll',(event) => {
-    setTimeout(() => {
-        body.style.display = "none";
-    }, 2000);
-});
+    
+let cotegory = document.getElementById("upperMainC") // Append MainCategory
+
+let upperTitle = document.getElementById("upperTitle") // Append Title 
+let image1 = document.getElementById("image1") // Append image1 
+let image2 = document.getElementById("image2") // Append image2 
+let image3 = document.getElementById("image3") // Append image3 
+let image4 = document.getElementById("image4") // Append image4 
+let currimage = document.getElementById("currimage") // Append currimage
+let description = document.getElementById("description") // Append description 
+let color = document.getElementById("color") // Append color 
+let title = document.getElementById("title") // Append title 
+let price = document.getElementById("price") // Append price
+let colorincircle = document.getElementById("colorincircle");
+
+let sizeValue = document.getElementById("sizeValue") // Checking if value is not empty
+let Addtocart = document.getElementById("AddtoBag")
+
+let singleprodData = JSON.parse(localStorage.getItem("singleProduct"));
+
+window.addEventListener('load',()=>{
+  console.log(singleprodData);
+  cotegory.innerText=singleprodData.category;
+  upperTitle.innerText=singleprodData.title;
+  image1.setAttribute("src",`${singleprodData.image[0]}`);
+  image1.setAttribute("data-img",`${singleprodData.image[0]}`);
+  image2.setAttribute("src",`${singleprodData.image[1]}`);
+  image2.setAttribute("data-img",`${singleprodData.image[1]}`);
+  image3.setAttribute("src",`${singleprodData.image[2]}`);
+  image3.setAttribute("data-img",`${singleprodData.image[2]}`);
+  image4.setAttribute("src",`${singleprodData.image[3]}`);
+  image4.setAttribute("data-img",`${singleprodData.image[3]}`);
+  currimage.setAttribute("src",`${singleprodData.image[4]}`);
+  currimage.setAttribute("data-img",`${singleprodData.image[4]}`);
 
 
+  color.innerText=singleprodData.color;
+  let col=(singleprodData.color).toLowerCase();
+  colorincircle.style.backgroundColor=`${ singleprodData.color}`
 
-    document.querySelector("#loginidi").addEventListener("click",function(){
-        document.querySelector(".popup").classList.add("active")
-        
-            })
-        
-            document.querySelector(".popup .close-btn").addEventListener("click",function(){
-        document.querySelector(".popup").classList.remove("active");
-        
-            })
+})
+
+
+
+Addtocart.addEventListener('click',()=>{
+ localStorage.setItem('addToBag',JSON.stringify(singleprodData))
+ console.log(singleprodData);
+})
+
+
+
 </script>
 </html>
