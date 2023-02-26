@@ -11,9 +11,9 @@ let editsalessbtn=document.getElementById("editsalessbtn")
 let signoutbtn =document.getElementById("signup_btn")
 
 //signout
-// signoutbtn.addEventListener("click",() =>{
-//   window.open("index.html")
-// })
+signoutbtn.addEventListener("click",() =>{
+  window.open("index.html")
+})
 
 
 
@@ -248,8 +248,8 @@ editprdtform.addEventListener("submit",(e)=>{
      orderth4.innerText="TOTAL"
      let ordertbody=document.createElement("tbody")
      ordertbody.setAttribute("id","ordertabledata")
-     let data =JSON.parse(localStorage.getItem("order"))
-      data.forEach((element) =>{
+     let orderdata =JSON.parse(localStorage.getItem("checkout-data"))
+      orderdata.forEach((element) =>{
         let bodytr=document.createElement("tr")
         bodytr.setAttribute("id","bodytr")
         let bodytd1=document.createElement("td")
@@ -258,39 +258,73 @@ editprdtform.addEventListener("submit",(e)=>{
         let imgdiv=document.createElement("div")
         imgdiv.setAttribute("id","imgdiv")
         let imgbody=document.createElement("img")
-        imgbody.setAttribute("src",element.image[0])
+        imgbody.setAttribute("src",element.imag)
         let textdiv=document.createElement("div")
         textdiv.setAttribute("id","textdiv")
         let titlep=document.createElement("p")
         titlep.innerText=`Title: ${element.title}`
         let brandp =document.createElement("p")
-        brandp.innerText=`Brand: ${element.brand}`
+        brandp.innerText=`Material: ${element.material}`
         let bodytd2=document.createElement("td")
          bodytd2.innerText=element.price
          bodytd2.setAttribute("class","texttd")
          let bodytd3=document.createElement("td")
-         bodytd3.innerText=1
+         bodytd3.innerText=element.quantity
          bodytd3.setAttribute("class","texttd")
          let bodytd4=document.createElement("td")
-         bodytd4.innerText=element.price
+         bodytd4.innerText=element.price*element.quantity
          bodytd4.setAttribute("class","texttd")
          
        let confirmprdt=document.createElement("div")
        confirmprdt.setAttribute("id","confirmprdt")
+       
        let cancelbtn=document.createElement("button")
        let confirmbtn=document.createElement("button")
    
    
-
+       cancelbtn.setAttribute("data-id",`${element.id}`)
        cancelbtn.setAttribute("id","cancelbtn")
-       
+       confirmbtn.setAttribute("data-id",`${element.id}`)
        confirmbtn.setAttribute("id","confirmbtn")
        cancelbtn.innerText="CANCEL"
        confirmbtn.innerText="CONFIRM"
        confirmbtn.addEventListener("click",(e)=>{
-        console.log(e.target.parentElement.parentElement)
-        console.log(data)
+         
+        for(let i=0;i<orderdata.length;i++){
+          if(orderdata[i].id==e.target.dataset.id){
+            let saledata=JSON.parse(localStorage.getItem("sale"))||[]
+            saledata.push(orderdata[i])
+           localStorage.setItem("sale",JSON.stringify(saledata))
+           orderdata[i]=" "
+          }
+        }
+        console.log(orderdata)
+        let filtersaledata =orderdata.filter((e) =>{
+         if(e!=" "){
+            return e
+         }
+        })
+        localStorage.setItem("checkout-data",JSON.stringify(filtersaledata))
+        bodytr.innerHTML=null
        })
+      
+       cancelbtn.addEventListener("click",(e) =>{
+        for(let i=0;i<orderdata.length;i++){
+          if(orderdata[i].id==e.target.dataset.id){
+           orderdata[i]=" "
+          }
+        }
+        console.log(orderdata)
+        let filterdata =orderdata.filter((e) =>{
+         if(e!=" "){
+            return e
+         }
+        })
+        console.log(filterdata)
+        localStorage.setItem("checkout-data",JSON.stringify(filterdata))
+       bodytr.innerHTML=null
+      })
+
        confirmprdt.append(cancelbtn,confirmbtn)
         textdiv.append(titlep,brandp)
         imgdiv.append(imgbody)
@@ -309,24 +343,26 @@ editprdtform.addEventListener("submit",(e)=>{
    
     editsalessbtn.addEventListener("click",() =>{
       productpage.innerHTML=null
+      let data =JSON.parse(localStorage.getItem("sale"))
+      let sum=0
+      let total=0
+      for(let i=0;i<data.length;i++){
+         sum+=data[i].price*data[i].quantity
+          total+=data[i].quantity
+      }
       let salediv=document.createElement("div")
       salediv.setAttribute("id","salediv")
       let totalsaletext=document.createElement("div")
       totalsaletext.innerText="Total Sale"
       let totalprcie=document.createElement("p")
-      totalprcie.innerText=123456
+      totalprcie.innerText=sum
       let totalsaleprodt=document.createElement("div")
       totalsaleprodt.innerText="Total Number of Product Saled"
       let totalnumberprdt=document.createElement("p")
-      totalnumberprdt.innerText="2"
+      totalnumberprdt.innerText=quantity
       totalsaleprodt.append(totalnumberprdt)
       totalsaletext.append(totalprcie)
       salediv.append(totalsaletext,totalsaleprodt)
-    
-
-
-
-      //prr
       let ordertable= document.createElement("table")
      ordertable.setAttribute("id","ordertable")
      let orderhead=document.createElement("thead")
@@ -342,7 +378,7 @@ editprdtform.addEventListener("submit",(e)=>{
      orderth4.innerText="TOTAL"
      let ordertbody=document.createElement("tbody")
      ordertbody.setAttribute("id","ordertabledata")
-     let data =JSON.parse(localStorage.getItem("order"))
+     
       data.forEach((element) =>{
         let bodytr=document.createElement("tr")
         bodytr.setAttribute("id","bodytr")
@@ -352,21 +388,21 @@ editprdtform.addEventListener("submit",(e)=>{
         let imgdiv=document.createElement("div")
         imgdiv.setAttribute("id","imgdiv")
         let imgbody=document.createElement("img")
-        imgbody.setAttribute("src",element.image[0])
+        imgbody.setAttribute("src",element.imag)
         let textdiv=document.createElement("div")
         textdiv.setAttribute("id","textdiv")
         let titlep=document.createElement("p")
         titlep.innerText=`Title: ${element.title}`
         let brandp =document.createElement("p")
-        brandp.innerText=`Brand: ${element.brand}`
+        brandp.innerText=`Material: ${element.material}`
         let bodytd2=document.createElement("td")
          bodytd2.innerText=element.price
          bodytd2.setAttribute("class","texttd")
          let bodytd3=document.createElement("td")
-         bodytd3.innerText=1
+         bodytd3.innerText=element.quantity
          bodytd3.setAttribute("class","texttd")
          let bodytd4=document.createElement("td")
-         bodytd4.innerText=element.price
+         bodytd4.innerText=element.price*element.quantity
          bodytd4.setAttribute("class","texttd")
          textdiv.append(titlep,brandp)
          imgdiv.append(imgbody)
