@@ -10,15 +10,27 @@
     display: flex;
     justify-content: space-between;
     margin: auto;
-    width: 50%;
-    height: 70px;
     align-items: center;
+    max-width: 990px;
+    min-width: 768px;
+  }
+
+  #bodypagemain img{
+    width: 300px;
+
+  }
+  #bodypagemain div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 990px;
+    min-width: 768px;
+    margin: auto;
   }
     </style>
     <link rel="stylesheet" href="/Styles/index.css">
 </head>
 <body>
-    <div id="topmost_div">
+  <div id="topmost_div">
         <p>
           Spring into Sale | Up to 60% off | Now Live |
           <span><a href="">Click to Shop!</a></span>
@@ -1258,7 +1270,8 @@ let image4 = document.getElementById("image4") // Append image4
 let currimage = document.getElementById("currimage") // Append currimage
 let description = document.getElementById("description") // Append description 
 let color = document.getElementById("color") // Append color 
-let title = document.getElementById("title") // Append title 
+let title = document.getElementById("title")
+title.setAttribute("class", "img_title") // Append title 
 let price = document.getElementById("price") // Append price
 let colorincircle = document.getElementById("colorincircle");
 
