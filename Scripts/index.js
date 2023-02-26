@@ -287,7 +287,7 @@ function hide_toggle_cont() {
 //   login_email,
 //   "********************************"
 // );
-=======
+// =======
 
 
 signup_form.addEventListener("submit", (e) => {
@@ -315,6 +315,11 @@ login_form.addEventListener("submit", (e) => {
 
   let email1 = document.getElementById("login_email").value;
   let pass1 = document.getElementById("login_password").value;
+
+if(email1=="heavengallery@gmail.com" && pass1=="heavengallery"){
+  window.open("adminMainpage.html")
+  return
+}
 
   for (let i = 0; i < t.length; i++) {
     if (email1 == t[i].email && pass1 == t[i].pass) {
