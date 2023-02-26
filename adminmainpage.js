@@ -6,6 +6,24 @@ let Addprdocutsbtn=document.getElementById("Addprdocutsbtn")
 let editprdocutsbtn=document.getElementById("editprdocutsbtn")
 let editprdtform=document.getElementById("editprdtform")
 let productpage =document.getElementById("products")
+let editorderssbtn=document.getElementById("editorderssbtn")
+let editsalessbtn=document.getElementById("editsalessbtn")
+let signoutbtn =document.getElementById("signup_btn")
+
+//signout
+signoutbtn.addEventListener("click",() =>{
+  window.open("index.html")
+})
+
+
+
+
+
+sidebarprdtbtn.addEventListener("click",() =>{
+  window.addEventListener("load",() =>{
+    fetchCard(url)
+})
+})
 // addproductbtn
 Addprdocutsbtn.addEventListener("click",() =>{
    
@@ -39,7 +57,30 @@ function fetchCard(url){
 }
 
 function renderCard(data){
-    tabledata.innerHTML=null
+    productpage.innerHTML=null
+    let table=document.createElement("table")
+      table.setAttribute("id","table")
+      let thead=document.createElement("thead")
+      thead.setAttribute("id","tablehead")
+      let trhead=document.createElement("tr")
+      let th1=document.createElement("th")
+      th1.innerText="IMAGE"
+      let th2=document.createElement("th")
+      th2.innerText="TITLE"
+      let th3=document.createElement("th")
+      th3.innerText="PRICE"
+      let th4=document.createElement("th")
+      th4.innerText="CATEGORY"
+      let th5=document.createElement("th")
+      th5.innerText="BRAND"
+      let th6=document.createElement("th")
+      th6.innerText="SIZE"
+      let th7=document.createElement("th")
+      th7.innerText="MATERIAL"
+      let th8=document.createElement("th")
+      th8.innerText="COLOR"
+      let tbody=document.createElement("tbody")
+      tbody.setAttribute("id","tabledata")
     data.forEach((element) => {
         let tr=document.createElement("tr")
        let td1=document.createElement("td")
@@ -110,19 +151,21 @@ function renderCard(data){
             method:"DELETE",
            
           })
-          .then(res => res.json())
-          .then((data) =>{
-            renderCard(data)
-          })
-
+            
+            alert(`${e.target.dataset.id} is deleted`)
+            tr.innerHTML=null
+        
        })
      
        
 
 
        tr.append(td1,td2,td3,td4,td5,td6,td7,td8,editprdt)
-       tabledata.append(tr)
-        
+       tbody.append(tr)
+        trhead.append(th1,th2,th3,th4,th5,th6,th7,th8)
+        thead.append(trhead)
+        table.append(thead,tbody)
+        productpage.append(table)
    });
 }
 
@@ -150,6 +193,7 @@ document.getElementById("top_search_inp").addEventListener("input", (e) => {
 
 editprdtform.addEventListener("submit",(e)=>{
    e.preventDefault()
+  
     let img1=document.getElementById("inptimg1").value
     let img2=document.getElementById("inptimg2").value
     let img3=document.getElementById("inptimg3").value
@@ -184,4 +228,196 @@ editprdtform.addEventListener("submit",(e)=>{
         fetchCard(url)
       })
     })
+
+    // orders
+    editorderssbtn.addEventListener("click",() =>{
+      console.log("Hi")
+      productpage.innerHTML=null
+     let ordertable= document.createElement("table")
+     ordertable.setAttribute("id","ordertable")
+     let orderhead=document.createElement("thead")
+     let orderheadtr=document.createElement("tr")
+     let orderth1=document.createElement("th")
+     orderth1.innerText="PRODUCTS"
+     orderth1.setAttribute("id","orderth1")
+     let orderth2=document.createElement("th")
+     orderth2.innerText="PRICE"
+     let orderth3=document.createElement("th")
+     orderth3.innerText="QUANTITY"
+     let orderth4=document.createElement("th")
+     orderth4.innerText="TOTAL"
+     let ordertbody=document.createElement("tbody")
+     ordertbody.setAttribute("id","ordertabledata")
+     let data =JSON.parse(localStorage.getItem("order"))
+      data.forEach((element) =>{
+        let bodytr=document.createElement("tr")
+        bodytr.setAttribute("id","bodytr")
+        let bodytd1=document.createElement("td")
+        let maindiv=document.createElement("div")
+        maindiv.setAttribute("id","maindiv")
+        let imgdiv=document.createElement("div")
+        imgdiv.setAttribute("id","imgdiv")
+        let imgbody=document.createElement("img")
+        imgbody.setAttribute("src",element.image[0])
+        let textdiv=document.createElement("div")
+        textdiv.setAttribute("id","textdiv")
+        let titlep=document.createElement("p")
+        titlep.innerText=`Title: ${element.title}`
+        let brandp =document.createElement("p")
+        brandp.innerText=`Brand: ${element.brand}`
+        let bodytd2=document.createElement("td")
+         bodytd2.innerText=element.price
+         bodytd2.setAttribute("class","texttd")
+         let bodytd3=document.createElement("td")
+         bodytd3.innerText=1
+         bodytd3.setAttribute("class","texttd")
+         let bodytd4=document.createElement("td")
+         bodytd4.innerText=element.price
+         bodytd4.setAttribute("class","texttd")
+         
+       let confirmprdt=document.createElement("div")
+       confirmprdt.setAttribute("id","confirmprdt")
+       let cancelbtn=document.createElement("button")
+       let confirmbtn=document.createElement("button")
+   
+   
+
+       cancelbtn.setAttribute("id","cancelbtn")
+       
+       confirmbtn.setAttribute("id","confirmbtn")
+       cancelbtn.innerText="CANCEL"
+       confirmbtn.innerText="CONFIRM"
+       confirmbtn.addEventListener("click",(e)=>{
+        console.log(e.target.parentElement.parentElement)
+        console.log(data)
+       })
+       confirmprdt.append(cancelbtn,confirmbtn)
+        textdiv.append(titlep,brandp)
+        imgdiv.append(imgbody)
+        maindiv.append(imgdiv,textdiv)
+        bodytd1.append(maindiv)
+        bodytr.append(bodytd1,bodytd2,bodytd3,bodytd4,confirmprdt)
+        ordertbody.append(bodytr)
+        
+      })
     
+     ordertable.append(orderhead,ordertbody)
+        orderhead.append(orderheadtr)
+        orderheadtr.append(orderth1,orderth2,orderth3,orderth4)
+        productpage.append(ordertable)
+    })
+   
+    editsalessbtn.addEventListener("click",() =>{
+      productpage.innerHTML=null
+      let salediv=document.createElement("div")
+      salediv.setAttribute("id","salediv")
+      let totalsaletext=document.createElement("div")
+      totalsaletext.innerText="Total Sale"
+      let totalprcie=document.createElement("p")
+      totalprcie.innerText=123456
+      let totalsaleprodt=document.createElement("div")
+      totalsaleprodt.innerText="Total Number of Product Saled"
+      let totalnumberprdt=document.createElement("p")
+      totalnumberprdt.innerText="2"
+      totalsaleprodt.append(totalnumberprdt)
+      totalsaletext.append(totalprcie)
+      salediv.append(totalsaletext,totalsaleprodt)
+    
+
+
+
+      //prr
+      let ordertable= document.createElement("table")
+     ordertable.setAttribute("id","ordertable")
+     let orderhead=document.createElement("thead")
+     let orderheadtr=document.createElement("tr")
+     let orderth1=document.createElement("th")
+     orderth1.innerText="PRODUCTS"
+     orderth1.setAttribute("id","orderth1")
+     let orderth2=document.createElement("th")
+     orderth2.innerText="PRICE"
+     let orderth3=document.createElement("th")
+     orderth3.innerText="QUANTITY"
+     let orderth4=document.createElement("th")
+     orderth4.innerText="TOTAL"
+     let ordertbody=document.createElement("tbody")
+     ordertbody.setAttribute("id","ordertabledata")
+     let data =JSON.parse(localStorage.getItem("order"))
+      data.forEach((element) =>{
+        let bodytr=document.createElement("tr")
+        bodytr.setAttribute("id","bodytr")
+        let bodytd1=document.createElement("td")
+        let maindiv=document.createElement("div")
+        maindiv.setAttribute("id","maindiv")
+        let imgdiv=document.createElement("div")
+        imgdiv.setAttribute("id","imgdiv")
+        let imgbody=document.createElement("img")
+        imgbody.setAttribute("src",element.image[0])
+        let textdiv=document.createElement("div")
+        textdiv.setAttribute("id","textdiv")
+        let titlep=document.createElement("p")
+        titlep.innerText=`Title: ${element.title}`
+        let brandp =document.createElement("p")
+        brandp.innerText=`Brand: ${element.brand}`
+        let bodytd2=document.createElement("td")
+         bodytd2.innerText=element.price
+         bodytd2.setAttribute("class","texttd")
+         let bodytd3=document.createElement("td")
+         bodytd3.innerText=1
+         bodytd3.setAttribute("class","texttd")
+         let bodytd4=document.createElement("td")
+         bodytd4.innerText=element.price
+         bodytd4.setAttribute("class","texttd")
+         textdiv.append(titlep,brandp)
+         imgdiv.append(imgbody)
+         maindiv.append(imgdiv,textdiv)
+         bodytd1.append(maindiv)
+         bodytr.append(bodytd1,bodytd2,bodytd3,bodytd4)
+         ordertbody.append(bodytr)
+         
+       })
+      
+      ordertable.append(orderhead,ordertbody)
+         orderhead.append(orderheadtr)
+         orderheadtr.append(orderth1,orderth2,orderth3,orderth4)
+         productpage.append(salediv,ordertable)
+    })
+    
+let filter=document.getElementById("filter")
+filter.addEventListener("change",() =>{
+  fetch(url)
+  .then(res => res.json())
+  .then((data) =>{
+    if(filter.value=="cate"){
+      renderCard(data)
+    }else{
+      let card=data.filter((element) =>{
+        if(element.category==filter.value){
+          return element
+        }
+      })
+      renderCard(card)
+    }
+  })
+})
+
+
+
+// let newdata =JSON.parse(localStorage.getItem("order"))||[]
+let arr=[]
+let obj={}
+obj.image=[
+  "https://www.ulcdn.net/images/products/441630/slide/1332x726/Memory_Foam_Bonded_Mattress_0.jpg",
+            "https://www.ulcdn.net/images/products/438469/slide/1332x726/Memory_Foam_Bonded_Mattress_1.jpg",
+            "https://www.ulcdn.net/images/products/438912/slide/1332x726/Memory_Foam_Bonded_Mattress_2.jpg",
+]
+obj.title="Memory & Bonded Foam Orthoapedic Single Size Mattress",
+obj.price=8639,
+obj.category="Mattress",
+obj.color= "White",
+ obj.brand="Urban Ladder",
+ obj.material="Foam",
+ obj.size="1-Seater"
+ arr.push(obj)
+ console.log(arr)
+ localStorage.setItem("order",JSON.stringify(arr))

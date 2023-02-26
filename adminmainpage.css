@@ -145,6 +145,11 @@
   font-size: 25px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+#editsalessbtn{
+  display: block;
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 #titlelabel{
   margin-left: 16px;
 }
@@ -238,4 +243,127 @@ th {
     cursor: pointer;
     border: 1px solid black;
     font-size: 15px;
+}
+/* orders */
+#orderth1{
+  width: 50%;
+}
+#maindiv{
+  width: 100%;
+  display: flex;
+}
+#imgdiv{
+  width: 40%;
+}
+#imgdiv img{
+  width: 100%;
+}
+#bodytr td{
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  font-size: 13px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.texttd{
+  text-align: center;
+}
+#confirmprdt{
+  margin-top: 50px;
+}
+#cancelbtn{
+ border: none;
+ background-color: #ffffff;
+ color: red;
+}
+#cancelbtn:hover{
+  cursor: pointer;
+}
+#confirmbtn{
+  border: none;
+  background-color: #ffffff;
+  color: green;
+ }
+ #confirmbtn:hover{
+   cursor: pointer;
+ }
+/* sale page */
+#salediv{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#salediv div:nth-child(1){
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: aqua;
+  margin-right: 20px;
+  
+}
+#salediv div:nth-child(2){
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: aqua;
+}
+/* LogIn $ SignUp Icon Pop-Up CSS */
+#login_signup_icon_div {
+  position: relative;
+}
+.dropdown-menu {
+  width: 120px;
+  background: #ffffff;
+  cursor: pointer;
+  border: 1px solid #e1e1e1;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  text-align: start;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-top: -4px;
+  line-height: 1.2;
+}
+#login_btn {
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  font-size: 1rem;
+  border-bottom: 1px solid rgb(243, 240, 240);
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+#login_btn:hover {
+  background-color: #f8f6f6;
+  color: #ed7745;
+}
+#signup_btn {
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  font-size: 1rem;
+  border-bottom: 1px solid rgb(243, 240, 240);
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+#signup_btn:hover {
+  color: red;
+  background-color: #f8f6f6;
+}
+#login_signup_icon_div:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu p {
+  margin: 0;
+  padding: 5px 10px;
+}
+/* filter */
+#extra select{
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #ed7745;
+  color: white;
+  border: none;
 }
