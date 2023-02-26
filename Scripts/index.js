@@ -275,3 +275,78 @@ function hide_toggle_cont() {
     toggle_cont.style.display = "none";
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////login.js
+console.log(signup_password,signup_email,login_password,login_email,"********************************")
+
+     
+
+signup_form.addEventListener("submit",(e)=>{
+  e.preventDefault()
+
+
+    //let name=document.getElementById("name")
+let pass=document.getElementById("signup_password")
+let email=document.getElementById("signup_email")
+
+
+//console.log(pass.value)
+let obj={
+//name:signup_form.name.value,
+pass:signup_form.signup_password.value,
+email:signup_form.signup_email.value
+}
+let t=JSON.parse(localStorage.getItem("data") ) || []       
+t.push(obj)
+
+//t.push(obj)
+
+//console.log(t)
+localStorage.setItem("data",JSON.stringify(t))            
+})
+
+
+
+
+//console.log(t)         
+
+//console.log(login_form,"aaaa")
+
+login_form.addEventListener("submit",(e)=>{
+e.preventDefault()
+
+let t=JSON.parse(localStorage.getItem("data") )  || []
+
+
+let email1=document.getElementById("login_email").value
+let pass1=document.getElementById("login_password").value
+
+
+
+
+for(let i=0;i<t.length;i++){
+     
+if(email1==t[i].email && pass1==t[i].pass){
+        window.open("https://course.masaischool.com/dashboard")
+        return 
+}
+
+}
+
+alert("please fill correct Id and password")
+
+})
+
