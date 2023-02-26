@@ -990,6 +990,8 @@
             <div id="upperTitle"></div>
         </div>
         <div id="bodypagemain">
+            <h3 id="title">
+            </h3>
             <div>
                 <div><img class="div1Images" id="image1" src="" alt="error"></div>
                 <div><img class="div1Images" id="image2" src="" alt="error"></div>
@@ -1247,7 +1249,7 @@
 <script src="/Scripts/index.js"></script>
 <script>
 
-    
+let heading=document.getElementById("title")
 let cotegory = document.getElementById("upperMainC") // Append MainCategory
 
 let upperTitle = document.getElementById("upperTitle") // Append Title 
@@ -1269,6 +1271,7 @@ let singleprodData = JSON.parse(localStorage.getItem("singleProduct"));
 
 window.addEventListener('load',()=>{
   console.log(singleprodData);
+  heading.innerText=singleprodData.title;
   cotegory.innerText=singleprodData.category;
   upperTitle.innerText=singleprodData.title;
   image1.setAttribute("src",`${singleprodData.image[0]}`);
