@@ -988,8 +988,8 @@
         price.innerText = `₹  ${element.price * x}`;
         sum += element.price * (x - 1)
         document.getElementById("cart-total").innerText = `₹  ${sum}`;
-        document.getElementById("final-price").innerText = `₹ ${sum-discounted(sum)}`;
-        document.getElementById("pay-ammount").innerText = `₹ ${sum-discounted(sum)}`;
+        document.getElementById("final-price").innerText = `₹ ${sum}`;
+        document.getElementById("pay-ammount").innerText = `₹ ${sum}`;
         console.log(obj)
         obj.price=element.price*x;
 
