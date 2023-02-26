@@ -277,13 +277,13 @@ function hide_toggle_cont() {
 }
 
 ///////////////login.js
-console.log(
-  signup_password,
-  signup_email,
-  login_password,
-  login_email,
-  "********************************"
-);
+// console.log(
+//   signup_password,
+//   signup_email,
+//   login_password,
+//   login_email,
+//   "********************************"
+// );
 
 signup_form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -321,7 +321,7 @@ login_form.addEventListener("submit", (e) => {
 
   for (let i = 0; i < t.length; i++) {
     if (email1 == t[i].email && pass1 == t[i].pass) {
-      window.open("Product.html");
+      window.open("index.html");
       alert("Login Succesfull");
       return;
     }
@@ -329,3 +329,9 @@ login_form.addEventListener("submit", (e) => {
 
   alert("Wrong Credentials.");
 });
+
+// Cart Count Script
+let cart_count = document.querySelector("#cart_count");
+let cart_items_list = JSON.parse(localStorage.getItem("addToBag")) || [];
+
+cart_count.innerText = cart_items_list.length;
