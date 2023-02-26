@@ -257,7 +257,7 @@ selected_category.forEach(function (item, index) {
     localStorage.setItem("selected_category", JSON.stringify(clicked_category));
 
     // Here we can paste the link of the page we want to go
-    window.location.href = "Product.html";
+    window.location.href = "/product.html";
   });
 });
 // ********************************
@@ -279,6 +279,16 @@ function hide_toggle_cont() {
 }
 
 ///////////////login.js
+
+// console.log(
+//   signup_password,
+//   signup_email,
+//   login_password,
+//   login_email,
+//   "********************************"
+// );
+=======
+
 
 signup_form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -309,17 +319,17 @@ login_form.addEventListener("submit", (e) => {
   for (let i = 0; i < t.length; i++) {
     if (email1 == t[i].email && pass1 == t[i].pass) {
       alert("Login Succesfull.");
-      window.open("index.html");
+      window.open("Product.html");
       return;
     }
   }
-
-  alert("Wrong Credentials.");
+  alert("Wrong Credentials");
 });
-// *************************
 
-// Cart Count Script
-let cart_count = document.querySelector("#cart_count");
-let cart_items_list = JSON.parse(localStorage.getItem("addToBag")) || [];
+// Increase Cart Count
+let cart_count = document.getElementById("cart_count");
+let cart_data = JSON.parse(localStorage.getItem("addToBag")) || [];
 
-cart_count.innerText = cart_items_list.length;
+cart_count.innerText = cart_data.length;
+
+

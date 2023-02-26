@@ -900,7 +900,11 @@
 <script src="checkout.js"></script>
 <script>
 
-  let arr1 = JSON.parse(localStorage.getItem("cart")) || [];
+  let arr1 = JSON.parse(localStorage.getItem("addToBag")) || [];
+
+  let LSData=[];
+  
+
 
   displayData(arr1)
 
@@ -1009,7 +1013,7 @@
             return true;
           }
         })
-        localStorage.setItem("cart", JSON.stringify(data))
+        localStorage.setItem("addToBag", JSON.stringify(data))
         displayData(data)
      
       })
