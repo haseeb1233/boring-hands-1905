@@ -1309,10 +1309,12 @@ window.addEventListener('load',()=>{
 })
 
 
+let LSData=JSON.parse(localStorage.getItem('addToBag')) || [];
 
 Addtocart.addEventListener('click',()=>{
- localStorage.setItem('addToBag',JSON.stringify(singleprodData))
- console.log(singleprodData);
+ LSData.push(singleprodData)
+ localStorage.setItem('addToBag',JSON.stringify(LSData))
+ console.log(LSData);
 })
 
 

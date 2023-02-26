@@ -105,11 +105,13 @@ drop_down_box.forEach(function (item, ind) {
     drop_down_title[ind].style.color = "#ed7745";
     drop_down_title[ind].borderBottom = "2px solid #ed7745";
     drop_down_title[ind].position = "relative";
+  
   });
 
   item.addEventListener("mouseout", function () {
     drop_down_title[ind].style.color = "#000000";
     drop_down_title[ind].position = "static";
+    
   });
 });
 // ***********************
@@ -257,7 +259,7 @@ selected_category.forEach(function (item, index) {
     localStorage.setItem("selected_category", JSON.stringify(clicked_category));
 
     // Here we can paste the link of the page we want to go
-    window.location.href = "Product.html";
+    window.location.href = "product.html";
   });
 });
 
