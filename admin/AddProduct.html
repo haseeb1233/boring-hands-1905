@@ -19,7 +19,7 @@
         width: 100%;
         height: 70px;
         background: rgb(32, 7, 5);
-        background: #F57F17;
+        background: #f57f17;
         display: flex;
         justify-content: space-between;
       }
@@ -36,7 +36,7 @@
       #adminbtn {
         border: none;
         border-radius: 0px 10px 10px 0px;
-        background-color: #F57F17
+        background-color: #f57f17;
       }
       nav > img {
         border-radius: 10px 0px 0px 10px;
@@ -47,7 +47,7 @@
         margin-bottom: 20px;
       }
       form {
-        box-shadow: 10px 10px 132px -1px #F57F17;
+        box-shadow: 10px 10px 132px -1px #f57f17;
         width: 400px;
         border: 2px solid teal;
         text-align: left;
@@ -97,7 +97,7 @@
         font-weight: bolder;
         border-radius: 10px;
         background: rgb(3, 3, 3);
-        background:#F57F17
+        background: #f57f17;
       }
       .swal-text {
         font-size: 20px;
@@ -106,21 +106,22 @@
       .swal-button {
         background-color: #0025ff;
       }
-      @media screen and (min-width:0px) and (max-width:400px){
-        form{
-    width: 300px;
-  }
+      @media screen and (min-width: 0px) and (max-width: 400px) {
+        form {
+          width: 300px;
+        }
       }
     </style>
   </head>
   <body>
     <nav>
-      <div id="adminbtn"><a href="http://127.0.0.1:5501/adminMainpage.html">Back to ADMIN Page</a></div>
-      <img
-        src=""
-        alt="logo"
-        onclick="locat()"
-      />
+      <div id="adminbtn">
+        <a
+          href="C:\Users\Prateek\Downloads\boring-hands-1905\boring-hands-1905\adminMainpage.html"
+          >Back to ADMIN Page</a
+        >
+      </div>
+      <img src="" alt="logo" onclick="locat()" />
     </nav>
     <h2 id="msg">Please Fill Product Details ...</h2>
     <form method="post" name="google-sheet" id="form">
@@ -204,9 +205,8 @@
         <option value="Tops">Home lifestyle</option>
         <option value="Jeans">Adonica</option>
         <option value="Belts">Arra</option>
-        <option value="Hats">Urban Ladder </option>
+        <option value="Hats">Urban Ladder</option>
         <option value="Hoodies">Febonic</option>
-        
       </select>
       <input
         type="text"
@@ -214,12 +214,7 @@
         placeholder="Material of  Product..."
         id="material"
       />
-      <input
-        type="text"
-        name="size"
-        placeholder="size"
-        id="size"
-      />
+      <input type="text" name="size" placeholder="size" id="size" />
       <button type="submit" id="btn" name="submit">ADD to SITE</button>
     </form>
   </body>
@@ -228,16 +223,16 @@
   <script>
     // const form = document.forms["google-sheet"];
 
-   let myForm=document.getElementById('form')
+    let myForm = document.getElementById("form");
 
-   let msgAlert=document.getElementById("msg")
+    let msgAlert = document.getElementById("msg");
 
     myForm.addEventListener("submit", (e) => {
       e.preventDefault();
-     // console.log(myForm.name.value,myForm.price.value,)
+      // console.log(myForm.name.value,myForm.price.value,)
       if (
-       myForm.name.value != "" &&
-       myForm.price.value != "" &&
+        myForm.name.value != "" &&
+        myForm.price.value != "" &&
         myForm.color.value != "" &&
         myForm.img1.value != "" &&
         myForm.img2.value != "" &&
@@ -247,25 +242,30 @@
         myForm.brand.value != "" &&
         myForm.size.value != ""
       ) {
-        msgAlert.innerText="Processing"
-        let product={};
-       product.title=myForm.name.value 
-       product.price=myForm.price.value 
-       product.color=myForm.color.value 
-       product.image=[myForm.img1.value,myForm.img2.value,myForm.img3.value,myForm.img4.value]  
-       product.category=myForm.Category.value 
-       product.brand=myForm.brand.value 
-       product.size=myForm.size.value 
-       product.material=myForm.material.value
-        fetch(scriptURL, { 
-            method: 'POST',
-            headers:{
-  'Content-Type': 'application/json',
-                    },
-            body: JSON.stringify(product)
-         })
+        msgAlert.innerText = "Processing";
+        let product = {};
+        product.title = myForm.name.value;
+        product.price = myForm.price.value;
+        product.color = myForm.color.value;
+        product.image = [
+          myForm.img1.value,
+          myForm.img2.value,
+          myForm.img3.value,
+          myForm.img4.value,
+        ];
+        product.category = myForm.Category.value;
+        product.brand = myForm.brand.value;
+        product.size = myForm.size.value;
+        product.material = myForm.material.value;
+        fetch(scriptURL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(product),
+        })
           .then((response) => {
-            msgAlert.innerText= "Product added to Site...";
+            msgAlert.innerText = "Product added to Site...";
             setTimeout(() => {
               myForm.name.value = "";
               myForm.price.value = "";
@@ -274,16 +274,16 @@
               myForm.img2.value = "";
               myForm.img3.value = "";
               myForm.img4.value = "";
-            //   myForm.category.value = "";
+              //   myForm.category.value = "";
               myForm.brand.value = "";
               myForm.size.value = "";
             }, 3000);
           })
           .catch(() => {
-            msgAlert.innerText="Sorry Try Again...!";
+            msgAlert.innerText = "Sorry Try Again...!";
           });
       } else {
-        msgAlert.innerText="Please Provide Complete Information....!";
+        msgAlert.innerText = "Please Provide Complete Information....!";
       }
     });
     function locat() {

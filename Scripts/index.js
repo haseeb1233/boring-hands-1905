@@ -105,13 +105,11 @@ drop_down_box.forEach(function (item, ind) {
     drop_down_title[ind].style.color = "#ed7745";
     drop_down_title[ind].borderBottom = "2px solid #ed7745";
     drop_down_title[ind].position = "relative";
-  
   });
 
   item.addEventListener("mouseout", function () {
     drop_down_title[ind].style.color = "#000000";
     drop_down_title[ind].position = "static";
-    
   });
 });
 // ***********************
@@ -259,7 +257,7 @@ selected_category.forEach(function (item, index) {
     localStorage.setItem("selected_category", JSON.stringify(clicked_category));
 
     // Here we can paste the link of the page we want to go
-    window.location.href = "product.html";
+    window.location.href = "/product.html";
   });
 });
 
@@ -279,13 +277,13 @@ function hide_toggle_cont() {
 }
 
 ///////////////login.js
-console.log(
-  signup_password,
-  signup_email,
-  login_password,
-  login_email,
-  "********************************"
-);
+// console.log(
+//   signup_password,
+//   signup_email,
+//   login_password,
+//   login_email,
+//   "********************************"
+// );
 
 signup_form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -323,10 +321,17 @@ login_form.addEventListener("submit", (e) => {
 
   for (let i = 0; i < t.length; i++) {
     if (email1 == t[i].email && pass1 == t[i].pass) {
+      alert("Login Succesfull.");
       window.open("Product.html");
       return;
     }
   }
-
   alert("please fill correct Id and password");
 });
+
+// Increase Cart Count
+let cart_count = document.getElementById("cart_count");
+let cart_data = JSON.parse(localStorage.getItem("addToBag")) || [];
+
+cart_count.innerText = cart_data.length;
+console.log(cart_data);
