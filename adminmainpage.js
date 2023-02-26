@@ -11,9 +11,9 @@ let editsalessbtn=document.getElementById("editsalessbtn")
 let signoutbtn =document.getElementById("signup_btn")
 
 //signout
-signoutbtn.addEventListener("click",() =>{
-  window.open("index.html")
-})
+// signoutbtn.addEventListener("click",() =>{
+//   window.open("index.html")
+// })
 
 
 
