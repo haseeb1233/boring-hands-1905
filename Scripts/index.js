@@ -322,9 +322,10 @@ login_form.addEventListener("submit", (e) => {
   for (let i = 0; i < t.length; i++) {
     if (email1 == t[i].email && pass1 == t[i].pass) {
       window.open("Product.html");
+      alert("Login Succesfull");
       return;
     }
   }
 
-  alert("please fill correct Id and password");
+  alert("Wrong Credentials.");
 });
