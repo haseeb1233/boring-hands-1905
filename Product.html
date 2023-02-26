@@ -6,48 +6,217 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #products{
-            border: 2px solid red;
-        }
+     
         #filterSort{
+        margin-top: 50px;
           display: flex;
-          margin-bottom: 40px;
-        }
-        #filterSort>div:nth-child(3){
-         margin-left: 50%;
-        }
-        #filterSort>div:nth-child(2){
-            margin-left: 5%;
-        }
-        /* #SubCategory>select{
-            height: 30px;
-        }
-        #filterPrice>select{
-            height: 30px;
-        } */
+          margin-bottom: 40px;  }
+        #filterSort>div:nth-child(1){ border-radius: 0px; margin-left: 5%; }
+        #filterSort>div:nth-child(3){  border-radius: 0px;  margin-left: 50%; }
+
+        #filterSort>div:nth-child(2){    border-radius: 0px; margin-left: 5%; }
+       
         select{
             height: 30px;
-            background-color:#F57F17 ;
+            background-color:#FFA726 ;
             border-radius: 3px;
-            color: antiquewhite;
+            color: antiquewhite;  }
+       
+        #products>div{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+            text-align: center;  }
+      
+        #products>div>div>div>img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
         }
+        #products>div>div>div{
+            text-align: center;
+            display: flex;  
+        }
+        #products>div>div>div>p:nth-child(1){
+          margin-left: 20px;
+          margin-right: 40%;
+        }
+        .button{
+          background-color: #757575;
+          border: 0px;
+          height: 30px;
+          width: 100%;
+          margin-left: 0%;
+          border-radius: 5px;  }
 
-    </style>
+        .button:hover{
+          cursor: pointer;
+          background-color: #5D4037;
+          color: aliceblue; }
+          
+        #products>div>div>div>h5{  margin-left: 30%; }
+      
+        
+
+</style>
+<link rel="stylesheet" href="/Styles/index.css">
+   
 </head>
 <body>
+ <!-- Nav Bar start from here -->
+    <div id="topmost_div">
+        <p>
+          Spring into Sale | Up to 60% off | Now Live |
+          <span><a href="">Click to Shop!</a></span>
+        </p>
+      </div>
+  
+      <!-- Top Most Box for Low Screen Device  -->
+      <div id="low_sc_top_most_div">
+        <svg
+          id="star_ratings"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 161.16 26.06"
+        >
+          <path
+            d="M94 11.78l-5.23 5L90 23.72a1.93 1.93 0 0 1-.77 1.93 2 2 0 0 1-2.1.16l-6.5-3.3-6.5 3.3a2 2 0 0 1-2.13-.1 2 2 0 0 1-.8-2l1.22-7-5.22-4.82a1.94 1.94 0 0 1-.5-2 2 2 0 0 1 1.58-1.32l7.27-1 3.23-6.34a2 2 0 0 1 1.8-1 2 2 0 0 1 1.8 1l3.22 6.3 7.3 1a2 2 0 0 1 1.6 1.24 2 2 0 0 1-.5 2.06zM27.9 9.72a2 2 0 0 0-1.6-1.35l-7.27-1L15.78 1A2 2 0 0 0 14 0a2 2 0 0 0-1.8 1L9 7.4l-7.27 1A2 2 0 0 0 .1 9.7a2 2 0 0 0 .52 2l5.23 5-1.23 7a1.94 1.94 0 0 0 .8 2 2 2 0 0 0 1.16.36 2 2 0 0 0 .92-.22l6.5-3.3 6.5 3.3a2 2 0 0 0 2.1-.16 2 2 0 0 0 .78-1.98l-1.22-7 5.23-5a2 2 0 0 0 .5-2zm33.3 0a2 2 0 0 0-1.62-1.35l-7.26-1-3.25-6.34a2 2 0 0 0-1.78-1 2 2 0 0 0-1.8 1l-3.3 6.35-7.3 1a2 2 0 0 0-1.6 1.34 2 2 0 0 0 .5 2l5.24 5-1.23 7a1.94 1.94 0 0 0 .8 2 2 2 0 0 0 1.17.36 2 2 0 0 0 .9-.22l6.5-3.3 6.5 3.3a2 2 0 0 0 2.1-.24 2 2 0 0 0 .78-1.9l-1.23-7 5.25-5a2 2 0 0 0 .5-2zm66.57 0a2 2 0 0 0-1.6-1.35l-7.27-1L115.66 1a2 2 0 0 0-1.8-1 2 2 0 0 0-1.78 1l-3.24 6.36-7.26 1A2 2 0 0 0 100 9.72a2 2 0 0 0 .52 2l5.2 5-1.24 7a2 2 0 0 0 .82 1.94 2 2 0 0 0 1.15.36 2 2 0 0 0 .92-.22l6.5-3.3 6.5 3.3a2.06 2.06 0 0 0 2.1-.16 2 2 0 0 0 .78-1.92l-1.25-7 5.23-5a2 2 0 0 0 .54-2zm32.78 2.08l-5.24 5 1.3 7a1.94 1.94 0 0 1-.8 1.93 2.1 2.1 0 0 1-1.2.38 2.2 2.2 0 0 1-.9-.2l-6.5-3.3-6.5 3.3a2 2 0 0 1-2.05-.1 2 2 0 0 1-.8-2l1.23-7-5.2-4.94a2 2 0 0 1-.5-2 2 2 0 0 1 1.6-1.32l7.25-1 3.25-6.34a1.24 1.24 0 0 1 .2-.26 1.9 1.9 0 0 1 1.6-.77 2 2 0 0 1 1.78 1l3.23 6.34 7.26 1a2 2 0 0 1 1.6 1.37 1.94 1.94 0 0 1-.5 2.04zm-1.42-1.4l-8.26-1.15-3.6-7.1.1 18.2 7.17 3.65-1.4-8z"
+          ></path>
+        </svg>
+  
+        <h2>India's highest rated furniture app.</h2>
+  
+        <button>INSTALL</button>
+      </div>
+  
+      <!-- Help & Track Order Icons Box -->
+      <div class="top_divs_container" id="help_track_container">
+        <!-- Parent Container -->
+        <div class="top_most_parent_divs" id="help_track_parent">
+          <!-- Left Icons -->
+          <div id="help_track_left_div">
+            <a href=""
+              ><span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="call-us-icon help_track_icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+                  ></path>
+                </svg> </span
+              >Help</a
+            >
+  
+            <a href="">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="email-icon help_track_icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.54 6.8C5.7 6.8 5.02 6.15 5 5.32c-.02-.83.63-1.5 1.46-1.54.83-.03 1.52.62 1.54 1.45v.04c0 .8-.65 1.47-1.46 1.5zm0-4C5.16 2.76 4.02 3.86 4 5.24c-.02 1.4 1.08 2.53 2.46 2.56C7.84 7.8 8.98 6.7 9 5.32V5.3c0-1.37-1.1-2.5-2.46-2.5zM23 21h-1.4c-.3-1.35-1.6-2.22-2.96-1.95-.98.2-1.75.97-1.95 1.95h-1.43v-8.55h2.3c3.07.1 5.5 2.66 5.42 5.74V21zm-2.42.68c-.02.1-.04.22-.08.32-.2.6-.77 1-1.4 1-.64 0-1.2-.4-1.42-1-.04-.1-.07-.2-.08-.3v-.2c0-.17.03-.34.1-.5.26-.78 1.1-1.2 1.88-.93.44.15.78.5.93.93.08.16.1.33.1.5.05.07.04.13.04.18h-.05zM14.24 21H7c-.26-1.35-1.57-2.23-2.92-1.97-1 .2-1.78.97-1.97 1.97H1v-9.88h2.8l.13.18.23.3c.62.78 1.3 1.53 2 2.23.04.05.1.08.16.1.1.05.25.05.36 0 .06-.02.12-.05.17-.1.72-.7 1.4-1.44 2-2.23.1-.1.18-.2.26-.33l.14-.15h5V21zM6 21.5c.03.17.03.34 0 .5-.22.6-.78 1-1.4 1-.64 0-1.2-.4-1.4-1-.1-.17-.17-.35-.2-.55.02-.16.06-.3.14-.45.2-.6.77-1 1.4-1 .66-.02 1.25.4 1.46 1 .05.15.08.3.1.45l-.1.05zM2.2 6.13c-.32-1.2-.06-2.46.7-3.43C3.77 1.6 5.12.95 6.53 1c1.43-.04 2.8.6 3.66 1.74.73.96 1 2.22.7 3.4-.54 1.52-1.3 2.94-2.3 4.2l-.14.16-.13.17-.23.33c-.48.63-1 1.23-1.57 1.8-.35-.37-1-1-1.6-1.8l-.2-.28c-.07-.07-.13-.14-.18-.22l-.1-.16c-1-1.25-1.77-2.68-2.25-4.2zm15.37 5.32H15.3v-.83c0-.27-.23-.5-.5-.5H10c.8-1.13 1.44-2.38 1.87-3.7.4-1.5.07-3.07-.87-4.28C9.94.76 8.28-.04 6.53 0 4.8-.05 3.16.73 2.1 2.1 1.16 3.33.84 4.92 1.23 6.4c.42 1.34 1.04 2.6 1.84 3.72H.5c-.28 0-.5.23-.5.5V21.5c0 .28.22.5.5.5h1.6c.27 1.36 1.6 2.23 2.95 1.96C6.03 23.76 6.8 23 7 22h9.7c.27 1.36 1.58 2.23 2.94 1.96.98-.2 1.75-.97 1.95-1.96h1.9c.27 0 .5-.22.5-.5v-3.3c.07-3.64-2.8-6.65-6.44-6.75zm-2.3 1V21v-8.55z"
+                  ></path>
+                </svg> </span
+              >Track Order</a
+            >
+          </div>
+  
+          <!-- Right Icons -->
+          <div id="help_track_right_div">
+            <a href="">Stores</a>
+            <a href="">Bulk Orders</a>
+            <a href="">Gift Cards</a>
+            <a href="">HG Services</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Low Screen device Nav Bar -->
+      <div id="nav_bar_cont">
+        <div class="nav_bar_left_div">
+          <button onclick="show_category_toggle()" class="hamburger_menu">
+            <i class="fa-light fa-bars"></i>
+          </button>
+          <img
+            onclick="window.location.href=`index.html`"
+            class="nav_bar_logo"
+            src="/Images/Logo.png"
+            alt=""
+          />
+        </div>
+  
+        <div class="nav_bar_right_div">
+          <svg
+            class="nav_bar_icons"
+            id="question_mark_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+            ></path>
+          </svg>
+  
+          <svg
+            class="nav_bar_icons"
+            id="nav_bar_heart_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z"
+            ></path>
+          </svg>
+  
+          <svg
+            class="nav_bar_icons"
+            id="nav_girl_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z"
+            ></path>
+          </svg>
+  
+          <svg
+            class="nav_bar_icons"
+            id="nav_bar_cart_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <!-- nav Bar Ended here -->
+
     <div id="filterSort">
     
     <div id="SubCategory">
         <select name="SCategory" id="SCategory">
           <option value="">-- Category--</option>
-          <option value="Shirts">Study Chairs</option>
-          <option value="T-Shirt">Accent Chairs</option>
-          <option value="Coffee Tables">Coffee Tables</option>
-          <option value="Sofa">Sofa</option>
+          <option value="chair">Study Chairs</option>
+          <option value="chair">Accent Chairs</option>
+          <option value="sofa">Sofa</option>
           <option value="Bed">Bed</option>
+          <option value="Tables">Coffee Tables</option>
           <option value="Bookshelves">Bookshelves</option>
-          <option value="Study Table">Study Table</option>
-          <option value="Tv Units">Tv Units</option>
+          <option value="table">Study Table</option>
+          <option value="tv">Tv Units</option>
           <option value="Cupboard">Cupboard</option>
           <option value="Shoe Rack">Shoe Rack</option>
       </select>
@@ -56,15 +225,10 @@
         <select name="SCategory" id="priceRange">
           <option value="">--Price--</option>
           <option value=""></option>
-          <option value="T-Shirt">T-Shirt</option>
-          <option value="Sweaters">Sweaters</option>
-          <option value="Hoodies">Hoodies</option>
-          <option value="Jackets">Jackets</option>
-          <option value="Jeans">Jeans</option>
-          <option value="Shorts">Shorts</option>
-          <option value="Wallets">Wallets</option>
-          <option value="Belts">Belts</option>
-          <option value="Hats">Hats</option>
+          <option value="2999">0-2999</option>
+          <option value="6999">3000-6999</option>
+          <option value="7000">above 6999</option>
+          
       </select>
       </div>
       <div id="sort">
@@ -72,8 +236,6 @@
             <option value="">Recommended </option>
             <option value="H2L">Price:High To Low</option>
             <option value="L2H">Price:Low To High</option>
-            <option value="New">New Arrivals</option>
-            <option value="Discount">Discount</option>
         </select>
     </div>
       </div>
@@ -81,21 +243,218 @@
         
        <!-- products card will be appended here -->
       </div>
+      <div id="pagination">
+        
+      </div>
 </body>
 
 <script>
-    const scriptURL = "https://himanshu-bamu.onrender.com/Products"
+    const scriptURL = "https://himanshu-bamu.onrender.com/Products";
+    let products= document.getElementById('products')
 
-let fetchdata = fetch(scriptURL);
+    let paginationhere=document.getElementById("pagination")
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    let fetchedData=[]
+    let fetchdata = fetch(scriptURL);
     fetchdata
       .then((data) => {
         return data.json();
       })
       .then((data) => {
-        console.log(data)
+        fetchedData=data;
+        // console.log(data)
+
+        renderCardList(data)
+        let numOfpages=fetchedData.length/9;
+       renderPagination(numOfpages,fetchedData)
       });
     
-    let filterCotegory = document.getElementById('SCategory');
-    console.log(filterCotegory);
+   function renderCardList(cardData) {
+  let cardList = `
+    <div class="card-list">
+      ${cardData
+        .map((item) =>
+          getCard(
+            item.id,
+            item.title,
+            item.brand,
+            item.category,
+            item.image[0],
+            item.color,
+            item.material,
+            item.price,
+            item.size,
+
+          )
+        )
+        .join("")}
+    </div>
+  `;
+
+  products.innerHTML = cardList;
+
+  
+const productsContainer = document.getElementById('products');
+
+
+
+
+// Get the products container
+
+
+// Add event listener to the products container to handle view button clicks
+ let btncards = document.querySelectorAll(".button");
+
+// console.log(btncards)
+btncards.forEach((ele,ind)=>{
+  ele.addEventListener("click",(e)=>{
+      // let recentVisited = JSON.parse(localStorage.getItem("recentStack")) || [];
+     console.log(e)
+      let singleprod = {};
+     fetch(`${scriptURL}/${e.target.dataset.id}`)
+    .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        // fetchedData=data;
+        console.log(data)
+        
+
+
+        localStorage.setItem("singleProduct",JSON.stringify(data));
+        // renderCardList(data)
+         window.location.href = "/admin/Himanshu/singleProduct.html"
+      });
+      
+  
+     
+          
+
+  })
+})
+
+ 
+}
+
+
+function getCard(id,title,brand,category,image,color,material,price,size) {
+  let card = `
+      <div class="card" data-id=${id} >
+        <div class="card__img">
+        <img src=${image} alt="food" />
+        </div>
+        <h5 class="card__item card__title">${title}</h3>
+        <div class="card__body">
+          <p class="card__item card__title">Size: ${size}</p>
+          <p class="card__item card__matrials">Materials: ${material}</p3>   
+        </div>
+        
+          <h5 class="card__item card__price">${price}</h5>
+          <button class= 'button' data-id=${id}  >View Details</button>
+          
+      </div>
+  `;
+  return card;
+}
+
+
+ 
+ 
+
+const categoryDropdown = document.getElementById('SCategory');
+const priceFilter = document.getElementById('priceRange');
+const sort = document.getElementById('sortCategory');
+
+categoryDropdown.addEventListener('change', function() {
+    let catVal = categoryDropdown.value;
+    let priceVal = priceFilter.value;
+    let sorted = sort.value;
+    let filteredData = fetchedData.filter((item) => {
+        if (catVal === '') {
+            return true;
+        } else if (item.category === catVal) {
+            return true;
+        }
+        return false;
+    }).filter((item) => {
+        if (priceVal === '') {
+            return true;
+        } else if (priceVal === '2999' && item.price <= 2999) {
+            return true;
+        } else if (priceVal === '6999' && item.price > 2999 && item.price <= 6999) {
+            return true;
+        } else if (priceVal === '7000' && item.price > 6999) {
+            return true;
+        }
+        return false;
+    }).sort((a, b) => {
+        if (sorted === 'H2L') {
+            return b.price - a.price;
+        } else if (sorted === 'L2H') {
+            return a.price - b.price;
+        }
+        return 0;
+    });
+    renderCardList(filteredData);
+   let numOfpages=filteredData.length/9;
+    renderPagination(numOfpages,prod)
+
+});
+
+priceFilter.addEventListener('change', function() {
+    categoryDropdown.dispatchEvent(new Event('change'));
+});
+
+sort.addEventListener('change', function() {
+    categoryDropdown.dispatchEvent(new Event('change'));
+});
+
+
+
+function renderPagination(numOfpages,prod){
+    let arr = [];
+
+    for(let i = 0 ; i<numOfpages ; i++){
+        arr.push(createbtn (i+1));
+    }
+    
+    paginationhere.innerHTML = `
+       ${arr.join("")}
+    `
+
+    function createbtn (num){
+        return `
+        <button class="pagination-button" data-id="${num-1}">${num}</button>
+        `
+    }
+    let pgbuttons = document.querySelectorAll(".pagination-button");
+
+    pgbuttons.forEach((el,ind)=>{
+        el.addEventListener("click",(e)=>{
+            // alert(`this was clicked ${e.target.dataset.id}`)
+            let int = e.target.dataset.id * cardsperpage;
+            let newdata = prod.slice(int,int+cardsperpage);
+
+            renderDOM(newdata)
+
+        })
+    })
+  
+}
+
+
 </script>
 </html>
