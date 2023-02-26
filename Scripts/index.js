@@ -260,14 +260,16 @@ selected_category.forEach(function (item, index) {
     window.location.href = "Product.html";
   });
 });
+// ********************************
 
 // Script for Category Toggle Clicked on Hamburger Menu
 function show_category_toggle() {
   var toggle_cate = document.getElementById("cate_toggle_cont");
   toggle_cate.style.display = "block";
 }
+// *********************************
 
-// // Script for Hiding Category Toggle
+// Script for Hiding Category Toggle
 function hide_toggle_cont() {
   var toggle_cont = document.getElementById("cate_toggle_cont");
 
@@ -277,39 +279,24 @@ function hide_toggle_cont() {
 }
 
 ///////////////login.js
-// console.log(
-//   signup_password,
-//   signup_email,
-//   login_password,
-//   login_email,
-//   "********************************"
-// );
 
 signup_form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  //let name=document.getElementById("name")
   let pass = document.getElementById("signup_password");
   let email = document.getElementById("signup_email");
 
-  //console.log(pass.value)
   let obj = {
-    //name:signup_form.name.value,
     pass: signup_form.signup_password.value,
     email: signup_form.signup_email.value,
   };
+
   let t = JSON.parse(localStorage.getItem("data")) || [];
+
   t.push(obj);
 
-  //t.push(obj)
-
-  //console.log(t)
   localStorage.setItem("data", JSON.stringify(t));
 });
-
-//console.log(t)
-
-//console.log(login_form,"aaaa")
 
 login_form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -321,14 +308,15 @@ login_form.addEventListener("submit", (e) => {
 
   for (let i = 0; i < t.length; i++) {
     if (email1 == t[i].email && pass1 == t[i].pass) {
+      alert("Login Succesfull.");
       window.open("index.html");
-      alert("Login Succesfull");
       return;
     }
   }
 
   alert("Wrong Credentials.");
 });
+// *************************
 
 // Cart Count Script
 let cart_count = document.querySelector("#cart_count");
