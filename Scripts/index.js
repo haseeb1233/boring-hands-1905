@@ -302,6 +302,7 @@ signup_form.addEventListener("submit", (e) => {
   t.push(obj);
 
   //t.push(obj)
+  alert("SignUp Successfull.");
 
   //console.log(t)
   localStorage.setItem("data", JSON.stringify(t));
@@ -321,8 +322,8 @@ login_form.addEventListener("submit", (e) => {
 
   for (let i = 0; i < t.length; i++) {
     if (email1 == t[i].email && pass1 == t[i].pass) {
-      window.open("index.html");
       alert("Login Succesfull");
+      window.open("index.html");
       return;
     }
   }
