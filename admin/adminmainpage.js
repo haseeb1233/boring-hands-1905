@@ -248,7 +248,7 @@ editprdtform.addEventListener("submit",(e)=>{
      orderth4.innerText="TOTAL"
      let ordertbody=document.createElement("tbody")
      ordertbody.setAttribute("id","ordertabledata")
-     let orderdata =JSON.parse(localStorage.getItem("checkout-data"))
+     let orderdata =JSON.parse(localStorage.getItem("addToBag"))
       orderdata.forEach((element) =>{
         let bodytr=document.createElement("tr")
         bodytr.setAttribute("id","bodytr")
@@ -258,7 +258,7 @@ editprdtform.addEventListener("submit",(e)=>{
         let imgdiv=document.createElement("div")
         imgdiv.setAttribute("id","imgdiv")
         let imgbody=document.createElement("img")
-        imgbody.setAttribute("src",element.imag)
+        imgbody.setAttribute("src",element.image[0])
         let textdiv=document.createElement("div")
         textdiv.setAttribute("id","textdiv")
         let titlep=document.createElement("p")
@@ -269,10 +269,10 @@ editprdtform.addEventListener("submit",(e)=>{
          bodytd2.innerText=element.price
          bodytd2.setAttribute("class","texttd")
          let bodytd3=document.createElement("td")
-         bodytd3.innerText=element.quantity
+         bodytd3.innerText=1
          bodytd3.setAttribute("class","texttd")
          let bodytd4=document.createElement("td")
-         bodytd4.innerText=element.price*element.quantity
+         bodytd4.innerText=element.price
          bodytd4.setAttribute("class","texttd")
          
        let confirmprdt=document.createElement("div")
@@ -304,7 +304,7 @@ editprdtform.addEventListener("submit",(e)=>{
             return e
          }
         })
-        localStorage.setItem("checkout-data",JSON.stringify(filtersaledata))
+        localStorage.setItem("addToBag",JSON.stringify(filtersaledata))
         bodytr.innerHTML=null
        })
       
@@ -321,7 +321,7 @@ editprdtform.addEventListener("submit",(e)=>{
          }
         })
         console.log(filterdata)
-        localStorage.setItem("checkout-data",JSON.stringify(filterdata))
+        localStorage.setItem("addToBag",JSON.stringify(filterdata))
        bodytr.innerHTML=null
       })
 
@@ -347,8 +347,8 @@ editprdtform.addEventListener("submit",(e)=>{
       let sum=0
       let total=0
       for(let i=0;i<data.length;i++){
-         sum+=data[i].price*data[i].quantity
-          total+=data[i].quantity
+         sum+=data[i].price
+          total+=1
       }
       let salediv=document.createElement("div")
       salediv.setAttribute("id","salediv")
@@ -359,7 +359,7 @@ editprdtform.addEventListener("submit",(e)=>{
       let totalsaleprodt=document.createElement("div")
       totalsaleprodt.innerText="Total Number of Product Saled"
       let totalnumberprdt=document.createElement("p")
-      totalnumberprdt.innerText=quantity
+      totalnumberprdt.innerText=total
       totalsaleprodt.append(totalnumberprdt)
       totalsaletext.append(totalprcie)
       salediv.append(totalsaletext,totalsaleprodt)
@@ -388,7 +388,7 @@ editprdtform.addEventListener("submit",(e)=>{
         let imgdiv=document.createElement("div")
         imgdiv.setAttribute("id","imgdiv")
         let imgbody=document.createElement("img")
-        imgbody.setAttribute("src",element.imag)
+        imgbody.setAttribute("src",element.image[0])
         let textdiv=document.createElement("div")
         textdiv.setAttribute("id","textdiv")
         let titlep=document.createElement("p")
@@ -399,10 +399,10 @@ editprdtform.addEventListener("submit",(e)=>{
          bodytd2.innerText=element.price
          bodytd2.setAttribute("class","texttd")
          let bodytd3=document.createElement("td")
-         bodytd3.innerText=element.quantity
+         bodytd3.innerText=1
          bodytd3.setAttribute("class","texttd")
          let bodytd4=document.createElement("td")
-         bodytd4.innerText=element.price*element.quantity
+         bodytd4.innerText=element.price*1
          bodytd4.setAttribute("class","texttd")
          textdiv.append(titlep,brandp)
          imgdiv.append(imgbody)
